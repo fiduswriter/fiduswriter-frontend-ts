@@ -148,6 +148,10 @@
       "types": "./dist/user/contacts/index.d.ts",
       "default": "./dist/user/contacts/index.js"
     },
+    "./user/contacts/add_dialog": {
+      "types": "./dist/user/contacts/add_dialog.d.ts",
+      "default": "./dist/user/contacts/add_dialog.js"
+    },
     "./document_templates": {
       "types": "./dist/document_templates/index.d.ts",
       "default": "./dist/document_templates/index.js"
@@ -207,7 +211,7 @@
   },
   "dependencies": {
     "@fiduswriter/bibliography-manager": "^0.1.29",
-    "@fiduswriter/document": "^0.2.39",
+    "@fiduswriter/document": "^0.2.40",
     "@fiduswriter/document-template-editor": "^0.1.15",
     "@fiduswriter/editor": "^0.1.76",
     "@fiduswriter/image-manager": "^0.1.22",
