@@ -1,6 +1,6 @@
 {
   "name": "@fiduswriter/frontend",
-  "version": "0.1.43",
+  "version": "0.1.44",
   "description": "Fidus Writer-specific shared utilities and UI chrome",
   "keywords": [
     "fiduswriter",
