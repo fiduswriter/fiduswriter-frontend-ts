@@ -24,6 +24,8 @@ import {
 import {profileContents} from "./templates.js"
 import type {FrontendApp, User} from "../../types.js"
 
+import type {PluginList} from "../../app/index.js"
+
 export class Profile {
     app: FrontendApp
     user: User & {id?: number}
@@ -33,19 +35,23 @@ export class Profile {
     postRenderHandlers: Array<() => void>
     plugins: Record<string, {init(): void}> | null
     dom!: HTMLElement
+    profilePlugins: PluginList
 
     constructor({
         app,
         user,
-        socialaccount_providers
+        socialaccount_providers,
+        profilePlugins = []
     }: {
         app: FrontendApp
         user: User & {id?: number}
         socialaccount_providers: Array<Record<string, unknown>>
+        profilePlugins?: PluginList
     }) {
         this.app = app
         this.user = user
         this.socialaccount_providers = socialaccount_providers
+        this.profilePlugins = profilePlugins
         this.pluginTemplates = []
         this.plugins = null
         this.clickTargets = {
@@ -153,7 +159,21 @@ export class Profile {
         if (this.plugins) {
             return
         }
+        // Add plugins.
         this.plugins = {}
+
+        this.profilePlugins.forEach(([app, plugin]) => {
+            if (!this.app.settings.APPS.includes(app)) {
+                return
+            }
+            Object.values(plugin).forEach(pluginExport => {
+                if (typeof pluginExport === "function") {
+                    const name = (pluginExport as any).name
+                    this.plugins![name] = new (pluginExport as any)(this)
+                    this.plugins![name].init()
+                }
+            })
+        })
     }
 
     render(): void {
@@ -327,12 +347,12 @@ export class Profile {
         }
     }
 
-    save(): void {
+    save(): Promise<void> {
         activateWait()
         const newLang = (this.dom.querySelector("#language") as HTMLSelectElement).value
         const inlineReferences = (this.dom.querySelector("#inline-references") as HTMLInputElement).checked
         const inlineMath = (this.dom.querySelector("#inline-math") as HTMLInputElement).checked
-        this.app.apiConnectors.userProfile.save({
+        return this.app.apiConnectors.userProfile.save({
             username: (this.dom.querySelector("#username") as HTMLInputElement).value,
             first_name: (this.dom.querySelector("#first_name") as HTMLInputElement).value,
             last_name: (this.dom.querySelector("#last_name") as HTMLInputElement).value,

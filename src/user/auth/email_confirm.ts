@@ -25,8 +25,8 @@ export class EmailConfirm extends PreloginPage {
     confirmMethods: Array<() => Promise<unknown>>
     firstVerification: boolean
 
-    constructor({app, language}: {app: PreloginApp; language: string}, key: string) {
-        super({app, language})
+    constructor({app, language, plugins = []}: {app: PreloginApp; language: string; plugins?: Array<[string, Record<string, any>]>}, key: string) {
+        super({app, language, plugins})
 
         this.title = gettext("Confirm Email")
         this.pluginLoaders = []

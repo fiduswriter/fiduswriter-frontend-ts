@@ -39,8 +39,8 @@ interface PluginConstructor {
     new (...args: any[]): {init(): () => void}
 }
 
-type PluginModule = Record<string, PluginConstructor>
-type PluginList = Array<[string, PluginModule]>
+export type PluginModule = Record<string, PluginConstructor>
+export type PluginList = Array<[string, PluginModule]>
 
 export interface AppPluginOptions {
     appPlugins?: PluginList
@@ -48,6 +48,8 @@ export interface AppPluginOptions {
     editorPlugins?: PluginList
     citationDialogPlugins?: PluginList
     bibliographyOverviewPlugins?: PluginList
+    profilePlugins?: PluginList
+    confirmAccountPlugins?: PluginList
 }
 
 // ---- Route types ----
@@ -89,6 +91,8 @@ export class App {
     editorPlugins: PluginList
     citationDialogPlugins: PluginList
     bibliographyOverviewPlugins: PluginList
+    profilePlugins: PluginList
+    confirmAccountPlugins: PluginList
     routes: RouteMap
 
     openLoginPage: () => Page
@@ -147,6 +151,8 @@ export class App {
         this.citationDialogPlugins = pluginOpts.citationDialogPlugins ?? []
         this.bibliographyOverviewPlugins =
             pluginOpts.bibliographyOverviewPlugins ?? []
+        this.profilePlugins = pluginOpts.profilePlugins ?? []
+        this.confirmAccountPlugins = pluginOpts.confirmAccountPlugins ?? []
 
         this.config.goTo = (url: string) => this.goTo(url)
         this.config.menuPlugins = this.menuPlugins
@@ -173,7 +179,11 @@ export class App {
                         case "confirm-email": {
                             const key = pathnameParts[3]
                             returnValue = new EmailConfirm(
-                                {app: this.config.app as PreloginApp, language: this.config.language || ""},
+                                {
+                                    app: this.config.app as PreloginApp,
+                                    language: this.config.language || "",
+                                    plugins: this.confirmAccountPlugins
+                                },
                                 key
                             )
                             break
@@ -325,7 +335,8 @@ export class App {
                                 app: this.config,
                                 user: this.config.user,
                                 socialaccount_providers:
-                                    this.config.socialaccount_providers ?? []
+                                    this.config.socialaccount_providers ?? [],
+                                profilePlugins: this.profilePlugins
                             })
                             break
                         case "contacts":
