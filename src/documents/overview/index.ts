@@ -238,9 +238,25 @@ export class DocumentOverview {
 
     activateFidusPlugins(): void {
         if (this.plugins) {
+            // Plugins have been activated already
             return
         }
+        // Add plugins.
         this.plugins = {}
+
+        const documentsOverviewPlugins: Array<[string, Record<string, unknown>]> =
+            (this.app as any).documentsOverviewPlugins ?? []
+        documentsOverviewPlugins.forEach(([app, plugin]) => {
+            if (!this.app.settings.APPS.includes(app)) {
+                return
+            }
+            Object.values(plugin).forEach((pluginExport: any) => {
+                if (typeof pluginExport === "function") {
+                    this.plugins![pluginExport.name] = new pluginExport(this)
+                    this.plugins![pluginExport.name].init()
+                }
+            })
+        })
     }
 
     getDocumentListData(): Promise<void> {

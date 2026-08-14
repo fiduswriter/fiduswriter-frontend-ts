@@ -48,6 +48,7 @@ export interface AppPluginOptions {
     editorPlugins?: PluginList
     citationDialogPlugins?: PluginList
     bibliographyOverviewPlugins?: PluginList
+    documentsOverviewPlugins?: PluginList
     profilePlugins?: PluginList
     confirmAccountPlugins?: PluginList
 }
@@ -91,6 +92,7 @@ export class App {
     editorPlugins: PluginList
     citationDialogPlugins: PluginList
     bibliographyOverviewPlugins: PluginList
+    documentsOverviewPlugins: PluginList
     profilePlugins: PluginList
     confirmAccountPlugins: PluginList
     routes: RouteMap
@@ -151,11 +153,14 @@ export class App {
         this.citationDialogPlugins = pluginOpts.citationDialogPlugins ?? []
         this.bibliographyOverviewPlugins =
             pluginOpts.bibliographyOverviewPlugins ?? []
+        this.documentsOverviewPlugins =
+            pluginOpts.documentsOverviewPlugins ?? []
         this.profilePlugins = pluginOpts.profilePlugins ?? []
         this.confirmAccountPlugins = pluginOpts.confirmAccountPlugins ?? []
 
         this.config.goTo = (url: string) => this.goTo(url)
         this.config.menuPlugins = this.menuPlugins
+        this.config.documentsOverviewPlugins = this.documentsOverviewPlugins
         this.config.apiConnectors = this.apiConnectors
 
         this.routes = {
@@ -164,7 +169,7 @@ export class App {
                 requireLogin: true,
                 open: () => {
                     const overview = new DocumentOverview(
-                        {app: this.config, user: this.config.user},
+                        {app: this.config.app, user: this.config.user},
                         "/"
                     )
                     return Promise.resolve(overview)
@@ -308,7 +313,7 @@ export class App {
                         "/" + pathnameParts.slice(2).join("/")
                     ).replace(/\/?$/, "/")
                     const overview = new DocumentOverview(
-                        {app: this.config, user: this.config.user},
+                        {app: this.config.app, user: this.config.user},
                         path
                     )
                     return Promise.resolve(overview)
