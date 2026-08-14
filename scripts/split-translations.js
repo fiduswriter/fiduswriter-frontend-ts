@@ -260,16 +260,16 @@ for (const lang of languages) {
                 pkgDir = join(root, "locale")
                 break
             case "@fiduswriter/editor":
-                pkgDir = join(root, "..", "fiduswriter-editor-js", "locale")
+                pkgDir = join(root, "..", "fiduswriter-editor-ts", "locale")
                 break
             case "@fiduswriter/bibliography-manager":
-                pkgDir = join(root, "..", "fiduswriter-bibliography-manager-js", "locale")
+                pkgDir = join(root, "..", "fiduswriter-bibliography-manager-ts", "locale")
                 break
             case "@fiduswriter/image-manager":
-                pkgDir = join(root, "..", "fiduswriter-image-manager-js", "locale")
+                pkgDir = join(root, "..", "fiduswriter-image-manager-ts", "locale")
                 break
             case "@fiduswriter/document-template-editor":
-                pkgDir = join(root, "..", "fiduswriter-document-template-editor-js", "locale")
+                pkgDir = join(root, "..", "fiduswriter-document-template-editor-ts", "locale")
                 break
             default:
                 console.log(`  ${lang}/${pkgName}: unknown package, skipping`)

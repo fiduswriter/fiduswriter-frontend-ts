@@ -10,13 +10,13 @@
     "ui",
     "browser"
   ],
-  "homepage": "https://codeberg.org/fiduswriter/fiduswriter-frontend-js#readme",
+  "homepage": "https://codeberg.org/fiduswriter/fiduswriter-frontend-ts#readme",
   "bugs": {
-    "url": "https://codeberg.org/fiduswriter/fiduswriter-frontend-js/issues"
+    "url": "https://codeberg.org/fiduswriter/fiduswriter-frontend-ts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@codeberg.org/fiduswriter/fiduswriter-frontend-js.git"
+    "url": "ssh://git@codeberg.org/fiduswriter/fiduswriter-frontend-ts.git"
   },
   "license": "AGPL-3.0",
   "author": "Johannes Wilm",
