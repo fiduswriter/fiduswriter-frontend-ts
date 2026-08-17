@@ -122,7 +122,7 @@ export class DocumentRevisionsDialog {
 
     download(id: number, filename: string): void {
         this.apiConnectors.revision.getRevisionBlob(id)
-            .then(blob => download(blob, filename, "application/fidus+zip"))
+            .then(blob => download(blob, filename, "application/vnd.fiduswriter+zip"))
     }
 
     delete(id: number): Promise<any> {

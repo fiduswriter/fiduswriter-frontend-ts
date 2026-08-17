@@ -237,7 +237,7 @@ export class DocMaintenance {
 
     saveRevision(id: number, zipfs: JSZip): void {
         zipfs
-            .generateAsync({type: "blob", mimeType: "application/fidus+zip"})
+            .generateAsync({type: "blob", mimeType: "application/vnd.fiduswriter+zip"})
             .then((blob: Blob) => {
                 this.app.apiConnectors.maintenance.updateRevision(id, blob).then(() => {
                     addAlert(
