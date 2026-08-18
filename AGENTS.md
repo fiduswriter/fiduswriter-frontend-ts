@@ -9,7 +9,7 @@ enough to live in `fwtoolkit`.
 
 - Package name: `@fiduswriter/frontend`
 - License: `AGPL-3.0`
-- Repository: `https://codeberg.org/fiduswriter/fiduswriter-common.git`
+- Repository: `https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts.git`
 - Author: Johannes Wilm
 
 ## Scope
