@@ -1,6 +1,6 @@
 {
   "name": "@fiduswriter/frontend",
-  "version": "0.1.47",
+  "version": "0.1.48",
   "description": "Fidus Writer-specific shared utilities and UI chrome",
   "keywords": [
     "fiduswriter",
@@ -211,12 +211,12 @@
   },
   "dependencies": {
     "@fiduswriter/bibliography-manager": "^0.1.29",
-    "@fiduswriter/document": "^0.2.41",
+    "@fiduswriter/document": "^0.2.42",
     "@fiduswriter/document-template-editor": "^0.1.16",
-    "@fiduswriter/editor": "^0.1.77",
+    "@fiduswriter/editor": "^0.1.78",
     "@fiduswriter/image-manager": "^0.1.22",
     "downloadjs": "^1.4.7",
-    "fwtoolkit": "^0.2.10",
+    "fwtoolkit": "^0.2.11",
     "jszip": "^3.10.1",
     "prosemirror-history": "^1.3.2",
     "prosemirror-keymap": "^1.2.2",
@@ -277,12 +277,10 @@
       ],
       "own": {
         "additive": [
-          "colors.css",
-          "forms.css"
+          "colors.css"
         ],
         "component": [
           "fonts.css",
-          "text.css",
           "figure.css",
           "header_menu.css",
           "admin.css",

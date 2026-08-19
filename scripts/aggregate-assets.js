@@ -174,11 +174,8 @@ manifest.reset.push("fwtoolkit/css/reset.css")
 // Layer 1: Tokens (fwtoolkit colors base)
 manifest.tokens.push("fwtoolkit/css/colors.css")
 
-// Layer 2: Typography (frontend fonts/text)
-manifest.typography.push(
-    "@fiduswriter/frontend/css/fonts.css",
-    "@fiduswriter/frontend/css/text.css"
-)
+// Layer 2: Typography (frontend fonts)
+manifest.typography.push("@fiduswriter/frontend/css/fonts.css")
 
 // Layer 3: All fwtoolkit component CSS (used by the full SPA)
 const allFwtCss = readdirSync(join(root, "node_modules", "fwtoolkit", "css")).filter(
