@@ -211,12 +211,12 @@
   },
   "dependencies": {
     "@fiduswriter/bibliography-manager": "^0.1.29",
-    "@fiduswriter/document": "^0.2.40",
-    "@fiduswriter/document-template-editor": "^0.1.15",
-    "@fiduswriter/editor": "^0.1.76",
+    "@fiduswriter/document": "^0.2.41",
+    "@fiduswriter/document-template-editor": "^0.1.16",
+    "@fiduswriter/editor": "^0.1.77",
     "@fiduswriter/image-manager": "^0.1.22",
     "downloadjs": "^1.4.7",
-    "fwtoolkit": "^0.2.8",
+    "fwtoolkit": "^0.2.10",
     "jszip": "^3.10.1",
     "prosemirror-history": "^1.3.2",
     "prosemirror-keymap": "^1.2.2",
@@ -229,9 +229,12 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@swc/core": "^1.16.1",
+    "@swc/jest": "^0.2.39",
     "@types/downloadjs": "^1.4.6",
     "@types/jest": "^30.0.0",
     "@types/qrcode": "^1.5.6",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.6.0",
     "gettext-parser": "^9.1.1",
     "globals": "^15.15.0",
@@ -240,10 +243,8 @@
     "jest": "^30.4.2",
     "lint-staged": "^17.0.8",
     "prettier": "^3.5.3",
-    "ts-jest": "^29.4.11",
-    "ts-jest-resolver": "^2.0.1",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.0"
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-eslint": "^8.67.0"
   },
   "fiduswriter": {
     "css": {
