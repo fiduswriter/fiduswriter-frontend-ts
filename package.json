@@ -210,13 +210,13 @@
     "postinstall": "node scripts/aggregate-assets.js"
   },
   "dependencies": {
-    "@fiduswriter/bibliography-manager": "^0.1.29",
-    "@fiduswriter/document": "^0.2.42",
+    "@fiduswriter/bibliography-manager": "^0.1.31",
+    "@fiduswriter/document": "^0.2.43",
     "@fiduswriter/document-template-editor": "^0.1.16",
-    "@fiduswriter/editor": "^0.1.78",
+    "@fiduswriter/editor": "^0.1.80",
     "@fiduswriter/image-manager": "^0.1.22",
     "downloadjs": "^1.4.7",
-    "fwtoolkit": "^0.2.11",
+    "fwtoolkit": "^0.2.13",
     "jszip": "^3.10.1",
     "prosemirror-history": "^1.3.2",
     "prosemirror-keymap": "^1.2.2",
