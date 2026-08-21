@@ -19,7 +19,7 @@ cd "$BUILD_DIR"
 git init
 git checkout -b pages
 git add .
-git commit -m "Deploy @fiduswriter/common to Codeberg Pages"
+git commit -m "Deploy @fiduswriter/frontend to Forgejo Pages"
 
 REMOTE=$(cd "$ROOT" && git remote get-url origin)
 echo "Pushing to $REMOTE pages branch..."
@@ -28,4 +28,4 @@ git push -f origin pages
 
 cd "$ROOT"
 rm -rf "$BUILD_DIR"
-echo "Done. Available at https://fiduswriter.codeberg.page/common/"
+echo "Done. Available at https://fiduswriter.pages.fiduswriter.org/fiduswriter-frontend-ts/"
