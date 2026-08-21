@@ -17,7 +17,7 @@
  *
  * Usage:
  *   node scripts/split-translations.js <path-to-django-locale>
- *   node scripts/split-translations.js /path/to/fiduswriter/fiduswriter/locale
+ *   node scripts/split-translations.js /path/to/fiduswriter-server-backend/fiduswriter/locale
  *
  * Requires: gettext-parser
  */
@@ -114,7 +114,7 @@ const PACKAGE_MAP = {
 const djangoLocalePath = process.argv[2]
 if (!djangoLocalePath || !existsSync(djangoLocalePath)) {
     console.error(`Usage: node split-translations.js <path-to-django-locale>`)
-    console.error(`  e.g.: node scripts/split-translations.js ../../fiduswriter/fiduswriter/locale`)
+    console.error(`  e.g.: node scripts/split-translations.js ../../fiduswriter-server-backend/fiduswriter/locale`)
     process.exit(1)
 }
 

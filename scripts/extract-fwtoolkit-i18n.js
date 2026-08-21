@@ -12,7 +12,7 @@
  *
  * Example:
  *   node scripts/extract-fwtoolkit-i18n.js \
- *     ../../fiduswriter/fiduswriter/locale \
+ *     ../../fiduswriter-server-backend/fiduswriter/locale \
  *     ../../fwtoolkit
  */
 
