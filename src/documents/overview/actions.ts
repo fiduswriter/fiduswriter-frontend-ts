@@ -19,6 +19,23 @@ import {createPasswordDialog, enterPasswordDialog} from "fwtoolkit/e2ee/password
 import type {DocumentOverview} from "./index.js"
 import type {FrontendApp} from "../../types.js"
 import {documentDialogTemplate, importDocumentTemplate} from "./templates.js"
+import {
+    HtmlExportDialog,
+    EpubExportDialog,
+    TemplateExportDialog
+} from "@fiduswriter/editor/dialogs/index"
+import {Node as PMNode} from "prosemirror-model"
+import {acceptAllNoInsertions} from "@fiduswriter/document/transform"
+
+/** Return a copy of the document with all tracked changes accepted. */
+const resolveDocTrackedChanges = (
+    doc: Record<string, unknown>,
+    schema: unknown
+): Record<string, unknown> => {
+    const pmDoc = PMNode.fromJSON(schema as never, doc.content as never)
+    const resolved = acceptAllNoInsertions(pmDoc)
+    return {...doc, content: resolved.toJSON() as never}
+}
 
 const exportProgressCallback = (doc: Record<string, unknown>) => {
     const title = shortFileTitle(doc.title as string, (doc.path as string) || "")
@@ -800,7 +817,19 @@ export class DocumentOverviewActions {
         })
     }
 
-    downloadHTMLFiles(ids: number[]): void {
+    async downloadHTMLFiles(ids: number[]): Promise<void> {
+        const dialog = new HtmlExportDialog()
+        const options = await dialog.init()
+        if (!options) {
+            return
+        }
+        const converterOptions: Record<string, unknown> = {}
+        if (options.svgMath) {
+            converterOptions.mathOutput = "svg"
+        }
+        if (!options.resolveTrackChanges) {
+            converterOptions.trackChanges = true
+        }
         import("../tools.js").then(({getMissingDocumentListData}) => {
             getMissingDocumentListData(
                 ids,
@@ -809,8 +838,14 @@ export class DocumentOverviewActions {
                 this.documentOverview.app.apiConnectors.document
             ).then(() =>
                 ids.forEach(id => {
-                    const doc = this.documentOverview.documentList.find(entry => entry.id === id)
-                    if (!doc) return
+                    const found = this.documentOverview.documentList.find(entry => entry.id === id)
+                    if (!found) return
+                    const doc = options.resolveTrackChanges
+                        ? resolveDocTrackedChanges(
+                              found as Record<string, unknown>,
+                              this.documentOverview.schema
+                          )
+                        : found
                     const progressCallback = exportProgressCallback(doc!)
                     import("@fiduswriter/document/exporter/html/index").then(
                         ({HTMLExporter}) => {
@@ -820,7 +855,8 @@ export class DocumentOverviewActions {
                                 {db: doc!.images as any},
                                 this.documentOverview.app.csl as any,
                                 new Date((doc!.updated as number) * 1000),
-                                this.documentOverview.documentStyles
+                                this.documentOverview.documentStyles,
+                                converterOptions
                             )
                             exporter.progressCallback = progressCallback as any
                             exporter.init()
@@ -831,11 +867,17 @@ export class DocumentOverviewActions {
         })
     }
 
-    downloadTemplateExportFiles(
+    async downloadTemplateExportFiles(
         ids: number[],
         templateUrl: string,
         templateType: string
-    ): void {
+    ): Promise<void> {
+        const dialog = new TemplateExportDialog()
+        const options = await dialog.init(templateType === "docx" ? "docx" : "odt")
+        if (!options) {
+            return
+        }
+        const resolveTrackChanges = options.resolveTrackChanges
         import("../tools.js").then(({getMissingDocumentListData}) => {
             getMissingDocumentListData(
                 ids,
@@ -844,8 +886,14 @@ export class DocumentOverviewActions {
                 this.documentOverview.app.apiConnectors.document
             ).then(() => {
                 ids.forEach(id => {
-                    const doc = this.documentOverview.documentList.find(entry => entry.id === id)
-                    if (!doc) return
+                    const found = this.documentOverview.documentList.find(entry => entry.id === id)
+                    if (!found) return
+                    const doc = resolveTrackChanges
+                        ? resolveDocTrackedChanges(
+                              found as Record<string, unknown>,
+                              this.documentOverview.schema
+                          )
+                        : found
                     const progressCallback = exportProgressCallback(doc!)
                     if (templateType === "docx") {
                         import("@fiduswriter/document/exporter/docx/index").then(
@@ -972,7 +1020,19 @@ export class DocumentOverviewActions {
         })
     }
 
-    downloadEpubFiles(ids: number[]): void {
+    async downloadEpubFiles(ids: number[]): Promise<void> {
+        const dialog = new EpubExportDialog()
+        const options = await dialog.init()
+        if (!options) {
+            return
+        }
+        const converterOptions: Record<string, unknown> = {}
+        if (options.svgMath) {
+            converterOptions.mathOutput = "svg"
+        }
+        if (!options.resolveTrackChanges) {
+            converterOptions.trackChanges = true
+        }
         import("../tools.js").then(({getMissingDocumentListData}) => {
             getMissingDocumentListData(
                 ids,
@@ -981,8 +1041,14 @@ export class DocumentOverviewActions {
                 this.documentOverview.app.apiConnectors.document
             ).then(() =>
                 ids.forEach(id => {
-                    const doc = this.documentOverview.documentList.find(entry => entry.id === id)
-                    if (!doc) return
+                    const found = this.documentOverview.documentList.find(entry => entry.id === id)
+                    if (!found) return
+                    const doc = options.resolveTrackChanges
+                        ? resolveDocTrackedChanges(
+                              found as Record<string, unknown>,
+                              this.documentOverview.schema
+                          )
+                        : found
                     const progressCallback = exportProgressCallback(doc!)
                     import("@fiduswriter/document/exporter/epub/index").then(
                         ({EpubExporter}) => {
@@ -992,7 +1058,8 @@ export class DocumentOverviewActions {
                                 {db: doc!.images as any},
                                 this.documentOverview.app.csl as any,
                                 new Date((doc!.updated as number) * 1000),
-                                this.documentOverview.documentStyles
+                                this.documentOverview.documentStyles,
+                                converterOptions
                             )
                             exporter.progressCallback = progressCallback as any
                             exporter.init()
