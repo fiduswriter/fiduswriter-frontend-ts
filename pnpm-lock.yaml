@@ -12,14 +12,14 @@ importers:
         specifier: ^0.1.31
         version: 0.1.31(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       '@fiduswriter/document':
-        specifier: ^0.2.43
-        version: 0.2.43
+        specifier: ^0.3.1
+        version: 0.3.5
       '@fiduswriter/document-template-editor':
         specifier: ^0.1.17
         version: 0.1.17
       '@fiduswriter/editor':
-        specifier: ^0.1.81
-        version: 0.1.81
+        specifier: ^0.2.1
+        version: 0.2.6
       '@fiduswriter/image-manager':
         specifier: ^0.1.23
         version: 0.1.23(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
@@ -62,10 +62,10 @@ importers:
         version: 10.0.1(eslint@10.7.0)
       '@swc/core':
         specifier: ^1.16.1
-        version: 1.16.1
+        version: 1.16.1(@swc/helpers@0.5.23)
       '@swc/jest':
         specifier: ^0.2.39
-        version: 0.2.39(@swc/core@1.16.1)
+        version: 0.2.39(@swc/core@1.16.1(@swc/helpers@0.5.23))
       '@types/downloadjs':
         specifier: ^1.4.6
         version: 1.4.6
@@ -85,8 +85,8 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       globals:
-        specifier: ^15.15.0
-        version: 15.15.0
+        specifier: ^17.0.0
+        version: 17.11.0
       happy-dom:
         specifier: ^20.10.6
         version: 20.11.0
@@ -344,8 +344,11 @@ packages:
   '@fiduswriter/document@0.2.43':
     resolution: {integrity: sha512-JQwnxOXjPROft8pSd6M8GizVyReZFi7QecmLWmyOnzZuZZaW2oOrUP+eIYqhGsfR1ydMXvmgPbOcJLNG/uFe+A==}
 
-  '@fiduswriter/editor@0.1.81':
-    resolution: {integrity: sha512-vInbt5A36Osdf9Rg6kH3t96tlZcg9k7UuxxkHEp+S46yAI39TEnztg74cRTc2e+zG0JrVGVMnKNIMX6ZCejBhg==}
+  '@fiduswriter/document@0.3.5':
+    resolution: {integrity: sha512-84QFf06a9qu8jVqp6CUIUSSmOt94lOkAfKyXFeN96OarnaRuFRzr+SePmxKSfA6qpZivV0wt49j/GLTDO1iPlA==}
+
+  '@fiduswriter/editor@0.2.6':
+    resolution: {integrity: sha512-HY/JxTPEyopDaSEPn5HqM0fR6OGw51fTSfGRZcV5zdGviQA3sg+UujjarMOw3SoIzJH3LFGCfoXT5jZYx5H0BA==}
 
   '@fiduswriter/image-manager@0.1.23':
     resolution: {integrity: sha512-u2jJTBLbaOCUlFcM4pI2tyqZL6VF6lB16c09zSroJgiV+9FPU7NulFGLLJe6WMAvlFO8e4gnETLWTKEVIU4acA==}
@@ -500,6 +503,15 @@ packages:
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
 
+  '@pdf-lib/standard-fonts@1.0.0':
+    resolution: {integrity: sha512-hU30BK9IUN/su0Mn9VdlVKsWBS6GyhVfqjwl1FjZN4TxP6cCw0jP2w7V3Hf5uX7M0AZJ16vey9yE0ny7Sa59ZA==}
+
+  '@pdf-lib/upng@1.0.1':
+    resolution: {integrity: sha512-dQK2FUMQtowVP00mtIksrlZhdFXQZPC+taih1q4CvPZ5vqdxR/LKBaFg0oAfzd1GlHZXXSPdQfzQnt+ViGvEIQ==}
+
+  '@pdfme/pdf-lib@6.1.12':
+    resolution: {integrity: sha512-AZJ+grbyrrPm15kmyt/Fc3unui8mhFQBPdPppcoApK+bAfbIV4RnmQBLm/HLr+jsE7ciK13c0IEYSVDkH3tPbw==}
+
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -611,6 +623,9 @@ packages:
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
+
+  '@swc/helpers@0.5.23':
+    resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
 
   '@swc/jest@0.2.39':
     resolution: {integrity: sha512-eyokjOwYd0Q8RnMHri+8/FS1HIrIUKK/sRrFp8c1dThUOfNeCWbLmBP1P5VsKdvmkd25JaH+OKYwEYiAYg9YAA==}
@@ -993,6 +1008,10 @@ packages:
   '@xml-tools/parser@1.0.11':
     resolution: {integrity: sha512-aKqQ077XnR+oQtHJlrAflaZaL7qZsulWc/i/ZEooar5JiWj1eLt0+Wg28cpa+XLney107wXqneC+oG1IZvxkTA==}
 
+  '@xmldom/xmldom@0.8.15':
+    resolution: {integrity: sha512-/5NV/vDALVFDXgLmfsy9TRCBlKwO2LNBFzpzvb9iIj+jR+eSc6DLYYvVOdivT/jm7MtU6TebYuRmzEOI7w40UA==}
+    engines: {node: '>=10.0.0'}
+
   '@xmldom/xmldom@0.9.10':
     resolution: {integrity: sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==}
     engines: {node: '>=14.6'}
@@ -1081,6 +1100,9 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
+  base64-js@1.5.1:
+    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
   baseline-browser-mapping@2.11.0:
     resolution: {integrity: sha512-oCu2wfipvX3AePSgmOuKkIywOu+8n9psz7hXYmk56ghpu3+7KzNIBopaOs4c9BrtdnTtW30unG9GTfHo7EwERQ==}
     engines: {node: '>=6.0.0'}
@@ -1099,6 +1121,9 @@ packages:
   brace-expansion@5.0.7:
     resolution: {integrity: sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==}
     engines: {node: 18 || 20 || >=22}
+
+  brotli@1.3.3:
+    resolution: {integrity: sha512-oTKjJdShmDuGW94SyyaoQvAjf30dZaHnjJ8uAF+u2/vGJkJbJPJAT1gDiOJP5v1Zb6f9KEyW/1HpuaWIXtGHPg==}
 
   browserslist@4.28.7:
     resolution: {integrity: sha512-JxV13hNrFxqjOc8alRbq9dK1MM79NEXYpma2B2J4wAtpWS5zIEIKqWPGCl7N4o7Uc7B7itylh7SuDujATRyyTw==}
@@ -1162,6 +1187,10 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
+  clone@2.1.2:
+    resolution: {integrity: sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==}
+    engines: {node: '>=0.8'}
+
   co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
@@ -1173,12 +1202,32 @@ packages:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
 
+  color-convert@3.1.3:
+    resolution: {integrity: sha512-fasDH2ont2GqF5HpyO4w0+BcewlhHEZOFn9c1ckZdHpJ56Qb7MHhH/IcJZbBGgvdtwdwNbLvxiBEdg336iA9Sg==}
+    engines: {node: '>=14.6'}
+
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+
+  color-name@2.1.1:
+    resolution: {integrity: sha512-p2FdgwVx1a9yWBHP2wI0VgShkDpgN4kZISkxdNipGBJWpa5G6b04OINlVWCyJj0JmfvcPrgqt95E9k8yvaOJFg==}
+    engines: {node: '>=12.20'}
+
+  color-string@2.1.4:
+    resolution: {integrity: sha512-Bb6Cq8oq0IjDOe8wJmi4JeNn763Xs9cfrBcaylK1tPypWzyoy2G3l90v9k64kjphl/ZJjPIShFztenRomi8WTg==}
+    engines: {node: '>=18'}
+
+  color@5.0.3:
+    resolution: {integrity: sha512-ezmVcLR3xAVp8kYOm4GS45ZLLgIE6SPAFoduLr6hTDajwb3KZ2F46gulK3XpcwRFb5KKGCSezCBAY4Dw4HsyXA==}
+    engines: {node: '>=18'}
 
   commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
+    engines: {node: '>=18'}
 
   complex-esm@2.1.1-esm1:
     resolution: {integrity: sha512-IShBEWHILB9s7MnfyevqNGxV0A1cfcSnewL/4uPFiSxkcQL4Mm3FxJ0pXMtCXuWLjYz3lRRyk6OfkeDZcjD6nw==}
@@ -1254,6 +1303,9 @@ packages:
   detect-newline@3.1.0:
     resolution: {integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==}
     engines: {node: '>=8'}
+
+  dfa@1.2.0:
+    resolution: {integrity: sha512-ED3jP8saaweFTjeGX8HQPjeC1YYyZs98jGNZx6IiBvxW7JG5v492kamAQB3m2wop07CvU/RQmzcKr6bgcC5D/Q==}
 
   diff-dom@5.2.1:
     resolution: {integrity: sha512-G6WquwIa/XOxiYDYRMxfJj+c+a6LXMv7zgXoAQ3eRjTYkc8Lc4Aq97krTu/B15r243FR7dyeSxDenzKtO6sbfA==}
@@ -1335,6 +1387,10 @@ packages:
     peerDependenciesMeta:
       jiti:
         optional: true
+
+  esm@3.2.25:
+    resolution: {integrity: sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==}
+    engines: {node: '>=6'}
 
   espree@11.2.0:
     resolution: {integrity: sha512-7p3DrVEIopW1B1avAGLuCSh1jubc01H2JHc8B4qqGblmg5gI9yumBgACjWo4JlIc04ufug4xJ3SQI8HkS/Rgzw==}
@@ -1434,6 +1490,12 @@ packages:
   flatted@3.4.2:
     resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
 
+  fonteditor-core@2.6.3:
+    resolution: {integrity: sha512-YUryIKjkenjZ41E7JvM3V+02Ak4mTHDDTwBWgs9KBzypzHqLZHuua1UDRevZNTKawmnq1dbBAa70Jddl2+F4FQ==}
+
+  fontkit@2.0.4:
+    resolution: {integrity: sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==}
+
   foreground-child@3.3.1:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
@@ -1489,8 +1551,8 @@ packages:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
     deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
-  globals@15.15.0:
-    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
+  globals@17.11.0:
+    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
     engines: {node: '>=18'}
 
   graceful-fs@4.2.11:
@@ -1503,6 +1565,9 @@ packages:
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+
+  html-entities@2.6.0:
+    resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
@@ -1834,6 +1899,10 @@ packages:
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
 
+  mathjax-full@3.2.2:
+    resolution: {integrity: sha512-+LfG9Fik+OuI8SLwsiR02IVdjcnRCy5MufYLi0C3TdMT56L/pjB0alMVGgoWJF8pN9Rc7FESycZB9BMNWIid5w==}
+    deprecated: Version 4 replaces this package with the scoped package @mathjax/src
+
   mathlive@0.110.0:
     resolution: {integrity: sha512-UOpJsQ6h1eeN0xZULGTl1MwUB/lZLCDuzKeHvKEh7Zra8U/rtgDNrssj5PZdJtBTIV48AfEhtv6rv47AeMOxJA==}
 
@@ -1845,6 +1914,9 @@ packages:
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
+
+  mhchemparser@4.2.1:
+    resolution: {integrity: sha512-kYmyrCirqJf3zZ9t/0wGgRZ4/ZJw//VwaRVGA75C4nhE60vtnIzhl9J9ndkX/h6hxSN7pjg/cE0VxbnNM+bnDQ==}
 
   mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
@@ -1865,6 +1937,9 @@ packages:
     resolution: {integrity: sha512-tEBHqDnIoM/1rXME1zgka9g6Q2lcoCkxHLuc7ODJ5BxbP5d4c2Z5cGgtXAku59200Cx7diuHTOYfSBD8n6mm8A==}
     engines: {node: '>=16 || 14 >=14.17'}
 
+  mj-context-menu@0.6.1:
+    resolution: {integrity: sha512-7NO5s6n10TIV96d4g2uDpG7ZDpIhMh0QNfGdJw/W47JswFcosz457wqz/b5sAKvl12sxINGFCn80NZHKwxQEXA==}
+
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -1875,6 +1950,9 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  node-html-better-parser@1.5.9:
+    resolution: {integrity: sha512-z1I5UINMezJXYL9cH3h0a9KBth2G978gSLlfkpQ+CQzzVHVQy9gpARgm9eDsz1O4gn1HtgUqjdAIYxKFZm6uHQ==}
 
   node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
@@ -1933,8 +2011,14 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
+  pako@0.2.9:
+    resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
+
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
+
+  pako@2.2.0:
+    resolution: {integrity: sha512-zJq6RP/5q+TO2OpFV3FHzlPnFjmkb7Nc99a5SNjJE+uu/PkpChs+NIZSSzbBoD+6kjiISXjfYdwj1ZRQ81dz/w==}
 
   parse-json@5.2.0:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
@@ -2099,6 +2183,9 @@ packages:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
 
+  restructure@3.0.2:
+    resolution: {integrity: sha512-gSfoiOEA0VPE6Tukkrr7I0RBdE0s7H1eFCDBk05l1KIQT1UIKNc5JZy6jdyW6eYH3aR3g5b3PuL77rq0hvwtAw==}
+
   rfc6902@5.2.0:
     resolution: {integrity: sha512-ZNQpVnWsdLMTCcLZcUY9ZBhxWuj7/H13EM7NL2gvbAMBXfLeN3iOLi3TWT1+8Or7OTLYXRDCy7sTEStk3j4KBA==}
 
@@ -2161,6 +2248,10 @@ packages:
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
+
+  speech-rule-engine@4.1.4:
+    resolution: {integrity: sha512-i/VCLG1fvRc95pMHRqG4aQNscv+9aIsqA2oI7ZQS51sTdUcDHYX6cpT8/tqZ+enjs1tKVwbRBWgxut9SWn+f9g==}
+    hasBin: true
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
@@ -2237,6 +2328,14 @@ packages:
     resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
     engines: {node: '>=10'}
 
+  svg-for-pdfkit@0.2.1:
+    resolution: {integrity: sha512-2vAj/EjcDt98m1PM6cFjlyNTqf4FhDtgtUZksuIz/sH9vQOpKpMcGBqGgljCz3DQDmh/o/qSAEWbOiicFHh1ig==}
+
+  svg4pdf-lib@0.1.2:
+    resolution: {integrity: sha512-SuWUveOKKK2npwjWoQdcau/CbHDi//CqMYVgXRmRFcwYFpHe1cJiXEC3+UG+lVdKVgU38LZ/z8VsvN3JtljqnA==}
+    peerDependencies:
+      '@pdfme/pdf-lib': ^6.1.0
+
   synckit@0.11.13:
     resolution: {integrity: sha512-eNRKgb3z66Yp3D2CixVujOUvXLFUTij/zVnV8KRyvFdQwpz7I5DS8UfRkTeLzb64u+dkzDSdelE24izu+zSSUg==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2244,6 +2343,9 @@ packages:
   test-exclude@6.0.0:
     resolution: {integrity: sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==}
     engines: {node: '>=8'}
+
+  tiny-inflate@1.0.3:
+    resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
 
   tinyexec@1.2.4:
     resolution: {integrity: sha512-SHf/r48b7vOrjve9PxJo3MN5v5yuyjHvdUcrQffT3WXMUfnGmHDVbC4k3sHJaJTgZCwpUplIaAo5ANtMyp3YHg==}
@@ -2300,6 +2402,12 @@ packages:
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
+  unicode-properties@1.4.1:
+    resolution: {integrity: sha512-CLjCCLQ6UuMxWnbIylkisbRj31qxHPAurvena/0iwSVbQ2G1VY5/HjV0IRabOEbDHlzZlRdCrD4NhB0JtU40Pg==}
+
+  unicode-trie@2.0.0:
+    resolution: {integrity: sha512-x7bc76x0bm4prf1VLg79uhAzKw8DVboClSN5VxJuQ+LKDOVEW9CdH+VY7SP+vX7xCYQqzzgQpFqz15zeLvAtZQ==}
+
   unrs-resolver@1.12.2:
     resolution: {integrity: sha512-dmlRxBJJayXjqTwC+JtF1HhJmgf3ftQ3YejFcZrf4+KKtJv0qDsK1pjqaaVjG7wJ5NJ6UVP1OqRMQ71Z4C3rxQ==}
 
@@ -2319,6 +2427,9 @@ packages:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
 
+  vivliostyle-pdf@0.2.4:
+    resolution: {integrity: sha512-pSzfX2V5SksLBKjZZ50VdW2ZS1JkVBtztHwQ9DeQkbrFopYqmqvhcX2BF6UpFT6IENZDwxcU8vDzxZXdJgW5ig==}
+
   w3c-keyname@2.2.8:
     resolution: {integrity: sha512-dpojBhNsCNN7T82Tm7k26A6G9ML3NkhDsnw9n/eoxSRlVBB4CEtIQ/KTCLI2Fwf3ataSXRhYFkQi3SlnFwPvPQ==}
 
@@ -2336,6 +2447,9 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
+
+  wicked-good-xpath@1.3.0:
+    resolution: {integrity: sha512-Gd9+TUn5nXdwj/hFsPVx5cuHHiF5Bwuc30jZ4+ronF1qHK5O7HD0sgmXWSEgwKquT3ClLoKPVbO6qGwVwLzvAw==}
 
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
@@ -2731,10 +2845,41 @@ snapshots:
       prosemirror-view: 1.42.1
       w3c-keyname: 2.2.8
 
-  '@fiduswriter/editor@0.1.81':
+  '@fiduswriter/document@0.3.5':
+    dependencies:
+      '@prettier/plugin-xml': 3.4.2(prettier@3.9.6)
+      '@vivliostyle/print': 2.44.1
+      bibliojson: 4.0.4
+      citeproc-plus: 2.0.4
+      downloadjs: 1.4.7
+      fast-deep-equal: 3.1.3
+      fast-xml-parser: 5.10.1
+      fwtoolkit: 0.2.14(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      jszip: 3.10.1
+      mathjax-full: 3.2.2
+      mathlive: 0.110.0
+      mathml-to-latex: 1.8.0
+      mathml2omml: 0.5.0
+      orderedmap: 2.1.1
+      prettier: 3.9.6
+      prosemirror-commands: 1.7.1
+      prosemirror-gapcursor: 1.4.1
+      prosemirror-history: 1.5.0
+      prosemirror-keymap: 1.2.3
+      prosemirror-model: 1.25.11
+      prosemirror-schema-basic: 1.2.4
+      prosemirror-schema-list: 1.5.1
+      prosemirror-state: 1.4.4
+      prosemirror-tables: 1.8.5
+      prosemirror-transform: 1.12.0
+      prosemirror-view: 1.42.1
+      vivliostyle-pdf: 0.2.4
+      w3c-keyname: 2.2.8
+
+  '@fiduswriter/editor@0.2.6':
     dependencies:
       '@fiduswriter/bibliography-manager': 0.1.31(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
-      '@fiduswriter/document': 0.2.43
+      '@fiduswriter/document': 0.3.5
       '@fiduswriter/image-manager': 0.1.23(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       '@fortawesome/fontawesome-free': 7.3.1
       cropperjs: 1.6.2
@@ -3035,6 +3180,22 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
+  '@pdf-lib/standard-fonts@1.0.0':
+    dependencies:
+      pako: 1.0.11
+
+  '@pdf-lib/upng@1.0.1':
+    dependencies:
+      pako: 1.0.11
+
+  '@pdfme/pdf-lib@6.1.12':
+    dependencies:
+      '@pdf-lib/standard-fonts': 1.0.0
+      '@pdf-lib/upng': 1.0.1
+      color: 5.0.3
+      node-html-better-parser: 1.5.9
+      pako: 2.2.0
+
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -3091,7 +3252,7 @@ snapshots:
   '@swc/core-win32-x64-msvc@1.16.1':
     optional: true
 
-  '@swc/core@1.16.1':
+  '@swc/core@1.16.1(@swc/helpers@0.5.23)':
     dependencies:
       '@swc/counter': 0.1.3
       '@swc/types': 0.1.28
@@ -3108,13 +3269,18 @@ snapshots:
       '@swc/core-win32-arm64-msvc': 1.16.1
       '@swc/core-win32-ia32-msvc': 1.16.1
       '@swc/core-win32-x64-msvc': 1.16.1
+      '@swc/helpers': 0.5.23
 
   '@swc/counter@0.1.3': {}
 
-  '@swc/jest@0.2.39(@swc/core@1.16.1)':
+  '@swc/helpers@0.5.23':
+    dependencies:
+      tslib: 2.8.1
+
+  '@swc/jest@0.2.39(@swc/core@1.16.1(@swc/helpers@0.5.23))':
     dependencies:
       '@jest/create-cache-key-function': 30.4.1
-      '@swc/core': 1.16.1
+      '@swc/core': 1.16.1(@swc/helpers@0.5.23)
       '@swc/counter': 0.1.3
       jsonc-parser: 3.3.1
 
@@ -3426,6 +3592,8 @@ snapshots:
     dependencies:
       chevrotain: 7.1.1
 
+  '@xmldom/xmldom@0.8.15': {}
+
   '@xmldom/xmldom@0.9.10': {}
 
   abbrev@2.0.0: {}
@@ -3526,6 +3694,8 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
+  base64-js@1.5.1: {}
+
   baseline-browser-mapping@2.11.0: {}
 
   bibliojson@4.0.4:
@@ -3544,6 +3714,10 @@ snapshots:
   brace-expansion@5.0.7:
     dependencies:
       balanced-match: 4.0.4
+
+  brotli@1.3.3:
+    dependencies:
+      base64-js: 1.5.1
 
   browserslist@4.28.7:
     dependencies:
@@ -3604,6 +3778,8 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
+  clone@2.1.2: {}
+
   co@4.6.0: {}
 
   collect-v8-coverage@1.0.3: {}
@@ -3612,9 +3788,26 @@ snapshots:
     dependencies:
       color-name: 1.1.4
 
+  color-convert@3.1.3:
+    dependencies:
+      color-name: 2.1.1
+
   color-name@1.1.4: {}
 
+  color-name@2.1.1: {}
+
+  color-string@2.1.4:
+    dependencies:
+      color-name: 2.1.1
+
+  color@5.0.3:
+    dependencies:
+      color-convert: 3.1.3
+      color-string: 2.1.4
+
   commander@10.0.1: {}
+
+  commander@13.1.0: {}
 
   complex-esm@2.1.1-esm1: {}
 
@@ -3666,6 +3859,8 @@ snapshots:
   deepmerge@4.3.1: {}
 
   detect-newline@3.1.0: {}
+
+  dfa@1.2.0: {}
 
   diff-dom@5.2.1: {}
 
@@ -3757,6 +3952,8 @@ snapshots:
       optionator: 0.9.4
     transitivePeerDependencies:
       - supports-color
+
+  esm@3.2.25: {}
 
   espree@11.2.0:
     dependencies:
@@ -3864,6 +4061,22 @@ snapshots:
 
   flatted@3.4.2: {}
 
+  fonteditor-core@2.6.3:
+    dependencies:
+      '@xmldom/xmldom': 0.8.15
+
+  fontkit@2.0.4:
+    dependencies:
+      '@swc/helpers': 0.5.23
+      brotli: 1.3.3
+      clone: 2.1.2
+      dfa: 1.2.0
+      fast-deep-equal: 3.1.3
+      restructure: 3.0.2
+      tiny-inflate: 1.0.3
+      unicode-properties: 1.4.1
+      unicode-trie: 2.0.0
+
   foreground-child@3.3.1:
     dependencies:
       cross-spawn: 7.0.6
@@ -3922,7 +4135,7 @@ snapshots:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
-  globals@15.15.0: {}
+  globals@17.11.0: {}
 
   graceful-fs@4.2.11: {}
 
@@ -3940,6 +4153,8 @@ snapshots:
       - utf-8-validate
 
   has-flag@4.0.0: {}
+
+  html-entities@2.6.0: {}
 
   html-escaper@2.0.2: {}
 
@@ -4436,6 +4651,13 @@ snapshots:
     dependencies:
       tmpl: 1.0.5
 
+  mathjax-full@3.2.2:
+    dependencies:
+      esm: 3.2.25
+      mhchemparser: 4.2.1
+      mj-context-menu: 0.6.1
+      speech-rule-engine: 4.1.4
+
   mathlive@0.110.0:
     dependencies:
       '@cortex-js/compute-engine': 0.58.0
@@ -4447,6 +4669,8 @@ snapshots:
   mathml2omml@0.5.0: {}
 
   merge-stream@2.0.0: {}
+
+  mhchemparser@4.2.1: {}
 
   mimic-fn@2.1.0: {}
 
@@ -4464,11 +4688,17 @@ snapshots:
 
   minipass@7.1.3: {}
 
+  mj-context-menu@0.6.1: {}
+
   ms@2.1.3: {}
 
   napi-postinstall@0.3.4: {}
 
   natural-compare@1.4.0: {}
+
+  node-html-better-parser@1.5.9:
+    dependencies:
+      html-entities: 2.6.0
 
   node-int64@0.4.0: {}
 
@@ -4523,7 +4753,11 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
+  pako@0.2.9: {}
+
   pako@1.0.11: {}
+
+  pako@2.2.0: {}
 
   parse-json@5.2.0:
     dependencies:
@@ -4722,6 +4956,8 @@ snapshots:
 
   resolve-from@5.0.0: {}
 
+  restructure@3.0.2: {}
+
   rfc6902@5.2.0: {}
 
   rope-sequence@1.3.4: {}
@@ -4765,6 +5001,12 @@ snapshots:
   source-map@0.5.6: {}
 
   source-map@0.6.1: {}
+
+  speech-rule-engine@4.1.4:
+    dependencies:
+      '@xmldom/xmldom': 0.9.10
+      commander: 13.1.0
+      wicked-good-xpath: 1.3.0
 
   sprintf-js@1.0.3: {}
 
@@ -4842,6 +5084,14 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
+  svg-for-pdfkit@0.2.1: {}
+
+  svg4pdf-lib@0.1.2(@pdfme/pdf-lib@6.1.12):
+    dependencies:
+      '@pdf-lib/upng': 1.0.1
+      '@pdfme/pdf-lib': 6.1.12
+      svg-for-pdfkit: 0.2.1
+
   synckit@0.11.13:
     dependencies:
       '@pkgr/core': 0.3.6
@@ -4851,6 +5101,8 @@ snapshots:
       '@istanbuljs/schema': 0.1.6
       glob: 7.2.3
       minimatch: 3.1.5
+
+  tiny-inflate@1.0.3: {}
 
   tinyexec@1.2.4: {}
 
@@ -4867,8 +5119,7 @@ snapshots:
     dependencies:
       typescript: '@typescript/typescript6@6.0.2'
 
-  tslib@2.8.1:
-    optional: true
+  tslib@2.8.1: {}
 
   type-check@0.4.0:
     dependencies:
@@ -4916,6 +5167,16 @@ snapshots:
 
   undici-types@8.3.0: {}
 
+  unicode-properties@1.4.1:
+    dependencies:
+      base64-js: 1.5.1
+      unicode-trie: 2.0.0
+
+  unicode-trie@2.0.0:
+    dependencies:
+      pako: 0.2.9
+      tiny-inflate: 1.0.3
+
   unrs-resolver@1.12.2:
     dependencies:
       napi-postinstall: 0.3.4
@@ -4961,6 +5222,14 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
 
+  vivliostyle-pdf@0.2.4:
+    dependencies:
+      '@pdfme/pdf-lib': 6.1.12
+      '@vivliostyle/print': 2.44.1
+      fonteditor-core: 2.6.3
+      fontkit: 2.0.4
+      svg4pdf-lib: 0.1.2(@pdfme/pdf-lib@6.1.12)
+
   w3c-keyname@2.2.8: {}
 
   walker@1.0.8:
@@ -4974,6 +5243,8 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
+
+  wicked-good-xpath@1.3.0: {}
 
   word-wrap@1.2.5: {}
 
