@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       '@fiduswriter/bibliography-manager':
-        specifier: ^0.1.32
-        version: 0.1.32(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+        specifier: ^0.1.33
+        version: 0.1.33(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       '@fiduswriter/document':
-        specifier: ^0.3.12
-        version: 0.3.12
+        specifier: ^0.3.15
+        version: 0.3.15
       '@fiduswriter/document-template-editor':
-        specifier: ^0.1.18
-        version: 0.1.18
+        specifier: ^0.1.20
+        version: 0.1.20
       '@fiduswriter/editor':
-        specifier: ^0.2.9
-        version: 0.2.9
+        specifier: ^0.2.17
+        version: 0.2.17
       '@fiduswriter/image-manager':
         specifier: ^0.1.26
         version: 0.1.26(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
@@ -27,8 +27,8 @@ importers:
         specifier: ^1.4.7
         version: 1.4.7
       fwtoolkit:
-        specifier: ^0.2.19
-        version: 0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+        specifier: ^0.2.25
+        version: 0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       jszip:
         specifier: ^3.10.1
         version: 3.10.1
@@ -335,17 +335,17 @@ packages:
     resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@fiduswriter/bibliography-manager@0.1.32':
-    resolution: {integrity: sha512-lmH6LcSr6lU1qXP9VJzkZo4xaI5TmJjnrxUmwlL1JdY55xGU3GuU6cOqSzDZZanCub4vXd3GKcvYoDcG79q1Ag==}
+  '@fiduswriter/bibliography-manager@0.1.33':
+    resolution: {integrity: sha512-JYRrmVPs1BOYv9DRX/Zb8iwxjYSp9xIZsXscdGJ3aUkOkAjkdfneXHU46gAXS/X26K/lJW26foSyq+w+c/KftA==}
 
-  '@fiduswriter/document-template-editor@0.1.18':
-    resolution: {integrity: sha512-RVOxZPgekcRVtK7GahKI9YtW+RWq1IMqGum7Dpo/ds2nSlP/F6cWdmNxu4/2qQNuAZNNl/qb3bufBsQP4y8lsA==}
+  '@fiduswriter/document-template-editor@0.1.20':
+    resolution: {integrity: sha512-H1AEBs7vZA6FIStTB+I87JXuOe+olzBP3fn83QAiShANDsFY3E4loPa9I8lSj5dYlyREWkvI8ry2EIFtuSVMJw==}
 
-  '@fiduswriter/document@0.3.12':
-    resolution: {integrity: sha512-34O0UV/8oepP+6RE8LpGnwSQf90QcbBbr2UOXBL7JtIBMyE/mg1azRMab5c99zphq+7H1S4DMgghZD7+JU1ZYA==}
+  '@fiduswriter/document@0.3.15':
+    resolution: {integrity: sha512-BO1qQsvSUEjgGLHwJFnWFW0eEgfptSBJSCKzA8YyOFLdbX6mN2lDe5KZyF2CQ6TeinMNm3XjClIs5DZmf/ubtg==}
 
-  '@fiduswriter/editor@0.2.9':
-    resolution: {integrity: sha512-umfyRt6HqM0IhCGRxGL4e3d2bBmjJQIEeJwZkI3joC7gCvOmx5qVixrZGpguiUDZDcPLa/Ydgk9Q1J7Gg8PuuA==}
+  '@fiduswriter/editor@0.2.17':
+    resolution: {integrity: sha512-URyLn90dlKp8GPnGKTeyu4Ngz+GWReZMybc+FA/niUM2YOIsXQjrAsqwpILS31eM/pjUQwRP8r4RjWy7aaErwg==}
 
   '@fiduswriter/image-manager@0.1.26':
     resolution: {integrity: sha512-04OkXL1TW5YfJccIh5JgF9ZtrkKNp423UDMD8wol3rbcDntr1JoNXmJnZwIlqrmdZkTmcxTQl9Fm6aaGQL1mWA==}
@@ -1507,8 +1507,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fwtoolkit@0.2.19:
-    resolution: {integrity: sha512-e2rkHmehL36MkEBl3h5/QdZ4rCxjr0HA/At7AzxmcKCZCnrBqj62dLIOSvUkcw+Ev0VzsaijpcQ+PnXHPoOTEA==}
+  fwtoolkit@0.2.25:
+    resolution: {integrity: sha512-btEOhJ4nuVm2ziHz0M8e9q1lmYyl/c2scLeoTq0kf51YlZm/uJGNcayNfTl04WKJolFK9+htUG3Oi0CManY34g==}
     peerDependencies:
       prosemirror-commands: ^1.7.0
       prosemirror-history: ^1.4.0
@@ -2793,11 +2793,11 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@fiduswriter/bibliography-manager@0.1.32(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)':
+  '@fiduswriter/bibliography-manager@0.1.33(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)':
     dependencies:
       bibliojson: 4.0.4
       fix-utf8: 2.0.1
-      fwtoolkit: 0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      fwtoolkit: 0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       prosemirror-commands: 1.7.1
       prosemirror-model: 1.25.11
       simple-datatables: 10.3.0
@@ -2808,12 +2808,12 @@ snapshots:
       - prosemirror-state
       - prosemirror-view
 
-  '@fiduswriter/document-template-editor@0.1.18':
+  '@fiduswriter/document-template-editor@0.1.20':
     dependencies:
-      '@fiduswriter/document': 0.3.12
+      '@fiduswriter/document': 0.3.15
       downloadjs: 1.4.7
       fast-deep-equal: 3.1.3
-      fwtoolkit: 0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      fwtoolkit: 0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       jszip: 3.10.1
       prosemirror-commands: 1.7.1
       prosemirror-example-setup: 1.2.3
@@ -2828,7 +2828,7 @@ snapshots:
       prosemirror-view: 1.42.1
       sortablejs: 1.15.7
 
-  '@fiduswriter/document@0.3.12':
+  '@fiduswriter/document@0.3.15':
     dependencies:
       '@mathjax/mathjax-newcm-font': 4.1.3
       '@mathjax/src': 4.1.3
@@ -2839,7 +2839,7 @@ snapshots:
       downloadjs: 1.4.7
       fast-deep-equal: 3.1.3
       fast-xml-parser: 5.11.0
-      fwtoolkit: 0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      fwtoolkit: 0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       jszip: 3.10.1
       mathlive: 0.110.0
       mathml-to-latex: 1.8.0
@@ -2860,10 +2860,10 @@ snapshots:
       vivliostyle-pdf: 0.2.5
       w3c-keyname: 2.2.8
 
-  '@fiduswriter/editor@0.2.9':
+  '@fiduswriter/editor@0.2.17':
     dependencies:
-      '@fiduswriter/bibliography-manager': 0.1.32(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
-      '@fiduswriter/document': 0.3.12
+      '@fiduswriter/bibliography-manager': 0.1.33(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      '@fiduswriter/document': 0.3.15
       '@fiduswriter/image-manager': 0.1.26(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       '@fortawesome/fontawesome-free': 7.3.1
       cropperjs: 1.6.2
@@ -2874,7 +2874,7 @@ snapshots:
       fast-xml-parser: 4.5.7
       fastdom: 1.0.12
       fix-utf8: 2.0.1
-      fwtoolkit: 0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      fwtoolkit: 0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       jszip: 3.10.1
       mathml-to-latex: 1.8.0
       mathml2omml: 0.5.0
@@ -2905,7 +2905,7 @@ snapshots:
       bibliojson: 4.0.4
       cropperjs: 1.6.2
       fast-deep-equal: 3.1.3
-      fwtoolkit: 0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
+      fwtoolkit: 0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       simple-datatables: 10.3.0
     transitivePeerDependencies:
       - prosemirror-commands
@@ -4078,7 +4078,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fwtoolkit@0.2.19(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1):
+  fwtoolkit@0.2.25(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1):
     dependencies:
       diff-dom: 5.2.1
       jszip: 3.10.1
