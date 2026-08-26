@@ -18,8 +18,8 @@ importers:
         specifier: ^0.1.20
         version: 0.1.20
       '@fiduswriter/editor':
-        specifier: ^0.2.17
-        version: 0.2.17
+        specifier: ^0.2.19
+        version: 0.2.19
       '@fiduswriter/image-manager':
         specifier: ^0.1.26
         version: 0.1.26(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
@@ -344,8 +344,8 @@ packages:
   '@fiduswriter/document@0.3.15':
     resolution: {integrity: sha512-BO1qQsvSUEjgGLHwJFnWFW0eEgfptSBJSCKzA8YyOFLdbX6mN2lDe5KZyF2CQ6TeinMNm3XjClIs5DZmf/ubtg==}
 
-  '@fiduswriter/editor@0.2.17':
-    resolution: {integrity: sha512-URyLn90dlKp8GPnGKTeyu4Ngz+GWReZMybc+FA/niUM2YOIsXQjrAsqwpILS31eM/pjUQwRP8r4RjWy7aaErwg==}
+  '@fiduswriter/editor@0.2.19':
+    resolution: {integrity: sha512-bSqzAyI71nd94G0kGsDigKuZA3robYRSwXI6aBW0v7ELsZHw+83xBJXerQon0HAEyGMhurQUsCO6G1TLiTVAig==}
 
   '@fiduswriter/image-manager@0.1.26':
     resolution: {integrity: sha512-04OkXL1TW5YfJccIh5JgF9ZtrkKNp423UDMD8wol3rbcDntr1JoNXmJnZwIlqrmdZkTmcxTQl9Fm6aaGQL1mWA==}
@@ -2860,7 +2860,7 @@ snapshots:
       vivliostyle-pdf: 0.2.5
       w3c-keyname: 2.2.8
 
-  '@fiduswriter/editor@0.2.17':
+  '@fiduswriter/editor@0.2.19':
     dependencies:
       '@fiduswriter/bibliography-manager': 0.1.33(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.1)
       '@fiduswriter/document': 0.3.15

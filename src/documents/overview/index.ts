@@ -126,7 +126,7 @@ export class DocumentOverview {
         })
         ensureCSS([
             staticUrl("css/document_overview.css"),
-            staticUrl("css/add_remove_dialog.css"),
+            staticUrl("css/fwtoolkit/add_remove_dialog.css"),
             staticUrl("css/editor/access_rights_dialog.css"),
             staticUrl("css/editor/e2ee.css")
         ])

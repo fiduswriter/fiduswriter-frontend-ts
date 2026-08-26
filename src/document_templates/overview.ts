@@ -72,7 +72,7 @@ export class DocTemplatesOverview {
         })
         document.body = this.dom
         ensureCSS([
-            staticUrl("css/add_remove_dialog.css"),
+            staticUrl("css/fwtoolkit/add_remove_dialog.css"),
             staticUrl("css/editor/access_rights_dialog.css")
         ])
         setDocTitle(gettext("Document Templates Overview"), this.app)
