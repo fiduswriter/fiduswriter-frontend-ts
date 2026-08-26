@@ -83,6 +83,7 @@ export type {
     DocumentApi,
     DocumentImportApi,
     UserProfileApi,
+    ConfirmKeyDataResponse,
     AuthApi,
     ContactsApi,
     DocumentTemplateApi,

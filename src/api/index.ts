@@ -37,6 +37,16 @@ export interface DocumentImportApi extends EditorDocumentImportApi {
 
 // ---- UserProfileApi ----
 
+/** Response body of `POST /api/user/get_confirmkey_data/`. */
+export interface ConfirmKeyDataResponse {
+    username: string
+    email: string
+    /** The user already has another verified email address. */
+    verified: boolean
+    /** The currently logged-in user differs from the confirmed one. */
+    logout?: boolean
+}
+
 export interface UserProfileApi {
     save(data: Record<string, unknown>): Promise<unknown>
     updatePreferences(data: Record<string, unknown>): Promise<unknown>
@@ -49,7 +59,7 @@ export interface UserProfileApi {
     deleteUser(data: Record<string, unknown>): Promise<Response>
     getSocialAccounts(): Promise<unknown>
     deleteSocialAccount(data: Record<string, unknown>): Promise<unknown>
-    getConfirmKeyData(data: Record<string, unknown>): Promise<{json: Record<string, unknown>}>
+    getConfirmKeyData(data: Record<string, unknown>): Promise<ConfirmKeyDataResponse>
     confirmEmail(key: string): Promise<unknown>
 }
 

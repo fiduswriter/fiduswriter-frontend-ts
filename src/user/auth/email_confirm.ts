@@ -5,6 +5,7 @@ import {
     whenReady
 } from "fwtoolkit"
 import {PreloginPage, type PreloginApp} from "../../prelogin/index.js"
+import type {ConfirmKeyDataResponse} from "../../api/index.js"
 import {
     checkTermsTemplate,
     confirmAccountTemplate,
@@ -57,8 +58,9 @@ export class EmailConfirm extends PreloginPage {
     }
 
     getConfirmData(): Promise<void> {
-        return this.app.apiConnectors.userProfile.getConfirmKeyData({key: this.key})
-            .then((json: any) => {
+        return this.app.apiConnectors.userProfile
+            .getConfirmKeyData({key: this.key})
+            .then((json: ConfirmKeyDataResponse) => {
                 this.username = json.username
                 this.email = json.email
                 this.validKey = true
