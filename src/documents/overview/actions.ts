@@ -22,6 +22,7 @@ import {documentDialogTemplate, importDocumentTemplate} from "./templates.js"
 import {
     HtmlExportDialog,
     EpubExportDialog,
+    PdfExportDialog,
     TemplateExportDialog
 } from "@fiduswriter/editor/dialogs/index"
 import {Node as PMNode} from "prosemirror-model"
@@ -1067,6 +1068,91 @@ export class DocumentOverviewActions {
                     )
                 })
             )
+        })
+    }
+
+    async downloadPdfFiles(ids: number[]): Promise<void> {
+        const dialog = new PdfExportDialog()
+        const options = await dialog.init()
+        if (!options) {
+            return
+        }
+        import("../tools.js").then(({getMissingDocumentListData}) => {
+            getMissingDocumentListData(
+                ids,
+                this.documentOverview.documentList as any,
+                this.documentOverview.schema,
+                this.documentOverview.app.apiConnectors.document
+            ).then(async () => {
+                for (const id of ids) {
+                    const found = this.documentOverview.documentList.find(entry => entry.id === id)
+                    if (!found) {
+                        continue
+                    }
+                    const doc = options.resolveTrackChanges
+                        ? resolveDocTrackedChanges(
+                              found as Record<string, unknown>,
+                              this.documentOverview.schema
+                          )
+                        : found
+                    const progressCallback = exportProgressCallback(doc!)
+                    let fidusFile: Uint8Array | undefined
+                    if (options.embedFidusFile && !doc!.e2ee) {
+                        // Encrypted documents are skipped: their source can
+                        // only be assembled with the document owner's key.
+                        const blob = (await new ExportFidusFile(
+                            this.documentOverview.app,
+                            doc as any,
+                            {db: doc!.bibliography as any},
+                            {db: doc!.images as any},
+                            true,
+                            undefined,
+                            false
+                        )) as unknown as Blob
+                        fidusFile = new Uint8Array(await blob.arrayBuffer())
+                    }
+                    await import("@fiduswriter/document/exporter/pdf/index").then(
+                        ({PdfExporter}) => {
+                            const exporter = new PdfExporter(
+                                doc as any,
+                                {db: doc!.bibliography as any},
+                                {db: doc!.images as any},
+                                this.documentOverview.app.csl as any,
+                                new Date((doc!.updated as number) * 1000),
+                                this.documentOverview.documentStyles,
+                                progressCallback as any,
+                                {
+                                    version: (
+                                        this.documentOverview.app.settings as {
+                                            VERSION?: string
+                                        }
+                                    ).VERSION,
+                                    userName:
+                                        this.documentOverview.app.user?.name ||
+                                        this.documentOverview.app.user
+                                            ?.username ||
+                                        undefined,
+                                    fidusFile,
+                                    pdfA: options.pdfA,
+                                    pdfUa: options.pdfUa,
+                                    embedSourceHtml:
+                                        options.embedSourceHtml || undefined,
+                                    figurePageFloats:
+                                        options.figurePageFloats,
+                                    tablePageFloats: options.tablePageFloats,
+                                    printOptions: options.printOptions,
+                                    printEngine: (
+                                        this.documentOverview.app.settings as {
+                                            PRINT_ENGINE?: string
+                                        }
+                                    ).PRINT_ENGINE
+                                }
+                            )
+                            return exporter.init()
+                        }
+                    )
+                }
+            })
         })
     }
 

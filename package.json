@@ -1,308 +1,309 @@
 {
-  "name": "@fiduswriter/frontend",
-  "version": "0.1.58",
-  "description": "Fidus Writer-specific shared utilities and UI chrome",
-  "keywords": [
-    "fiduswriter",
-    "frontend",
-    "spa",
-    "router",
-    "ui",
-    "browser"
-  ],
-  "homepage": "https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts",
-  "bugs": {
-    "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts.git"
-  },
-  "license": "AGPL-3.0",
-  "author": "Johannes Wilm",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./common": {
-      "types": "./dist/common/index.d.ts",
-      "default": "./dist/common/index.js"
-    },
-    "./feedback": {
-      "types": "./dist/feedback/index.d.ts",
-      "default": "./dist/feedback/index.js"
-    },
-    "./menu": {
-      "types": "./dist/menu/index.d.ts",
-      "default": "./dist/menu/index.js"
-    },
-    "./indexed_db": {
-      "types": "./dist/indexed_db/index.d.ts",
-      "default": "./dist/indexed_db/index.js"
-    },
-    "./prelogin": {
-      "types": "./dist/prelogin/index.d.ts",
-      "default": "./dist/prelogin/index.js"
-    },
-    "./prelogin/templates": {
-      "types": "./dist/prelogin/templates.d.ts",
-      "default": "./dist/prelogin/templates.js"
-    },
-    "./pages/404": {
-      "types": "./dist/pages/404.d.ts",
-      "default": "./dist/pages/404.js"
-    },
-    "./pages/offline": {
-      "types": "./dist/pages/offline.d.ts",
-      "default": "./dist/pages/offline.js"
-    },
-    "./pages/setup": {
-      "types": "./dist/pages/setup.d.ts",
-      "default": "./dist/pages/setup.js"
-    },
-    "./pages/flatpage": {
-      "types": "./dist/pages/flatpage.d.ts",
-      "default": "./dist/pages/flatpage.js"
-    },
-    "./admin_console": {
-      "types": "./dist/admin_console/index.d.ts",
-      "default": "./dist/admin_console/index.js"
-    },
-    "./error_hook": {
-      "types": "./dist/error_hook/index.d.ts",
-      "default": "./dist/error_hook/index.js"
-    },
-    "./documents/overview": {
-      "types": "./dist/documents/overview/index.d.ts",
-      "default": "./dist/documents/overview/index.js"
-    },
-    "./documents/tools": {
-      "types": "./dist/documents/tools.d.ts",
-      "default": "./dist/documents/tools.js"
-    },
-    "./documents/importer/register": {
-      "types": "./dist/documents/importer/register.d.ts",
-      "default": "./dist/documents/importer/register.js"
-    },
-    "./documents/importer/native": {
-      "types": "./dist/documents/importer/native/index.d.ts",
-      "default": "./dist/documents/importer/native/index.js"
-    },
-    "./documents/importer/native/import": {
-      "types": "./dist/documents/importer/native/import.d.ts",
-      "default": "./dist/documents/importer/native/import.js"
-    },
-    "./documents/importer/native/file": {
-      "types": "./dist/documents/importer/native/file.d.ts",
-      "default": "./dist/documents/importer/native/file.js"
-    },
-    "./documents/importer/docx": {
-      "types": "./dist/documents/importer/docx/index.d.ts",
-      "default": "./dist/documents/importer/docx/index.js"
-    },
-    "./documents/importer/odt": {
-      "types": "./dist/documents/importer/odt/index.d.ts",
-      "default": "./dist/documents/importer/odt/index.js"
-    },
-    "./documents/importer/pandoc": {
-      "types": "./dist/documents/importer/pandoc/index.d.ts",
-      "default": "./dist/documents/importer/pandoc/index.js"
-    },
-    "./documents/revisions": {
-      "types": "./dist/documents/revisions/index.d.ts",
-      "default": "./dist/documents/revisions/index.js"
-    },
-    "./user/profile": {
-      "types": "./dist/user/profile/index.d.ts",
-      "default": "./dist/user/profile/index.js"
-    },
-    "./user/auth/login": {
-      "types": "./dist/user/auth/login.d.ts",
-      "default": "./dist/user/auth/login.js"
-    },
-    "./user/auth/signup": {
-      "types": "./dist/user/auth/signup.d.ts",
-      "default": "./dist/user/auth/signup.js"
-    },
-    "./user/auth/password-reset": {
-      "types": "./dist/user/auth/password_reset_request.d.ts",
-      "default": "./dist/user/auth/password_reset_request.js"
-    },
-    "./user/auth/password-reset-change": {
-      "types": "./dist/user/auth/password_reset_change.d.ts",
-      "default": "./dist/user/auth/password_reset_change.js"
-    },
-    "./user/auth/email-confirm": {
-      "types": "./dist/user/auth/email_confirm.d.ts",
-      "default": "./dist/user/auth/email_confirm.js"
-    },
-    "./user/auth/two-factor": {
-      "types": "./dist/user/auth/two_factor.d.ts",
-      "default": "./dist/user/auth/two_factor.js"
-    },
-    "./user/contacts": {
-      "types": "./dist/user/contacts/index.d.ts",
-      "default": "./dist/user/contacts/index.js"
-    },
-    "./user/contacts/add_dialog": {
-      "types": "./dist/user/contacts/add_dialog.d.ts",
-      "default": "./dist/user/contacts/add_dialog.js"
-    },
-    "./document_templates": {
-      "types": "./dist/document_templates/index.d.ts",
-      "default": "./dist/document_templates/index.js"
-    },
-    "./document_templates/overview": {
-      "types": "./dist/document_templates/overview.d.ts",
-      "default": "./dist/document_templates/overview.js"
-    },
-    "./document_templates/editor": {
-      "types": "./dist/document_templates/editor.d.ts",
-      "default": "./dist/document_templates/editor.js"
-    },
-    "./maintenance": {
-      "types": "./dist/maintenance/index.d.ts",
-      "default": "./dist/maintenance/index.js"
-    },
-    "./workers/adjust-doc": {
-      "types": "./dist/workers/adjust_doc_to_template.d.ts",
-      "default": "./dist/workers/adjust_doc_to_template.js"
-    },
-    "./app": {
-      "types": "./dist/app/index.d.ts",
-      "default": "./dist/app/index.js"
-    },
-    "./api": {
-      "types": "./dist/api/index.d.ts",
-      "default": "./dist/api/index.js"
-    },
-    "./i18n": {
-      "types": "./dist/i18n/index.d.ts",
-      "default": "./dist/i18n/index.js"
-    }
-  },
-  "files": [
-    "dist/",
-    "css/",
-    "static/",
-    "scripts/",
-    "src/",
-    "locale/*/messages.json",
-    "README.md",
-    "LICENSE",
-    "logo.svg"
-  ],
-  "scripts": {
-    "build": "tsc && node scripts/aggregate-assets.js",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.js",
-    "install-hooks": "husky",
-    "postinstall": "node scripts/aggregate-assets.js"
-  },
-  "dependencies": {
-    "@fiduswriter/bibliography-manager": "^0.1.33",
-    "@fiduswriter/document": "^0.3.16",
-    "@fiduswriter/document-template-editor": "^0.1.21",
-    "@fiduswriter/editor": "^0.2.25",
-    "@fiduswriter/image-manager": "^0.1.28",
-    "downloadjs": "^1.4.7",
-    "fwtoolkit": "^0.2.26",
-    "jszip": "^3.10.1",
-    "prosemirror-history": "^1.3.2",
-    "prosemirror-keymap": "^1.2.2",
-    "prosemirror-model": "^1.25.0",
-    "prosemirror-state": "^1.4.3",
-    "prosemirror-view": "^1.38.1",
-    "qrcode": "^1.5.3",
-    "stacktrace-js": "^2.0.2",
-    "w3c-keyname": "2.2.8"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@swc/core": "^1.16.1",
-    "@swc/jest": "^0.2.39",
-    "@types/downloadjs": "^1.4.6",
-    "@types/jest": "^30.0.0",
-    "@types/qrcode": "^1.5.6",
-    "@typescript/native": "npm:typescript@^7.0.2",
-    "eslint": "^10.6.0",
-    "gettext-parser": "^9.1.1",
-    "globals": "^15.15.0",
-    "happy-dom": "^20.10.6",
-    "husky": "^9.1.7",
-    "jest": "^30.4.2",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.5.3",
-    "typescript": "npm:@typescript/typescript6@^6.0.2",
-    "typescript-eslint": "^8.67.0"
-  },
-  "fiduswriter": {
-    "css": {
-      "fwtoolkit": [
-        "reset.css",
-        "colors.css",
-        "forms.css",
-        "buttons.css",
-        "dialog.css",
-        "loader.css",
-        "alerts.css",
-        "pulldown.css",
-        "data_table.css",
-        "overview_menu.css",
-        "progress_task.css",
-        "ui_tabs.css",
-        "content_menu.css",
-        "dialog_table.css",
-        "common.css",
-        "drop_up.css",
-        "faq_dialog.css",
-        "file_selector.css",
-        "inline_tools.css",
-        "input_list.css",
-        "two_pane_selector.css",
-        "type_switch.css",
-        "checkable_list.css",
-        "pulldown_menu.css",
-        "add_remove_dialog.css"
-      ],
-      "own": {
-        "additive": [
-          "colors.css"
-        ],
-        "component": [
-          "fonts.css",
-          "header_menu.css",
-          "admin.css",
-          "flatpage.css",
-          "prelogin.css",
-          "document_overview.css",
-          "document_template_admin.css",
-          "show_profile.css",
-          "two_factor.css",
-          "feedback.css",
-          "user_template_manager.css",
-          "errorlist.css"
-        ]
-      }
-    }
-  },
-  "lint-staged": {
-    "*.{ts,js,mjs,css,md,json,html}": [
-      "prettier --write"
+    "name": "@fiduswriter/frontend",
+    "version": "0.1.58",
+    "description": "Fidus Writer-specific shared utilities and UI chrome",
+    "keywords": [
+        "fiduswriter",
+        "frontend",
+        "spa",
+        "router",
+        "ui",
+        "browser"
     ],
-    "*.{ts,js,mjs}": [
-      "eslint --fix",
-      "sh -c 'npm run typecheck'"
-    ]
-  }
+    "homepage": "https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts",
+    "bugs": {
+        "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-frontend-ts.git"
+    },
+    "license": "AGPL-3.0",
+    "author": "Johannes Wilm",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./common": {
+            "types": "./dist/common/index.d.ts",
+            "default": "./dist/common/index.js"
+        },
+        "./feedback": {
+            "types": "./dist/feedback/index.d.ts",
+            "default": "./dist/feedback/index.js"
+        },
+        "./menu": {
+            "types": "./dist/menu/index.d.ts",
+            "default": "./dist/menu/index.js"
+        },
+        "./indexed_db": {
+            "types": "./dist/indexed_db/index.d.ts",
+            "default": "./dist/indexed_db/index.js"
+        },
+        "./prelogin": {
+            "types": "./dist/prelogin/index.d.ts",
+            "default": "./dist/prelogin/index.js"
+        },
+        "./prelogin/templates": {
+            "types": "./dist/prelogin/templates.d.ts",
+            "default": "./dist/prelogin/templates.js"
+        },
+        "./pages/404": {
+            "types": "./dist/pages/404.d.ts",
+            "default": "./dist/pages/404.js"
+        },
+        "./pages/offline": {
+            "types": "./dist/pages/offline.d.ts",
+            "default": "./dist/pages/offline.js"
+        },
+        "./pages/setup": {
+            "types": "./dist/pages/setup.d.ts",
+            "default": "./dist/pages/setup.js"
+        },
+        "./pages/flatpage": {
+            "types": "./dist/pages/flatpage.d.ts",
+            "default": "./dist/pages/flatpage.js"
+        },
+        "./admin_console": {
+            "types": "./dist/admin_console/index.d.ts",
+            "default": "./dist/admin_console/index.js"
+        },
+        "./error_hook": {
+            "types": "./dist/error_hook/index.d.ts",
+            "default": "./dist/error_hook/index.js"
+        },
+        "./documents/overview": {
+            "types": "./dist/documents/overview/index.d.ts",
+            "default": "./dist/documents/overview/index.js"
+        },
+        "./documents/tools": {
+            "types": "./dist/documents/tools.d.ts",
+            "default": "./dist/documents/tools.js"
+        },
+        "./documents/importer/register": {
+            "types": "./dist/documents/importer/register.d.ts",
+            "default": "./dist/documents/importer/register.js"
+        },
+        "./documents/importer/native": {
+            "types": "./dist/documents/importer/native/index.d.ts",
+            "default": "./dist/documents/importer/native/index.js"
+        },
+        "./documents/importer/native/import": {
+            "types": "./dist/documents/importer/native/import.d.ts",
+            "default": "./dist/documents/importer/native/import.js"
+        },
+        "./documents/importer/native/file": {
+            "types": "./dist/documents/importer/native/file.d.ts",
+            "default": "./dist/documents/importer/native/file.js"
+        },
+        "./documents/importer/docx": {
+            "types": "./dist/documents/importer/docx/index.d.ts",
+            "default": "./dist/documents/importer/docx/index.js"
+        },
+        "./documents/importer/odt": {
+            "types": "./dist/documents/importer/odt/index.d.ts",
+            "default": "./dist/documents/importer/odt/index.js"
+        },
+        "./documents/importer/pandoc": {
+            "types": "./dist/documents/importer/pandoc/index.d.ts",
+            "default": "./dist/documents/importer/pandoc/index.js"
+        },
+        "./documents/revisions": {
+            "types": "./dist/documents/revisions/index.d.ts",
+            "default": "./dist/documents/revisions/index.js"
+        },
+        "./user/profile": {
+            "types": "./dist/user/profile/index.d.ts",
+            "default": "./dist/user/profile/index.js"
+        },
+        "./user/auth/login": {
+            "types": "./dist/user/auth/login.d.ts",
+            "default": "./dist/user/auth/login.js"
+        },
+        "./user/auth/signup": {
+            "types": "./dist/user/auth/signup.d.ts",
+            "default": "./dist/user/auth/signup.js"
+        },
+        "./user/auth/password-reset": {
+            "types": "./dist/user/auth/password_reset_request.d.ts",
+            "default": "./dist/user/auth/password_reset_request.js"
+        },
+        "./user/auth/password-reset-change": {
+            "types": "./dist/user/auth/password_reset_change.d.ts",
+            "default": "./dist/user/auth/password_reset_change.js"
+        },
+        "./user/auth/email-confirm": {
+            "types": "./dist/user/auth/email_confirm.d.ts",
+            "default": "./dist/user/auth/email_confirm.js"
+        },
+        "./user/auth/two-factor": {
+            "types": "./dist/user/auth/two_factor.d.ts",
+            "default": "./dist/user/auth/two_factor.js"
+        },
+        "./user/contacts": {
+            "types": "./dist/user/contacts/index.d.ts",
+            "default": "./dist/user/contacts/index.js"
+        },
+        "./user/contacts/add_dialog": {
+            "types": "./dist/user/contacts/add_dialog.d.ts",
+            "default": "./dist/user/contacts/add_dialog.js"
+        },
+        "./document_templates": {
+            "types": "./dist/document_templates/index.d.ts",
+            "default": "./dist/document_templates/index.js"
+        },
+        "./document_templates/overview": {
+            "types": "./dist/document_templates/overview.d.ts",
+            "default": "./dist/document_templates/overview.js"
+        },
+        "./document_templates/editor": {
+            "types": "./dist/document_templates/editor.d.ts",
+            "default": "./dist/document_templates/editor.js"
+        },
+        "./maintenance": {
+            "types": "./dist/maintenance/index.d.ts",
+            "default": "./dist/maintenance/index.js"
+        },
+        "./workers/adjust-doc": {
+            "types": "./dist/workers/adjust_doc_to_template.d.ts",
+            "default": "./dist/workers/adjust_doc_to_template.js"
+        },
+        "./app": {
+            "types": "./dist/app/index.d.ts",
+            "default": "./dist/app/index.js"
+        },
+        "./api": {
+            "types": "./dist/api/index.d.ts",
+            "default": "./dist/api/index.js"
+        },
+        "./i18n": {
+            "types": "./dist/i18n/index.d.ts",
+            "default": "./dist/i18n/index.js"
+        }
+    },
+    "files": [
+        "dist/",
+        "css/",
+        "static/",
+        "scripts/",
+        "src/",
+        "locale/*/messages.json",
+        "README.md",
+        "LICENSE",
+        "logo.svg"
+    ],
+    "scripts": {
+        "build": "tsc && node scripts/aggregate-assets.js",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run build",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.js",
+        "install-hooks": "husky",
+        "postinstall": "node scripts/aggregate-assets.js"
+    },
+    "dependencies": {
+        "@fiduswriter/bibliography-manager": "^0.1.34",
+        "@fiduswriter/document": "^0.3.17",
+        "@fiduswriter/document-template-editor": "^0.1.21",
+        "@fiduswriter/editor": "^0.2.28",
+        "@fiduswriter/image-manager": "^0.1.28",
+        "downloadjs": "^1.4.7",
+        "fwtoolkit": "^0.2.26",
+        "jszip": "^3.10.1",
+        "prosemirror-history": "^1.3.2",
+        "prosemirror-keymap": "^1.2.2",
+        "prosemirror-model": "^1.25.0",
+        "prosemirror-state": "^1.4.3",
+        "prosemirror-view": "^1.38.1",
+        "qrcode": "^1.5.3",
+        "stacktrace-js": "^2.0.2",
+        "w3c-keyname": "2.2.8",
+        "fast-deep-equal": "^3.1.3"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@swc/core": "^1.16.1",
+        "@swc/jest": "^0.2.39",
+        "@types/downloadjs": "^1.4.6",
+        "@types/jest": "^30.0.0",
+        "@types/qrcode": "^1.5.6",
+        "@typescript/native": "npm:typescript@^7.0.2",
+        "eslint": "^10.6.0",
+        "gettext-parser": "^9.1.1",
+        "globals": "^15.15.0",
+        "happy-dom": "^20.10.6",
+        "husky": "^9.1.7",
+        "jest": "^30.4.2",
+        "lint-staged": "^17.0.8",
+        "prettier": "^3.5.3",
+        "typescript": "npm:@typescript/typescript6@^6.0.2",
+        "typescript-eslint": "^8.67.0"
+    },
+    "fiduswriter": {
+        "css": {
+            "fwtoolkit": [
+                "reset.css",
+                "colors.css",
+                "forms.css",
+                "buttons.css",
+                "dialog.css",
+                "loader.css",
+                "alerts.css",
+                "pulldown.css",
+                "data_table.css",
+                "overview_menu.css",
+                "progress_task.css",
+                "ui_tabs.css",
+                "content_menu.css",
+                "dialog_table.css",
+                "common.css",
+                "drop_up.css",
+                "faq_dialog.css",
+                "file_selector.css",
+                "inline_tools.css",
+                "input_list.css",
+                "two_pane_selector.css",
+                "type_switch.css",
+                "checkable_list.css",
+                "pulldown_menu.css",
+                "add_remove_dialog.css"
+            ],
+            "own": {
+                "additive": [
+                    "colors.css"
+                ],
+                "component": [
+                    "fonts.css",
+                    "header_menu.css",
+                    "admin.css",
+                    "flatpage.css",
+                    "prelogin.css",
+                    "document_overview.css",
+                    "document_template_admin.css",
+                    "show_profile.css",
+                    "two_factor.css",
+                    "feedback.css",
+                    "user_template_manager.css",
+                    "errorlist.css"
+                ]
+            }
+        }
+    },
+    "lint-staged": {
+        "*.{ts,js,mjs,css,md,json,html}": [
+            "prettier --write"
+        ],
+        "*.{ts,js,mjs}": [
+            "eslint --fix",
+            "sh -c 'npm run typecheck'"
+        ]
+    }
 }

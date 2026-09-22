@@ -137,6 +137,21 @@ export const bulkMenuModel = (): MenuModel => ({
             order: 3
         },
         {
+            title: gettext("Export selected as PDF"),
+            tooltip: gettext(
+                "Export the documents that have been selected as PDF files."
+            ),
+            action: overview => {
+                const ids = overview.getSelected()
+                if (ids.length) {
+                    overview.mod.actions!.downloadPdfFiles(ids)
+                }
+            },
+            disabled: overview =>
+                !overview.getSelected().length || overview.app.isOffline(),
+            order: 4
+        },
+        {
             title: gettext("Export selected as HTML"),
             tooltip: gettext(
                 "Export the documents that have been selected as HTML files."
