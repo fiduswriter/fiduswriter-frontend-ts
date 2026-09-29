@@ -6,6 +6,8 @@ export const baseBodyTemplate = () => ""
 export const FeedbackTab = class {}
 export const SiteMenu = class {}
 export const escapeText = (s) => s
+export const avatarTemplate = () => ""
+export const langName = (code) => code
 export const shortFileTitle = (s) => s
 export const gettext = (s) => s
 export const localizeDate = () => ""

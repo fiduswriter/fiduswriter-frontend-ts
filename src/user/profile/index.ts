@@ -352,6 +352,7 @@ export class Profile {
         const newLang = (this.dom.querySelector("#language") as HTMLSelectElement).value
         const inlineReferences = (this.dom.querySelector("#inline-references") as HTMLInputElement).checked
         const inlineMath = (this.dom.querySelector("#inline-math") as HTMLInputElement).checked
+        const grammarCheckContinuous = (this.dom.querySelector("#grammar-check-continuous") as HTMLInputElement).checked
         return this.app.apiConnectors.userProfile.save({
             username: (this.dom.querySelector("#username") as HTMLInputElement).value,
             first_name: (this.dom.querySelector("#first_name") as HTMLInputElement).value,
@@ -362,7 +363,8 @@ export class Profile {
             .then(() =>
                 this.app.apiConnectors.userProfile.updatePreferences({
                     inline_references: inlineReferences,
-                    inline_math: inlineMath
+                    inline_math: inlineMath,
+                    grammar_check_continuous: grammarCheckContinuous
                 })
             )
             .catch(() => addAlert("error", gettext("Could not save preferences")))

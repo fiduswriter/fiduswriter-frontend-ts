@@ -240,6 +240,11 @@ export const profileContents = (
                         ${gettext("Enable inline math typing ($)")}
                     </label>
                     <p class="inline-editor-hint">${gettext("Type $ in the editor followed by LaTeX math to insert an equation inline, e.g. $x^2. Press Enter or Tab to confirm.")}</p>
+                    <label class="checkable-label">
+                        <input type="checkbox" id="grammar-check-continuous" ${user.preferences?.grammar_check_continuous ? "checked" : ""} />
+                        ${gettext("Continuous spell and grammar checking")}
+                    </label>
+                    <p class="inline-editor-hint">${gettext("Check spelling and grammar while typing with the built-in LingoTweaker checker. It runs entirely in your browser; no external server is needed.")}</p>
 
                 </div>
             </div>
