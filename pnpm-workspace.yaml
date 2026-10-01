@@ -13,8 +13,9 @@ minimumReleaseAgeExclude:
   - pages-to-pdf@0.3.10
   - lingotweaker-data@0.2.3
   - lingotweaker-wasm@0.2.3
+  - paged-with-floats@0.11.1
+  - '@fiduswriter/editor@0.2.34'
 overrides:
   test-exclude: ^8.0.0
-  '@babel/polyfill': '-'
   '@xmldom/xmldom': 0.9.12
   'glob@^10.5.0': ^13.0.6
