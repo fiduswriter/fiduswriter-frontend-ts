@@ -213,9 +213,10 @@
         "@fiduswriter/bibliography-manager": "^0.1.34",
         "@fiduswriter/document": "^0.3.17",
         "@fiduswriter/document-template-editor": "^0.1.21",
-        "@fiduswriter/editor": "^0.2.31",
+        "@fiduswriter/editor": "^0.2.33",
         "@fiduswriter/image-manager": "^0.1.28",
         "downloadjs": "^1.4.7",
+        "fast-deep-equal": "^3.1.3",
         "fwtoolkit": "^0.2.26",
         "jszip": "^3.10.1",
         "prosemirror-history": "^1.3.2",
@@ -225,8 +226,7 @@
         "prosemirror-view": "^1.38.1",
         "qrcode": "^1.5.3",
         "stacktrace-js": "^2.0.2",
-        "w3c-keyname": "2.2.8",
-        "fast-deep-equal": "^3.1.3"
+        "w3c-keyname": "2.2.8"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
@@ -241,7 +241,7 @@
         "globals": "^15.15.0",
         "happy-dom": "^20.10.6",
         "husky": "^9.1.7",
-        "jest": "^30.4.2",
+        "jest": "^30.5.2",
         "lint-staged": "^17.0.8",
         "prettier": "^3.5.3",
         "typescript": "npm:@typescript/typescript6@^6.0.2",

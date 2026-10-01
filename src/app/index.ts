@@ -714,6 +714,42 @@ export class App {
             })
     }
 
+    /**
+     * Persist the per-user spell-checker ignore lists (the editor's
+     * ModGrammar calls these; see
+     * fiduswriter/docs/plans/SPELLCHECK_IGNORED_WORDS.md). The lists also
+     * live in `config.user.preferences` so newly opened documents see the
+     * current state without refetching the configuration.
+     */
+    private updateIgnoredPreference(
+        key: "grammar_check_ignored_words" | "grammar_check_ignored_rules",
+        entries: string[]
+    ): Promise<unknown> {
+        const user = this.config.user ?? ({} as FrontendApp["user"])
+        const preferences = (user.preferences ??
+            {}) as Record<string, unknown>
+        preferences[key] = entries
+        user.preferences = preferences
+        this.config.user = user
+        return this.apiConnectors.userProfile.updatePreferences({
+            [key]: entries
+        })
+    }
+
+    saveIgnoredWords(words: string[]): Promise<unknown> {
+        return this.updateIgnoredPreference(
+            "grammar_check_ignored_words",
+            words
+        )
+    }
+
+    saveIgnoredRules(rules: string[]): Promise<unknown> {
+        return this.updateIgnoredPreference(
+            "grammar_check_ignored_rules",
+            rules
+        )
+    }
+
     goTo(url: string): Promise<void> {
         window.history.pushState({}, "", encodeURI(url))
         return this.selectPage()
