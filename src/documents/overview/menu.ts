@@ -212,6 +212,36 @@ export const bulkMenuModel = (): MenuModel => ({
             order: 7
         },
         {
+            title: gettext("Export selected as TEI"),
+            tooltip: gettext(
+                "Export the documents that have been selected as TEI files."
+            ),
+            action: overview => {
+                const ids = overview.getSelected()
+                if (ids.length) {
+                    overview.mod.actions!.downloadTEIFiles(ids)
+                }
+            },
+            disabled: overview =>
+                !overview.getSelected().length || overview.app.isOffline(),
+            order: 8
+        },
+        {
+            title: gettext("Export selected as Markdown"),
+            tooltip: gettext(
+                "Export the documents that have been selected as Markdown files."
+            ),
+            action: overview => {
+                const ids = overview.getSelected()
+                if (ids.length) {
+                    overview.mod.actions!.downloadMarkdownFiles(ids)
+                }
+            },
+            disabled: overview =>
+                !overview.getSelected().length || overview.app.isOffline(),
+            order: 9
+        },
+        {
             title: gettext("Export selected as FIDUS"),
             tooltip: gettext(
                 "Export the documents that have been selected as FIDUS files including their templates."
@@ -224,7 +254,7 @@ export const bulkMenuModel = (): MenuModel => ({
             },
             disabled: overview =>
                 !overview.getSelected().length || overview.app.isOffline(),
-            order: 8
+            order: 10
         },
         {
             title: gettext("Export selected as Slim FIDUS"),
@@ -239,7 +269,7 @@ export const bulkMenuModel = (): MenuModel => ({
             },
             disabled: overview =>
                 !overview.getSelected().length || overview.app.isOffline(),
-            order: 9
+            order: 11
         },
         {
             title: gettext("Delete selected"),
@@ -266,7 +296,7 @@ export const bulkMenuModel = (): MenuModel => ({
             },
             disabled: overview =>
                 !overview.getSelected().length || overview.app.isOffline(),
-            order: 10
+            order: 12
         }
     ]
 })

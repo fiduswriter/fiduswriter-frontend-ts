@@ -14,17 +14,17 @@ importers:
   .:
     dependencies:
       '@fiduswriter/bibliography-manager':
-        specifier: ^0.1.34
-        version: 0.1.34(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+        specifier: ^0.1.35
+        version: 0.1.35(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       '@fiduswriter/document':
-        specifier: ^0.3.19
-        version: 0.3.19(@pdfme/pdf-lib@6.2.2)
+        specifier: ^0.3.24
+        version: 0.3.24(@pdfme/pdf-lib@6.2.2)
       '@fiduswriter/document-template-editor':
         specifier: ^0.1.21
         version: 0.1.21(@pdfme/pdf-lib@6.2.2)
       '@fiduswriter/editor':
-        specifier: ^0.2.35
-        version: 0.2.35(@pdfme/pdf-lib@6.2.2)
+        specifier: ^0.2.38
+        version: 0.2.38(@pdfme/pdf-lib@6.2.2)
       '@fiduswriter/image-manager':
         specifier: ^0.1.28
         version: 0.1.28(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
@@ -356,20 +356,17 @@ packages:
     resolution: {integrity: sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@fiduswriter/bibliography-manager@0.1.34':
-    resolution: {integrity: sha512-QnAjaerr00r9So6oCamyTFt5UIoIeAYF09IE1Z4PH827WgvQGIjYuyWg/xsQxPEiAm7mHr3n5HLTe8SsFuwaCQ==}
+  '@fiduswriter/bibliography-manager@0.1.35':
+    resolution: {integrity: sha512-r6e8UZO37DcCKGApbrJz+qWvMdiQC+qo747SmY7bIOpQDqCEWZ+WIC9FGEv4BnsyTRyBI6SZAxIs6zvHI6gIHw==}
 
   '@fiduswriter/document-template-editor@0.1.21':
     resolution: {integrity: sha512-xL3fKQ4x5FnaOAwqgFIHM4CvenVwYkT8Jaku1us9eyBy1ZNUhQNm4aChj1Qtg601Z1np7TnPubxvWCQ2m/Q+Hw==}
 
-  '@fiduswriter/document@0.3.17':
-    resolution: {integrity: sha512-gq5nWX8ofe0Nh/MgEjEiYHLZFN2sNSx+Sc32S5y2x6wJVOo5ERGxzWYxR5gy37wMWiQ/dAB+gVuq+jwEdGgYGw==}
+  '@fiduswriter/document@0.3.24':
+    resolution: {integrity: sha512-hIGYRTew6Ul6bI/GjDc5cwKoUuikN3LKVSbtO1dghBbDXaQnJNiFIMyGBQQCH63ooZY7vOJ9VEi/5ULoXiwv5w==}
 
-  '@fiduswriter/document@0.3.19':
-    resolution: {integrity: sha512-Yte18A8Yr4NmVJC6XzAwZ/IookgEw0ZLXCP5ubkUMlSml67ek1+d73upIniZLGCd4PtQn1d95Vhg/lGrbCPXlA==}
-
-  '@fiduswriter/editor@0.2.35':
-    resolution: {integrity: sha512-Kaqa72d95j2rV70t4bgp32CQY+8r6cDg/fXZ2oIFGeQCAH94+9Bsae5WjLuONivhOHnrpW1aEHKlh9DSvnE5Qg==}
+  '@fiduswriter/editor@0.2.38':
+    resolution: {integrity: sha512-4Ki2fD4+pKlot39q9ZYiXjkJPMkOC5kQr3ZzosD/hHVUex/8z6xtebHcSPsXjJupoyvY31Meaz7tL9yjTeEYeQ==}
 
   '@fiduswriter/image-manager@0.1.28':
     resolution: {integrity: sha512-8zJfLs2iUmwEoFfCYTrLbe0/PC63Q2pWi51stfrGrJ7b8ftBmc4+0M0FFVbnbGMOGbBlKjyh4XGZbXxO+vp+JQ==}
@@ -1197,6 +1194,9 @@ packages:
     resolution: {integrity: sha512-3nED0ENvAP4yroghehwK6AmlOaTTn7EvIPSpFee5Lrfkmge/ZDP891yJGZpSIqAzp8G0o5ccgHcgHZjEzHYxUA==}
     engines: {node: '>=22'}
 
+  boolbase@1.0.0:
+    resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+
   brace-expansion@5.0.12:
     resolution: {integrity: sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ==}
     engines: {node: 20 || >=22}
@@ -1334,9 +1334,16 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
+  css-select@5.2.2:
+    resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
+
   css-tree@1.1.3:
     resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
     engines: {node: '>=8.0.0'}
+
+  css-what@6.2.2:
+    resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
+    engines: {node: '>= 6'}
 
   d@1.0.2:
     resolution: {integrity: sha512-MOqHvMWF9/9MX6nza0KgvFH4HpMU0EF5uUDXqX/BtxtU8NfB0QzRtJ8Oe/6SuS4kbhyzVJwjd97EA4PKrzJ8bw==}
@@ -1397,6 +1404,19 @@ packages:
   dijkstrajs@1.0.3:
     resolution: {integrity: sha512-qiSlmBq9+BCdCA/L46dw8Uy93mloxsPSbwnm5yrKn2vMPiy8KyAskTF6zuV/j5BMsmOGZDPs7KjU+mjb670kfA==}
 
+  dom-serializer@2.0.0:
+    resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
+
+  domelementtype@2.3.0:
+    resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
+
+  domhandler@5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+
+  domutils@3.2.2:
+    resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
+
   downloadjs@1.4.7:
     resolution: {integrity: sha512-LN1gO7+u9xjU5oEScGFKvXhYf7Y/empUIIEAGBs1LzUq/rg5duiDrkuH5A2lQGd5jfMOb9X9usDa2oVXwJ0U/Q==}
 
@@ -1413,9 +1433,17 @@ packages:
   encoding@0.1.13:
     resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
 
+  entities@4.5.0:
+    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
+    engines: {node: '>=0.12'}
+
   entities@7.0.1:
     resolution: {integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==}
     engines: {node: '>=0.12'}
+
+  entities@8.1.0:
+    resolution: {integrity: sha512-kxL7msIffSuh9aaFAMD7rxAIuTRMAHMeBtgHW2yUdWw732ZNh4MehkF2gdjvtdmikkaIP9bFDDJOPlsvm7avrA==}
+    engines: {node: '>=20.19.0'}
 
   error-ex@1.3.4:
     resolution: {integrity: sha512-sqQamAnR14VgCr1A618A3sGrygcpK+HEbenA/HiEAkkUwcZIIB/tgWqHFxWgOyDh4nB4JCRimh79dR5Ywc9MDQ==}
@@ -1904,12 +1932,12 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lingotweaker-data@0.2.4:
-    resolution: {integrity: sha512-Gq9zhvgkuMxpWbF2VhAbpCMb8EPk5DugsRDwCvI2/x1DWOFp/OxY3DB34ehl6LEI9m8sF37NY0moKMmQHgKZGg==}
+  lingotweaker-data@0.2.6:
+    resolution: {integrity: sha512-T0L7gjcvOL+bibW/Sm0grgMVCfFg6X7nHODn4iug8HfGbcOqoFF2AmuQ+sDz6ylm+EyXLzEys8zE4h+0B/5GGw==}
     engines: {node: '>= 18'}
 
-  lingotweaker-wasm@0.2.4:
-    resolution: {integrity: sha512-APUsKzQsz/t4EvAoc7SoLTFGl9ggtuujB/HQmE/wNUMBp9T3pFOC01h4QYH+XMZYHWWqdY2nXmK1Blad8StHOg==}
+  lingotweaker-wasm@0.2.6:
+    resolution: {integrity: sha512-YZTxkZb1wv2dounZWQ27BKjrbYEBRgN3KprB9mQUwcBP4HOdnA7K5L82DtzgcImoW96KpFHlcnS3ftnNlqm5Ww==}
     engines: {node: '>= 18'}
 
   lint-staged@17.6.0:
@@ -1989,6 +2017,9 @@ packages:
   node-html-better-parser@1.5.9:
     resolution: {integrity: sha512-z1I5UINMezJXYL9cH3h0a9KBth2G978gSLlfkpQ+CQzzVHVQy9gpARgm9eDsz1O4gn1HtgUqjdAIYxKFZm6uHQ==}
 
+  node-html-parser@9.0.4:
+    resolution: {integrity: sha512-reUSrZkF1rO7hEYe5mJwtbVcQ6mB5QrViCZH6Wv+iz3er/PA9Q50gol15dMLQRDfdli4VzqPMPR24HNRFgVKFw==}
+
   node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
 
@@ -2003,6 +2034,9 @@ packages:
   npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
+
+  nth-check@2.1.1:
+    resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
   onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
@@ -2038,18 +2072,11 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  paged-with-floats@0.11.1:
-    resolution: {integrity: sha512-VqlEMdzBc6/twdyFx5RojmxPsS8p4rk2Srjc9A+ak6U/QI+MohQLL1653iYq6VjbXw3e0cEZxAdXIjPWZljRqg==}
-    deprecated: paged-with-floats has been renamed to paginate-for-print. Use paginate-for-print (v1.0.0 or later) instead.
-
-  pages-to-pdf@0.3.10:
-    resolution: {integrity: sha512-k/WF0d7AyOWHM5v8V6qWEjYmWdZbe9sL6TYoWoGlTz7wVEje6nMaGV1qKzu2+wTYfjNugTtIdCyXAnF/nt85Vw==}
-
   pages-to-pdf@0.4.1:
     resolution: {integrity: sha512-Y91uRab9lJNzw9M89QPzX6pd/ITG9MGSMx7RCA9cY7l3SM3oh5Tj9i8XTrIBxUyffiHFWVcsz+W6MotuwMwqBA==}
 
-  paginate-for-print@1.1.0:
-    resolution: {integrity: sha512-XZNKzznRo+ntB3LHA4Cyki7zkjDC6nha4YwXTpKeAy2/2PlEWE3av7Vl1+GR3tR0Exuryhybzazs0A+YvFl0tA==}
+  paginate-for-print@1.1.2:
+    resolution: {integrity: sha512-8lgEyfIsuaN7E3aFBjbQIp0LxHoG/MNvDSZZIvausrMwFXEUvOYRTJUf5wKn/RREHrLnnw5SxjMK0Tm2NiVOYA==}
 
   pako@0.2.9:
     resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
@@ -2811,9 +2838,9 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@fiduswriter/bibliography-manager@0.1.34(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)':
+  '@fiduswriter/bibliography-manager@0.1.35(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)':
     dependencies:
-      '@fiduswriter/document': 0.3.17(@pdfme/pdf-lib@6.2.2)
+      '@fiduswriter/document': 0.3.24(@pdfme/pdf-lib@6.2.2)
       bibliojson: 4.1.0
       fix-utf8: 2.0.1
       fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
@@ -2830,7 +2857,7 @@ snapshots:
 
   '@fiduswriter/document-template-editor@0.1.21(@pdfme/pdf-lib@6.2.2)':
     dependencies:
-      '@fiduswriter/document': 0.3.17(@pdfme/pdf-lib@6.2.2)
+      '@fiduswriter/document': 0.3.24(@pdfme/pdf-lib@6.2.2)
       downloadjs: 1.4.7
       fast-deep-equal: 3.1.3
       fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
@@ -2850,7 +2877,7 @@ snapshots:
     transitivePeerDependencies:
       - '@pdfme/pdf-lib'
 
-  '@fiduswriter/document@0.3.17(@pdfme/pdf-lib@6.2.2)':
+  '@fiduswriter/document@0.3.24(@pdfme/pdf-lib@6.2.2)':
     dependencies:
       '@mathjax/mathjax-newcm-font': 4.1.3
       '@mathjax/src': 4.1.3
@@ -2865,43 +2892,10 @@ snapshots:
       mathlive: 0.110.0
       mathml-to-latex: 1.8.0
       mathml2omml: 0.5.0
-      orderedmap: 2.1.1
-      paged-with-floats: 0.11.1(@pdfme/pdf-lib@6.2.2)
-      pages-to-pdf: 0.3.10
-      prettier: 3.9.9
-      prosemirror-commands: 1.7.2
-      prosemirror-gapcursor: 1.4.1
-      prosemirror-history: 1.5.1
-      prosemirror-keymap: 1.2.3
-      prosemirror-model: 1.25.12
-      prosemirror-schema-basic: 1.2.5
-      prosemirror-schema-list: 1.5.1
-      prosemirror-state: 1.4.4
-      prosemirror-tables: 1.8.5
-      prosemirror-transform: 1.12.2
-      prosemirror-view: 1.42.6
-      w3c-keyname: 2.2.8
-    transitivePeerDependencies:
-      - '@pdfme/pdf-lib'
-
-  '@fiduswriter/document@0.3.19(@pdfme/pdf-lib@6.2.2)':
-    dependencies:
-      '@mathjax/mathjax-newcm-font': 4.1.3
-      '@mathjax/src': 4.1.3
-      '@prettier/plugin-xml': 3.4.2(prettier@3.9.9)
-      bibliojson: 4.1.0
-      citeproc-plus: 2.0.4
-      downloadjs: 1.4.7
-      fast-deep-equal: 3.1.3
-      fast-xml-parser: 5.11.2
-      fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
-      jszip: 3.10.2
-      mathlive: 0.110.0
-      mathml-to-latex: 1.8.0
-      mathml2omml: 0.5.0
+      node-html-parser: 9.0.4
       orderedmap: 2.1.1
       pages-to-pdf: 0.4.1
-      paginate-for-print: 1.1.0(@pdfme/pdf-lib@6.2.2)
+      paginate-for-print: 1.1.2(@pdfme/pdf-lib@6.2.2)
       prettier: 3.9.9
       prosemirror-commands: 1.7.2
       prosemirror-gapcursor: 1.4.1
@@ -2918,10 +2912,10 @@ snapshots:
     transitivePeerDependencies:
       - '@pdfme/pdf-lib'
 
-  '@fiduswriter/editor@0.2.35(@pdfme/pdf-lib@6.2.2)':
+  '@fiduswriter/editor@0.2.38(@pdfme/pdf-lib@6.2.2)':
     dependencies:
-      '@fiduswriter/bibliography-manager': 0.1.34(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
-      '@fiduswriter/document': 0.3.19(@pdfme/pdf-lib@6.2.2)
+      '@fiduswriter/bibliography-manager': 0.1.35(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+      '@fiduswriter/document': 0.3.24(@pdfme/pdf-lib@6.2.2)
       '@fiduswriter/image-manager': 0.1.28(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       '@fortawesome/fontawesome-free': 7.3.1
       cropperjs: 1.6.3
@@ -2934,7 +2928,7 @@ snapshots:
       fix-utf8: 2.0.1
       fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       jszip: 3.10.2
-      lingotweaker-wasm: 0.2.4
+      lingotweaker-wasm: 0.2.6
       mathml-to-latex: 1.8.0
       mathml2omml: 0.5.0
       orderedmap: 2.1.1
@@ -3795,6 +3789,8 @@ snapshots:
     dependencies:
       xregexp: 5.1.3
 
+  boolbase@1.0.0: {}
+
   brace-expansion@5.0.12:
     dependencies:
       balanced-match: 4.0.4
@@ -3919,10 +3915,20 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  css-select@5.2.2:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 6.2.2
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      nth-check: 2.1.1
+
   css-tree@1.1.3:
     dependencies:
       mdn-data: 2.0.14
       source-map: 0.6.1
+
+  css-what@6.2.2: {}
 
   d@1.0.2:
     dependencies:
@@ -3959,6 +3965,24 @@ snapshots:
 
   dijkstrajs@1.0.3: {}
 
+  dom-serializer@2.0.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.5.0
+
+  domelementtype@2.3.0: {}
+
+  domhandler@5.0.3:
+    dependencies:
+      domelementtype: 2.3.0
+
+  domutils@3.2.2:
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+
   downloadjs@1.4.7: {}
 
   electron-to-chromium@1.5.442: {}
@@ -3971,7 +3995,11 @@ snapshots:
     dependencies:
       iconv-lite: 0.6.3
 
+  entities@4.5.0: {}
+
   entities@7.0.1: {}
+
+  entities@8.1.0: {}
 
   error-ex@1.3.4:
     dependencies:
@@ -4680,11 +4708,11 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lingotweaker-data@0.2.4: {}
+  lingotweaker-data@0.2.6: {}
 
-  lingotweaker-wasm@0.2.4:
+  lingotweaker-wasm@0.2.6:
     dependencies:
-      lingotweaker-data: 0.2.4
+      lingotweaker-data: 0.2.6
 
   lint-staged@17.6.0:
     dependencies:
@@ -4754,6 +4782,11 @@ snapshots:
     dependencies:
       html-entities: 2.6.0
 
+  node-html-parser@9.0.4:
+    dependencies:
+      css-select: 5.2.2
+      entities: 8.1.0
+
   node-int64@0.4.0: {}
 
   node-releases@2.0.57: {}
@@ -4763,6 +4796,10 @@ snapshots:
   npm-run-path@4.0.1:
     dependencies:
       path-key: 3.1.1
+
+  nth-check@2.1.1:
+    dependencies:
+      boolbase: 1.0.0
 
   onetime@5.1.2:
     dependencies:
@@ -4799,29 +4836,6 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  paged-with-floats@0.11.1(@pdfme/pdf-lib@6.2.2):
-    dependencies:
-      '@babel/runtime': 7.29.7
-      '@chenglou/pretext': 0.0.8
-      clear-cut: 2.0.2
-      css-tree: 1.1.3
-      event-emitter: 0.3.5
-      fontkit: 2.0.4
-      pages-to-pdf: 0.3.10
-      svg4pdf-lib: 0.1.2(@pdfme/pdf-lib@6.2.2)
-    optionalDependencies:
-      fonteditor-core: 2.6.3
-    transitivePeerDependencies:
-      - '@pdfme/pdf-lib'
-
-  pages-to-pdf@0.3.10:
-    dependencies:
-      '@mathjax/src': 4.1.3
-      '@pdfme/pdf-lib': 6.2.2
-      fonteditor-core: 2.6.3
-      fontkit: 2.0.4
-      svg4pdf-lib: 0.1.2(@pdfme/pdf-lib@6.2.2)
-
   pages-to-pdf@0.4.1:
     dependencies:
       '@mathjax/src': 4.1.3
@@ -4830,7 +4844,7 @@ snapshots:
       fontkit: 2.0.4
       svg4pdf-lib: 0.1.2(@pdfme/pdf-lib@6.2.2)
 
-  paginate-for-print@1.1.0(@pdfme/pdf-lib@6.2.2):
+  paginate-for-print@1.1.2(@pdfme/pdf-lib@6.2.2):
     dependencies:
       '@babel/runtime': 7.29.7
       '@chenglou/pretext': 0.0.8
