@@ -1080,6 +1080,35 @@ export class DocumentOverviewActions {
         })
     }
 
+    downloadTypstFiles(ids: number[]): void {
+        import("../tools.js").then(({getMissingDocumentListData}) => {
+            getMissingDocumentListData(
+                ids,
+                this.documentOverview.documentList as any,
+                this.documentOverview.schema,
+                this.documentOverview.app.apiConnectors.document
+            ).then(() =>
+                ids.forEach(id => {
+                    const doc = this.documentOverview.documentList.find(entry => entry.id === id)
+                    if (!doc) return
+                    const progressCallback = exportProgressCallback(doc!)
+                    import("@fiduswriter/document/exporter/typst/index").then(
+                        ({TypstExporter}) => {
+                            const exporter = new TypstExporter(
+                                doc as any,
+                                {db: doc!.bibliography as any},
+                                {db: doc!.images as any},
+                                new Date((doc!.updated as number) * 1000)
+                            )
+                            exporter.progressCallback = progressCallback as any
+                            exporter.init()
+                        }
+                    )
+                })
+            )
+        })
+    }
+
     async downloadEpubFiles(ids: number[]): Promise<void> {
         const dialog = new EpubExportDialog()
         const options = await dialog.init()

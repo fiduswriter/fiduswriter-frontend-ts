@@ -17,8 +17,8 @@ importers:
         specifier: ^0.1.35
         version: 0.1.35(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       '@fiduswriter/document':
-        specifier: ^0.3.24
-        version: 0.3.24(@pdfme/pdf-lib@6.2.2)
+        specifier: ^0.3.30
+        version: 0.3.30(@pdfme/pdf-lib@6.2.2)
       '@fiduswriter/document-template-editor':
         specifier: ^0.1.21
         version: 0.1.21(@pdfme/pdf-lib@6.2.2)
@@ -362,8 +362,8 @@ packages:
   '@fiduswriter/document-template-editor@0.1.21':
     resolution: {integrity: sha512-xL3fKQ4x5FnaOAwqgFIHM4CvenVwYkT8Jaku1us9eyBy1ZNUhQNm4aChj1Qtg601Z1np7TnPubxvWCQ2m/Q+Hw==}
 
-  '@fiduswriter/document@0.3.24':
-    resolution: {integrity: sha512-hIGYRTew6Ul6bI/GjDc5cwKoUuikN3LKVSbtO1dghBbDXaQnJNiFIMyGBQQCH63ooZY7vOJ9VEi/5ULoXiwv5w==}
+  '@fiduswriter/document@0.3.30':
+    resolution: {integrity: sha512-3dG7iJjfQQwAkz6gksMgtPvw/01Rxd9R+3l8oYkKGNgTIqKs9j3Ar6TroSe1ikXFoopSuAo8+xM6y6otmM1FUg==}
 
   '@fiduswriter/editor@0.2.38':
     resolution: {integrity: sha512-4Ki2fD4+pKlot39q9ZYiXjkJPMkOC5kQr3ZzosD/hHVUex/8z6xtebHcSPsXjJupoyvY31Meaz7tL9yjTeEYeQ==}
@@ -2840,7 +2840,7 @@ snapshots:
 
   '@fiduswriter/bibliography-manager@0.1.35(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)':
     dependencies:
-      '@fiduswriter/document': 0.3.24(@pdfme/pdf-lib@6.2.2)
+      '@fiduswriter/document': 0.3.30(@pdfme/pdf-lib@6.2.2)
       bibliojson: 4.1.0
       fix-utf8: 2.0.1
       fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
@@ -2857,7 +2857,7 @@ snapshots:
 
   '@fiduswriter/document-template-editor@0.1.21(@pdfme/pdf-lib@6.2.2)':
     dependencies:
-      '@fiduswriter/document': 0.3.24(@pdfme/pdf-lib@6.2.2)
+      '@fiduswriter/document': 0.3.30(@pdfme/pdf-lib@6.2.2)
       downloadjs: 1.4.7
       fast-deep-equal: 3.1.3
       fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
@@ -2877,7 +2877,7 @@ snapshots:
     transitivePeerDependencies:
       - '@pdfme/pdf-lib'
 
-  '@fiduswriter/document@0.3.24(@pdfme/pdf-lib@6.2.2)':
+  '@fiduswriter/document@0.3.30(@pdfme/pdf-lib@6.2.2)':
     dependencies:
       '@mathjax/mathjax-newcm-font': 4.1.3
       '@mathjax/src': 4.1.3
@@ -2915,7 +2915,7 @@ snapshots:
   '@fiduswriter/editor@0.2.38(@pdfme/pdf-lib@6.2.2)':
     dependencies:
       '@fiduswriter/bibliography-manager': 0.1.35(@pdfme/pdf-lib@6.2.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
-      '@fiduswriter/document': 0.3.24(@pdfme/pdf-lib@6.2.2)
+      '@fiduswriter/document': 0.3.30(@pdfme/pdf-lib@6.2.2)
       '@fiduswriter/image-manager': 0.1.28(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       '@fortawesome/fontawesome-free': 7.3.1
       cropperjs: 1.6.3

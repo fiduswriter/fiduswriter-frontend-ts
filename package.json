@@ -211,7 +211,7 @@
     },
     "dependencies": {
         "@fiduswriter/bibliography-manager": "^0.1.35",
-        "@fiduswriter/document": "^0.3.24",
+        "@fiduswriter/document": "^0.3.30",
         "@fiduswriter/document-template-editor": "^0.1.21",
         "@fiduswriter/editor": "^0.2.38",
         "@fiduswriter/image-manager": "^0.1.28",
