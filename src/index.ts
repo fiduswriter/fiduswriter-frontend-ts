@@ -23,6 +23,7 @@ export {FidusFileImporter, NativeImporter} from "./documents/importer/native/ind
 export {createNativeImporterBackend} from "./documents/importer/native/import.js"
 export {DocxImporter} from "./documents/importer/docx/index.js"
 export {OdtImporter} from "./documents/importer/odt/index.js"
+export {HtmlImporter} from "./documents/importer/html/index.js"
 export {PandocImporter} from "./documents/importer/pandoc/index.js"
 
 // Documents - revisions
