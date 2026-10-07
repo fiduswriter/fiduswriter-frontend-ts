@@ -15,8 +15,11 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs"
 import { cpSync, readdirSync } from "node:fs"
+import { createRequire } from "node:module"
 import { join, dirname, relative } from "node:path"
 import { fileURLToPath } from "node:url"
+
+const require = createRequire(import.meta.url)
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, "..")
@@ -54,14 +57,84 @@ function copyDir(src, dest) {
 }
 
 /**
- * Read a dependency's package.json relative to node_modules.
+ * Locate an installed dependency's package root.
+ *
+ * Node's own module resolution is used first, then the nearest
+ * package.json with a matching name is found by walking up from the
+ * resolved entry point. Unlike join(root, "node_modules", ...), this
+ * works under every package manager's node_modules layout: npm flat,
+ * npm nested, pnpm's virtual store, and this repository's own
+ * development checkout (where the package underfoot resolves as
+ * itself). Returns null when the package cannot be resolved.
+ *
+ * @param {string} pkgName  e.g. "fwtoolkit" or "@fiduswriter/editor"
+ * @returns {string|null}
+ */
+function resolveDepRoot(pkgName) {
+    let entry = null
+    try {
+        entry = require.resolve(pkgName)
+    } catch {
+        // No CommonJS entry — try ESM resolution below.
+    }
+    if (entry === null) {
+        try {
+            entry = fileURLToPath(import.meta.resolve(pkgName))
+        } catch {
+            // Not resolvable by either condition set.
+        }
+    }
+    if (entry) {
+        let dir = dirname(entry)
+        for (;;) {
+            const pkgJsonPath = join(dir, "package.json")
+            if (existsSync(pkgJsonPath)) {
+                try {
+                    if (
+                        JSON.parse(readFileSync(pkgJsonPath, "utf8")).name ===
+                        pkgName
+                    ) {
+                        return dir
+                    }
+                } catch {
+                    // A package.json that does not parse cannot be the one.
+                }
+            }
+            const parent = dirname(dir)
+            if (parent === dir) {
+                break
+            }
+            dir = parent
+        }
+    }
+    // Development checkout: the package underfoot is its own dependency.
+    try {
+        if (
+            JSON.parse(readFileSync(join(root, "package.json"), "utf8"))
+                .name === pkgName
+        ) {
+            return root
+        }
+    } catch {
+        // Root package.json unreadable — not the dev checkout either.
+    }
+    return null
+}
+
+/**
+ * Read a dependency's package.json.
  * @param {string} pkgName  e.g. "fwtoolkit" or "@fiduswriter/editor"
  * @returns {object|null}
  */
 function readDepPackage(pkgName) {
-    const path = join(root, "node_modules", pkgName, "package.json")
-    if (!existsSync(path)) return null
-    return JSON.parse(readFileSync(path, "utf8"))
+    const depRoot = resolveDepRoot(pkgName)
+    if (!depRoot) return null
+    const path = join(depRoot, "package.json")
+    try {
+        return JSON.parse(readFileSync(path, "utf8"))
+    } catch {
+        return null
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -87,8 +160,9 @@ if (existsSync(join(root, "static"))) {
 // ---------------------------------------------------------------------------
 console.log("Step 1c: Copying @fiduswriter/editor static assets...")
 
-const editorStatic = join(root, "node_modules", "@fiduswriter/editor", "static")
-if (existsSync(editorStatic)) {
+const editorRoot = resolveDepRoot("@fiduswriter/editor")
+const editorStatic = editorRoot ? join(editorRoot, "static") : null
+if (editorStatic && existsSync(editorStatic)) {
     copyDir(editorStatic, distStatic)
 } else {
     console.log("  (not found)")
@@ -122,7 +196,12 @@ const subDeps = [
 ]
 
 for (const dep of subDeps) {
-    const src = join(root, "node_modules", dep.name, dep.cssDir)
+    const depRoot = resolveDepRoot(dep.name)
+    if (!depRoot) {
+        console.log(`  ${dep.name}: skipped (not installed)`)
+        continue
+    }
+    const src = join(depRoot, dep.cssDir)
     const dest = join(distCss, dep.destDir)
     if (!existsSync(src)) {
         console.log(`  ${dep.name}: skipped (not found at ${src})`)
@@ -178,17 +257,25 @@ manifest.tokens.push("fwtoolkit/css/colors.css")
 manifest.typography.push("@fiduswriter/frontend/css/fonts.css")
 
 // Layer 3: All fwtoolkit component CSS (used by the full SPA)
-const allFwtCss = readdirSync(join(root, "node_modules", "fwtoolkit", "css")).filter(
-    (f) => f.endsWith(".css")
-)
-// Remove colors.css (already in tokens), common.css (goes in components),
-// and reset.css (already in the reset layer)
-const fwtComponents = allFwtCss
-    .filter(
-        (f) => f !== "colors.css" && f !== "fwtoolkit.css" && f !== "reset.css"
+const fwtoolkitRoot = resolveDepRoot("fwtoolkit")
+if (fwtoolkitRoot) {
+    const allFwtCss = readdirSync(join(fwtoolkitRoot, "css")).filter((f) =>
+        f.endsWith(".css")
     )
-    .map((f) => `fwtoolkit/css/${f}`)
-manifest.components.push(...fwtComponents)
+    // Remove colors.css (already in tokens), common.css (goes in components),
+    // and reset.css (already in the reset layer)
+    const fwtComponents = allFwtCss
+        .filter(
+            (f) =>
+                f !== "colors.css" && f !== "fwtoolkit.css" && f !== "reset.css"
+        )
+        .map((f) => `fwtoolkit/css/${f}`)
+    manifest.components.push(...fwtComponents)
+} else {
+    console.warn(
+        "  fwtoolkit could not be resolved; the manifest will lack its component layer"
+    )
+}
 
 // Layer 4: Additive overrides from all packages
 const additivePackages = [
