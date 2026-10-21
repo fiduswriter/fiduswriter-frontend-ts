@@ -99,10 +99,26 @@ export function createNativeImporterBackend(
                                   e2ee.key
                               )
                             : imageEntry.file
+                    let title = imageEntry.title
+                    let copyright = imageEntry.copyright
+                    if (isE2EE && e2ee?.key) {
+                        // Image metadata is encrypted with the target
+                        // document key before upload.
+                        title = await E2EEEncryptor.encryptObject(
+                            title,
+                            e2ee.key
+                        )
+                        if (copyright) {
+                            copyright = await E2EEEncryptor.encryptObject(
+                                copyright,
+                                e2ee.key
+                            )
+                        }
+                    }
                     const jsonData = {
                         doc_id: docId,
-                        title: imageEntry.title,
-                        copyright: imageEntry.copyright,
+                        title: title,
+                        copyright: copyright,
                         checksum: imageEntry.checksum
                     }
                     const files = {
