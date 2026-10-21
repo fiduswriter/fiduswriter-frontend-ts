@@ -35,8 +35,8 @@ importers:
         specifier: ^3.1.3
         version: 3.1.3
       fwtoolkit:
-        specifier: ^0.2.26
-        version: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+        specifier: ^0.2.30
+        version: 0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       jszip:
         specifier: ^3.10.1
         version: 3.10.2
@@ -1607,8 +1607,8 @@ packages:
   fontkit@2.0.4:
     resolution: {integrity: sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==}
 
-  fwtoolkit@0.2.26:
-    resolution: {integrity: sha512-gxMRnQqHv4M4zgfMwpAgpm0CpMEH2o/CRs6P5kV+6y4X4ESThYUGYmtUVU9pVx9yQmki22cTgf0w63kqu62WxQ==}
+  fwtoolkit@0.2.30:
+    resolution: {integrity: sha512-D7iwb3i5gzcI7hbFq8emk0LWwBBrJuzhOdXt4YEOWdv+/qh4QIaOcTzOqrpOpsJGetp1PQoBsT/pyMaBVNlGMQ==}
     peerDependencies:
       prosemirror-commands: ^1.7.0
       prosemirror-history: ^1.4.0
@@ -2843,7 +2843,7 @@ snapshots:
       '@fiduswriter/document': 0.3.30(@pdfme/pdf-lib@6.2.2)
       bibliojson: 4.1.0
       fix-utf8: 2.0.1
-      fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+      fwtoolkit: 0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       prosemirror-commands: 1.7.2
       prosemirror-model: 1.25.12
       simple-datatables: 10.3.0
@@ -2860,7 +2860,7 @@ snapshots:
       '@fiduswriter/document': 0.3.30(@pdfme/pdf-lib@6.2.2)
       downloadjs: 1.4.7
       fast-deep-equal: 3.1.3
-      fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+      fwtoolkit: 0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       jszip: 3.10.2
       prosemirror-commands: 1.7.2
       prosemirror-example-setup: 1.2.3
@@ -2887,7 +2887,7 @@ snapshots:
       downloadjs: 1.4.7
       fast-deep-equal: 3.1.3
       fast-xml-parser: 5.11.2
-      fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+      fwtoolkit: 0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       jszip: 3.10.2
       mathlive: 0.110.0
       mathml-to-latex: 1.8.0
@@ -2926,7 +2926,7 @@ snapshots:
       fast-xml-parser: 4.5.7
       fastdom: 1.0.12
       fix-utf8: 2.0.1
-      fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+      fwtoolkit: 0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       jszip: 3.10.2
       lingotweaker-wasm: 0.2.6
       mathml-to-latex: 1.8.0
@@ -2960,7 +2960,7 @@ snapshots:
       bibliojson: 4.1.0
       cropperjs: 1.6.3
       fast-deep-equal: 3.1.3
-      fwtoolkit: 0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
+      fwtoolkit: 0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)
       simple-datatables: 10.3.0
     transitivePeerDependencies:
       - prosemirror-commands
@@ -4216,7 +4216,7 @@ snapshots:
       unicode-properties: 1.4.1
       unicode-trie: 2.0.0
 
-  fwtoolkit@0.2.26(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6):
+  fwtoolkit@0.2.30(prosemirror-commands@1.7.2)(prosemirror-history@1.5.1)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6):
     dependencies:
       diff-dom: 5.2.1
       jszip: 3.10.2
