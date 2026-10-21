@@ -93,7 +93,7 @@ export interface AuthApi {
     twoFactorSetup(): Promise<TwoFactorSetupResponse>
     twoFactorVerify(data: Record<string, unknown>): Promise<TwoFactorVerifyResponse>
     twoFactorLogin(data: Record<string, unknown>): Promise<TwoFactorVerifyResponse>
-    twoFactorDisable(): Promise<TwoFactorVerifyResponse>
+    twoFactorDisable(data: Record<string, unknown>): Promise<TwoFactorVerifyResponse>
     twoFactorStatus(): Promise<TwoFactorStatusResponse>
 }
 

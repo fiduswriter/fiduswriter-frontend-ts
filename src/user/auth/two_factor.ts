@@ -134,8 +134,28 @@ export const twoFactorDisableDialog = (app: FrontendApp): any => {
             text: gettext("Disable 2FA"),
             classes: "fw-orange",
             click: () => {
+                const passwordInput = document.getElementById(
+                    "two-factor-disable-password"
+                ) as HTMLInputElement | null
+                const codeInput = document.getElementById(
+                    "two-factor-disable-code"
+                ) as HTMLInputElement | null
+                const password = passwordInput ? passwordInput.value : ""
+                const code = codeInput ? codeInput.value.trim() : ""
+
+                if (password.length === 0) {
+                    addAlert("error", gettext("Please enter your password."))
+                    return
+                }
+
+                if (code.length !== 6) {
+                    addAlert("error", gettext("Please enter a 6-digit code."))
+                    return
+                }
+
                 activateWait()
-                app.apiConnectors.auth.twoFactorDisable()
+                app.apiConnectors.auth
+                    .twoFactorDisable({password, code})
                     .then((json: TwoFactorVerifyResponse) => {
                         if (json.status === "success") {
                             addAlert("success", json.message)
@@ -145,11 +165,38 @@ export const twoFactorDisableDialog = (app: FrontendApp): any => {
                             addAlert("error", json.message)
                         }
                     })
-                    .catch(() => {
-                        addAlert(
-                            "error",
-                            gettext("Could not disable two-factor authentication.")
-                        )
+                    .catch((errorResponse: unknown) => {
+                        // The server rejects missing/invalid re-authentication
+                        // with a 4xx carrying a JSON message.
+                        const response = errorResponse as Response | undefined
+                        if (response && typeof response.json === "function") {
+                            response
+                                .json()
+                                .then((json: {message?: string}) => {
+                                    addAlert(
+                                        "error",
+                                        json.message ||
+                                            gettext(
+                                                "Could not disable two-factor authentication."
+                                            )
+                                    )
+                                })
+                                .catch(() => {
+                                    addAlert(
+                                        "error",
+                                        gettext(
+                                            "Could not disable two-factor authentication."
+                                        )
+                                    )
+                                })
+                        } else {
+                            addAlert(
+                                "error",
+                                gettext(
+                                    "Could not disable two-factor authentication."
+                                )
+                            )
+                        }
                     })
                     .then(() => {
                         deactivateWait()
@@ -162,12 +209,37 @@ export const twoFactorDisableDialog = (app: FrontendApp): any => {
     const dialog = new Dialog({
         id: "two-factor-disable-dialog",
         title: gettext("Disable Two-Factor Authentication"),
-        body: `<p>${gettext("Are you sure you want to disable two-factor authentication? This will reduce the security of your account.")}</p>`,
+        body: `<p>${gettext("Are you sure you want to disable two-factor authentication? This will reduce the security of your account.")}</p>
+            <p>${gettext("Confirm with your account password and a code from your authenticator app:")}</p>
+            <div class="two-factor-verify-section">
+                <label for="two-factor-disable-password">${gettext("Password")}</label>
+                <input type="password" id="two-factor-disable-password" class="fw-button fw-large" autocomplete="current-password" data-1p-ignore data-lpignore="true" data-form-type="other" />
+            </div>
+            <div class="two-factor-verify-section">
+                <label for="two-factor-disable-code">${gettext("Authenticator code")}</label>
+                <input type="text" id="two-factor-disable-code" placeholder="123456" maxlength="6" class="fw-button fw-large" autocomplete="one-time-code" />
+            </div>`,
         buttons,
         icon: "exclamation-triangle"
     })
 
     dialog.open()
+
+    const disableCodeInput = dialog.dialogEl.querySelector(
+        "#two-factor-disable-code"
+    )
+    if (disableCodeInput) {
+        ;(disableCodeInput as HTMLElement).addEventListener(
+            "keypress",
+            (event: Event) => {
+                if ((event as KeyboardEvent).key === "Enter") {
+                    event.preventDefault()
+                    buttons[0].click!()
+                }
+            }
+        )
+    }
+
     return dialog
 }
 
