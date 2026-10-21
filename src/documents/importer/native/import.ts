@@ -65,8 +65,11 @@ export function createNativeImporterBackend(
                 template_title: template.content.attrs.template,
                 path
             }
+            // The e2ee flag must always be sent explicitly, so that the
+            // server never has to guess the encryption intent of the new
+            // document.
+            jsonData.e2ee = !!(e2ee && e2ee.enabled)
             if (e2ee?.enabled) {
-                jsonData.e2ee = true
                 if (e2ee.salt) {
                     jsonData.e2ee_salt = e2ee.salt
                 }
