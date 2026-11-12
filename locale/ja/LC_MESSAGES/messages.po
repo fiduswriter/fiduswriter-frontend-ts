@@ -41,8 +41,8 @@ msgstr "すべてのドキュメント テンプレートが更新されまし�
 msgid "All documents updated!"
 msgstr "すべてのドキュメントが更新されました!"
 
-msgid "All documents, document templates and document revisions updated!"
-msgstr "すべてのドキュメント、ドキュメント テンプレート、ドキュメント リビジョンが更新されました。"
+msgid "All documents, document templates and document snapshots updated!"
+msgstr "すべてのドキュメント、ドキュメント テンプレート、ドキュメント スナップショットが更新されました。"
 
 msgid "All fields are required!"
 msgstr "すべてのフィールドは必須です。"
@@ -176,8 +176,8 @@ msgstr "ドキュメントを削除できませんでした"
 msgid "Could not delete document template"
 msgstr "ドキュメントテンプレートを削除できませんでした"
 
-msgid "Could not delete revision."
-msgstr "リビジョンを削除できませんでした。"
+msgid "Could not delete snapshot."
+msgstr "スナップショットを削除できませんでした。"
 
 msgid "Could not delete user account."
 msgstr "ユーザーアカウントを削除できませんでした。"
@@ -305,8 +305,8 @@ msgstr "本当に次の文書を削除してもよろしいですか?"
 msgid "Do you really want to delete the following documents?"
 msgstr "本当に次の文書を削除してもよろしいですか?"
 
-msgid "Do you really want to delete the revision?"
-msgstr "本当にリビジョンを削除してもよろしいですか?"
+msgid "Do you really want to delete the snapshot?"
+msgstr "本当にスナップショットを削除してもよろしいですか?"
 
 msgid "Do you want to accept the below invite?"
 msgstr "以下の招待を承諾しますか?"
@@ -641,8 +641,8 @@ msgstr "連絡先がありません"
 msgid "No contacts found"
 msgstr "連絡先が見つかりませんでした"
 
-msgid "No document revisions to update."
-msgstr "更新するドキュメントのリビジョンはありません。"
+msgid "No document snapshots to update."
+msgstr "更新するドキュメントのスナップショットはありません。"
 
 msgid "No document templates available"
 msgstr "利用可能なドキュメントテンプレートがありません"
@@ -780,20 +780,20 @@ msgstr "パスワードのリセット"
 msgid "Respond"
 msgstr "応答"
 
-msgid "Revision deleted"
-msgstr "リビジョンが削除されました"
+msgid "Snapshot deleted"
+msgstr "スナップショットが削除されました"
 
-msgid "Revision of"
-msgstr "のリビジョン"
+msgid "Snapshot of"
+msgstr "のスナップショット"
 
-msgid "Revisions"
-msgstr "リビジョン"
+msgid "Snapshots"
+msgstr "スナップショット"
 
 msgid "Save"
 msgstr "保存"
 
-msgid "Saved revisions of"
-msgstr "保存されたリビジョン"
+msgid "Saved snapshots of"
+msgstr "保存されたスナップショット"
 
 msgid "Saved template"
 msgstr "保存されたテンプレート"
@@ -913,8 +913,8 @@ msgstr "アカウントを削除できませんでした!"
 msgid "The document has been updated"
 msgstr "ドキュメントが更新されました"
 
-msgid "The document revision has been updated: "
-msgstr "ドキュメントのリビジョンが更新されました。"
+msgid "The document snapshot has been updated: "
+msgstr "ドキュメントのスナップショットが更新されました。"
 
 msgid "The document template could not be copied"
 msgstr "ドキュメントテンプレートをコピーできませんでした"
@@ -1015,8 +1015,8 @@ msgstr "ドキュメントテンプレートを更新しています。"
 msgid "Updating documents."
 msgstr "ドキュメントを更新しています。"
 
-msgid "Updating saved revisions."
-msgstr "保存されたリビジョンを更新しています。"
+msgid "Updating saved snapshots."
+msgstr "保存されたスナップショットを更新しています。"
 
 msgid "Updating..."
 msgstr "更新中..."

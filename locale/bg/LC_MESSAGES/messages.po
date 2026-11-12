@@ -41,7 +41,7 @@ msgstr "Всички шаблони за документи са актуали�
 msgid "All documents updated!"
 msgstr "Всички документи са актуализирани!"
 
-msgid "All documents, document templates and document revisions updated!"
+msgid "All documents, document templates and document snapshots updated!"
 msgstr ""
 "Всички документи, шаблони на документи и ревизии на документи са "
 "актуализирани!"
@@ -180,8 +180,8 @@ msgstr "Документът не може да бъде изтрит"
 msgid "Could not delete document template"
 msgstr "Шаблонът на документа не може да бъде изтрит"
 
-msgid "Could not delete revision."
-msgstr "Ревизията не можа да се изтрие."
+msgid "Could not delete snapshot."
+msgstr "Снимката не можа да се изтрие."
 
 msgid "Could not delete user account."
 msgstr "Потребителският акаунт не може да бъде изтрит."
@@ -310,8 +310,8 @@ msgstr "Наистина ли искате да изтриете следния 
 msgid "Do you really want to delete the following documents?"
 msgstr "Наистина ли искате да изтриете следните документи?"
 
-msgid "Do you really want to delete the revision?"
-msgstr "Наистина ли искате да изтриете редакцията?"
+msgid "Do you really want to delete the snapshot?"
+msgstr "Наистина ли искате да изтриете снимката?"
 
 msgid "Do you want to accept the below invite?"
 msgstr "Искате ли да приемете поканата по-долу?"
@@ -664,8 +664,8 @@ msgstr "Няма налични контакти"
 msgid "No contacts found"
 msgstr "Няма намерени контакти"
 
-msgid "No document revisions to update."
-msgstr "Няма редакции на документи, които да се актуализират."
+msgid "No document snapshots to update."
+msgstr "Няма снимки на документи, които да се актуализират."
 
 msgid "No document templates available"
 msgstr "Няма налични шаблони за документи"
@@ -812,20 +812,20 @@ msgstr "Нулиране на парола"
 msgid "Respond"
 msgstr "Отговорете"
 
-msgid "Revision deleted"
-msgstr "Ревизията е изтрита"
+msgid "Snapshot deleted"
+msgstr "Снимката е изтрита"
 
-msgid "Revision of"
-msgstr "Преразглеждане на"
+msgid "Snapshot of"
+msgstr "Снимка на"
 
-msgid "Revisions"
-msgstr "Ревизиите"
+msgid "Snapshots"
+msgstr "Снимките"
 
 msgid "Save"
 msgstr "Запази"
 
-msgid "Saved revisions of"
-msgstr "Запазени ревизии на"
+msgid "Saved snapshots of"
+msgstr "Запазени снимки на"
 
 msgid "Saved template"
 msgstr "Запазен шаблон"
@@ -951,8 +951,8 @@ msgstr "Акаунтът не можа да бъде изтрит!"
 msgid "The document has been updated"
 msgstr "Документът е актуализиран"
 
-msgid "The document revision has been updated: "
-msgstr "Редакцията на документа е актуализирана: "
+msgid "The document snapshot has been updated: "
+msgstr "Снимката на документа е актуализирана: "
 
 msgid "The document template could not be copied"
 msgstr "Шаблонът на документа не можа да бъде копиран"
@@ -1057,8 +1057,8 @@ msgstr "Актуализиране на шаблони на документи."
 msgid "Updating documents."
 msgstr "Актуализиране на документи."
 
-msgid "Updating saved revisions."
-msgstr "Актуализиране на запазените версии."
+msgid "Updating saved snapshots."
+msgstr "Актуализиране на запазените снимки."
 
 msgid "Updating..."
 msgstr "Актуализиране..."

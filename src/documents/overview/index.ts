@@ -583,7 +583,7 @@ export class DocumentOverview {
             headings: [
                 "", "", "",
                 gettext("Title"),
-                gettext("Revisions"),
+                gettext("Snapshots"),
                 gettext("Created"),
                 gettext("Last changed"),
                 gettext("Owner"),

@@ -41,7 +41,7 @@ export class DocumentRevisionsDialog {
             return Promise.reject(new Error("Document not found"))
         }
         this.dialog = new Dialog({
-            title: `${gettext("Saved revisions of")} ${escapeText(shortFileTitle(doc.title as string, doc.path as string))}`,
+            title: `${gettext("Saved snapshots of")} ${escapeText(shortFileTitle(doc.title as string, doc.path as string))}`,
             id: "revisions-dialog",
             width: 620,
             height: 480,
@@ -96,7 +96,7 @@ export class DocumentRevisionsDialog {
                     longFilePath(
                         doc.title as string,
                         doc.path as string,
-                        `${gettext("Revision of")} `
+                        `${gettext("Snapshot of")} `
                     ),
                     false,
                     [],
@@ -151,7 +151,7 @@ export class DocumentRevisionsDialog {
             id: "confirmdeletion",
             title: gettext("Confirm deletion"),
             icon: "exclamation-triangle",
-            body: `${gettext("Do you really want to delete the revision?")}`,
+            body: `${gettext("Do you really want to delete the snapshot?")}`,
             height: 80,
             buttons
         } as any)
@@ -172,7 +172,7 @@ export class DocumentRevisionsDialog {
                     d => d.id === Number.parseInt(documentId!)
                 )
                 thisTr.parentElement!.removeChild(thisTr)
-                addAlert("success", gettext("Revision deleted"))
+                addAlert("success", gettext("Snapshot deleted"))
                 return Promise.resolve({
                     action: "deleted-revision",
                     id,
@@ -180,8 +180,8 @@ export class DocumentRevisionsDialog {
                 })
             })
             .catch(() => {
-                addAlert("error", gettext("Could not delete revision."))
-                return Promise.reject(new Error("Could not delete revision."))
+                addAlert("error", gettext("Could not delete snapshot."))
+                return Promise.reject(new Error("Could not delete snapshot."))
             })
     }
 }

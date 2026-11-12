@@ -181,13 +181,13 @@ export class DocMaintenance {
     }
 
     updateRevisions(): void {
-        addAlert("info", gettext("Updating saved revisions."))
+        addAlert("info", gettext("Updating saved snapshots."))
         this.app.apiConnectors.maintenance.getAllRevisionIds().then((json: RevisionIdsResponse) => {
             this.revSavesLeft = json.revision_ids.length
             if (this.revSavesLeft) {
                 json.revision_ids.forEach((revId: number) => this.updateRevision(revId))
             } else {
-                addAlert("info", gettext("No document revisions to update."))
+                addAlert("info", gettext("No document snapshots to update."))
                 this.done()
             }
         })
@@ -242,7 +242,7 @@ export class DocMaintenance {
                 this.app.apiConnectors.maintenance.updateRevision(id, blob).then(() => {
                     addAlert(
                         "success",
-                        gettext("The document revision has been updated: ") + id
+                        gettext("The document snapshot has been updated: ") + id
                     )
                     this.revSavesLeft--
                     if (this.revSavesLeft === 0) {
@@ -254,7 +254,7 @@ export class DocMaintenance {
 
     done(): void {
         ;(document.querySelector("input#update") as HTMLInputElement).value = gettext(
-            "All documents, document templates and document revisions updated!"
+            "All documents, document templates and document snapshots updated!"
         )
     }
 }

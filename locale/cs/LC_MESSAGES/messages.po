@@ -41,7 +41,7 @@ msgstr "Všechny šablony dokumentů byly aktualizovány!"
 msgid "All documents updated!"
 msgstr "Všechny dokumenty aktualizovány!"
 
-msgid "All documents, document templates and document revisions updated!"
+msgid "All documents, document templates and document snapshots updated!"
 msgstr ""
 "Všechny dokumenty, šablony dokumentů a revize dokumentů byly aktualizovány!"
 
@@ -179,8 +179,8 @@ msgstr "Dokument nelze smazat"
 msgid "Could not delete document template"
 msgstr "Šablonu dokumentu nelze smazat"
 
-msgid "Could not delete revision."
-msgstr "Nelze smazat revizi."
+msgid "Could not delete snapshot."
+msgstr "Nelze smazat snímek."
 
 msgid "Could not delete user account."
 msgstr "Uživatelský účet nelze smazat."
@@ -309,8 +309,8 @@ msgstr "Opravdu chcete smazat následující dokument?"
 msgid "Do you really want to delete the following documents?"
 msgstr "Opravdu chcete smazat následující dokumenty?"
 
-msgid "Do you really want to delete the revision?"
-msgstr "Opravdu chcete smazat revizi?"
+msgid "Do you really want to delete the snapshot?"
+msgstr "Opravdu chcete smazat snímek?"
 
 msgid "Do you want to accept the below invite?"
 msgstr "Chcete přijmout níže uvedenou pozvánku?"
@@ -660,8 +660,8 @@ msgstr "Nejsou k dispozici žádné kontakty"
 msgid "No contacts found"
 msgstr "Nebyly nalezeny žádné kontakty"
 
-msgid "No document revisions to update."
-msgstr "Žádné revize dokumentu k aktualizaci."
+msgid "No document snapshots to update."
+msgstr "Žádné snímky dokumentu k aktualizaci."
 
 msgid "No document templates available"
 msgstr "Nejsou k dispozici žádné šablony dokumentů"
@@ -804,20 +804,20 @@ msgstr "Obnovit heslo"
 msgid "Respond"
 msgstr "Reagovat"
 
-msgid "Revision deleted"
-msgstr "Revize smazána"
+msgid "Snapshot deleted"
+msgstr "Snímek smazán"
 
-msgid "Revision of"
-msgstr "Revize"
+msgid "Snapshot of"
+msgstr "Snímek"
 
-msgid "Revisions"
-msgstr "Revize"
+msgid "Snapshots"
+msgstr "Snímky"
 
 msgid "Save"
 msgstr "Uložit"
 
-msgid "Saved revisions of"
-msgstr "Uložené revize"
+msgid "Saved snapshots of"
+msgstr "Uložené snímky"
 
 msgid "Saved template"
 msgstr "Uložená šablona"
@@ -943,8 +943,8 @@ msgstr "Účet se nepodařilo smazat!"
 msgid "The document has been updated"
 msgstr "Dokument byl aktualizován"
 
-msgid "The document revision has been updated: "
-msgstr "Revize dokumentu byla aktualizována:"
+msgid "The document snapshot has been updated: "
+msgstr "Snímek dokumentu byl aktualizován:"
 
 msgid "The document template could not be copied"
 msgstr "Šablonu dokumentu se nepodařilo zkopírovat"
@@ -1049,8 +1049,8 @@ msgstr "Aktualizace šablon dokumentů."
 msgid "Updating documents."
 msgstr "Aktualizace dokumentů."
 
-msgid "Updating saved revisions."
-msgstr "Aktualizace uložených revizí."
+msgid "Updating saved snapshots."
+msgstr "Aktualizace uložených snímků."
 
 msgid "Updating..."
 msgstr "Aktualizace..."
