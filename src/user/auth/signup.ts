@@ -2,8 +2,19 @@ import {escapeText} from "fwtoolkit"
 import {PreloginPage, type PreloginApp} from "../../prelogin/index.js"
 
 export class Signup extends PreloginPage {
-    constructor({app, language}: {app: PreloginApp; language: string}) {
+    socialaccount_providers: Array<Record<string, unknown>>
+
+    constructor({
+        app,
+        language,
+        socialaccount_providers
+    }: {
+        app: PreloginApp
+        language: string
+        socialaccount_providers: Array<Record<string, unknown>>
+    }) {
         super({app, language})
+        this.socialaccount_providers = socialaccount_providers
         this.title = gettext("Signup")
         if (this.app.settings?.REGISTRATION_OPEN) {
             this.contents = `<div class="fw-login-left">
@@ -13,6 +24,26 @@ export class Signup extends PreloginPage {
                         'Already have an account? Then please <a href="/" title="Login">login</a>.'
                     )}
                 </p>
+                ${
+                    this.app.settings?.SOCIALACCOUNT_OPEN &&
+                    this.socialaccount_providers.length
+                        ? `<div class="socialaccount_ballot">
+                    <ul class="socialaccount_providers">
+                        ${this.socialaccount_providers
+                            .map(
+                                (provider: any) => `<li>
+                                <a title="${provider.name}" class="fw-button fw-socialaccount fw-${provider.id}"
+                                    href="${provider.login_url}">
+                                        <span class="fab fa-${provider.id}"></span>
+                                            ${gettext("Sign up with")} ${provider.name}
+                                </a>
+                            </li>`
+                            )
+                            .join("")}
+                    </ul>
+                </div>`
+                        : ""
+                }
             </div>
             <div class="fw-login-right">
                 <form>
@@ -52,6 +83,23 @@ export class Signup extends PreloginPage {
 
     bind(): void {
         super.bind()
+
+        const socialButtons = document.body.querySelectorAll(
+            ".fw-button.fw-socialaccount"
+        )
+        let btnWidth = 1
+
+        socialButtons.forEach((button: Element) => {
+            const theWidth = (button as HTMLElement).clientWidth
+            if (btnWidth < theWidth) {
+                btnWidth = theWidth
+            }
+        })
+        btnWidth += 15
+        socialButtons.forEach(
+            button =>
+                ((button as HTMLElement).style.width = `${btnWidth}px`)
+        )
 
         const signupSubmit = document.querySelector("#signup-submit")
 

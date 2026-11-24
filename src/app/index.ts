@@ -210,7 +210,9 @@ export class App {
                         case "sign-up":
                             returnValue = new Signup({
                                 app: this.config.app as PreloginApp,
-                                language: this.config.language || ""
+                                language: this.config.language || "",
+                                socialaccount_providers:
+                                    this.config.socialaccount_providers ?? []
                             })
                             break
                         default:
