@@ -1,5 +1,6 @@
 import {escapeText} from "fwtoolkit"
 import {PreloginPage, type PreloginApp} from "../../prelogin/index.js"
+import {socialProviderIcon} from "./social_icons.js"
 
 export class LoginPage extends PreloginPage {
     socialaccount_providers: Array<Record<string, unknown>>
@@ -44,7 +45,7 @@ export class LoginPage extends PreloginPage {
                                 (provider: any) => `<li>
                                 <a title="${provider.name}" class="fw-button fw-socialaccount fw-${provider.id}"
                                     href="${provider.login_url}">
-                                        <span class="fab fa-${provider.id}"></span>
+                                        <span class="fab fa-${socialProviderIcon(provider.id)}"></span>
                                             ${gettext("Login with")} ${provider.name}
                                 </a>
                             </li>`
