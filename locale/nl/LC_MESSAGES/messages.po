@@ -42,7 +42,8 @@ msgid "All documents updated!"
 msgstr "Alle documenten bijgewerkt!"
 
 msgid "All documents, document templates and document snapshots updated!"
-msgstr "Alle documenten, documentsjablonen en documentmomentopnamen bijgewerkt!"
+msgstr ""
+"Alle documenten, documentsjablonen en documentmomentopnamen bijgewerkt!"
 
 msgid "All fields are required!"
 msgstr "Alle velden zijn verplicht!"
@@ -53,6 +54,9 @@ msgid ""
 msgstr ""
 "Weet u zeker dat u tweefactorauthenticatie wilt uitschakelen? Dit vermindert"
 " de veiligheid van uw account."
+
+msgid "Authenticator code"
+msgstr "Authenticatiecode"
 
 msgid "Bibliography"
 msgstr "Bibliografie"
@@ -74,6 +78,14 @@ msgstr "Wachtwoord wijzigen"
 
 msgid "Change picture"
 msgstr "Afbeelding wijzigen"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Controleer spelling en grammatica tijdens het typen met de ingebouwde "
+"LingoTweaker-controle. Het draait volledig in uw browser; er is geen externe"
+" server nodig."
 
 msgid "Choose document template"
 msgstr "Kies documentsjabloon"
@@ -131,6 +143,11 @@ msgstr "Bevestig de primaire instelling"
 msgid "Confirm the new password"
 msgstr "Bevestig het nieuwe wachtwoord"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"Bevestig met uw accountwachtwoord en een code van uw authenticator-app:"
+
 msgid "Confirm your password"
 msgstr "Bevestig uw wachtwoord"
 
@@ -142,6 +159,9 @@ msgstr "Verbinden"
 
 msgid "Contacts"
 msgstr "Contacten"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Continue spelling- en grammaticacontrole"
 
 msgid "Copy"
 msgstr "Kopiëren"
@@ -469,8 +489,20 @@ msgstr "Exporteren geselecteerd als JATS"
 msgid "Export selected as LaTeX"
 msgstr "Exporteren geselecteerd als LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "Exporteren geselecteerd als Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Geselecteerde export als PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Export geselecteerd als Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Exporteren geselecteerd als TEI"
+
+msgid "Export selected as Typst"
+msgstr "Exporteren geselecteerd als Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Exporteer de documenten die zijn geselecteerd als BITS-bestanden."
@@ -500,6 +532,18 @@ msgstr "Exporteer de documenten die zijn geselecteerd als JATS-bestanden."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Exporteer de documenten die zijn geselecteerd als LaTeX-bestanden."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Exporteer de documenten die zijn geselecteerd als Markdown-bestanden."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Exporteer de documenten die zijn geselecteerd als PDF-bestanden."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Exporteer de documenten die zijn geselecteerd als TEI-bestanden."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Exporteer de documenten die zijn geselecteerd als Typst-bestanden."
 
 msgid "Exporting..."
 msgstr "Exporteren..."
@@ -753,6 +797,9 @@ msgstr ""
 msgid "Please enter a 6-digit code."
 msgstr "Voer een 6-cijferige code in."
 
+msgid "Please enter your password."
+msgstr "Voer uw wachtwoord in."
+
 msgid "Primary address"
 msgstr "Primair adres"
 
@@ -810,15 +857,6 @@ msgstr "Wachtwoord opnieuw instellen"
 
 msgid "Respond"
 msgstr "Antwoorden"
-
-msgid "Snapshot deleted"
-msgstr "Momentopname verwijderd"
-
-msgid "Snapshot of"
-msgstr "Momentopname van"
-
-msgid "Snapshots"
-msgstr "Momentopnamen"
 
 msgid "Save"
 msgstr "Opslaan"
@@ -890,6 +928,9 @@ msgstr "Schrijf je in"
 msgid "Sign Up Closed"
 msgstr "Aanmelden gesloten"
 
+msgid "Sign up with"
+msgstr "Meld u aan bij"
+
 msgid "Signup"
 msgstr "Aanmelden"
 
@@ -898,6 +939,15 @@ msgstr "Sitenavigatie"
 
 msgid "Skip for Now"
 msgstr "Overslaan voor nu"
+
+msgid "Snapshot deleted"
+msgstr "Momentopname verwijderd"
+
+msgid "Snapshot of"
+msgstr "Momentopname van"
+
+msgid "Snapshots"
+msgstr "Momentopnamen"
 
 msgid "Social Account Provider"
 msgstr "Aanbieder van sociale accounts"

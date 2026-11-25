@@ -56,6 +56,9 @@ msgstr ""
 "¿Está seguro de que desea desactivar la autenticación de dos factores? Esto "
 "reducirá la seguridad de su cuenta."
 
+msgid "Authenticator code"
+msgstr "código de autenticación"
+
 msgid "Bibliography"
 msgstr "Bibliografía"
 
@@ -76,6 +79,14 @@ msgstr "Cambiar contraseña"
 
 msgid "Change picture"
 msgstr "Cambiar imagen"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Revisa la ortografía y la gramática mientras escribes con el corrector "
+"integrado LingoTweaker. Se ejecuta completamente en su navegador; no se "
+"necesita ningún servidor externo."
 
 msgid "Choose document template"
 msgstr "Seleccionar una plantilla de documento"
@@ -132,6 +143,12 @@ msgstr "Confirmar correo principal"
 msgid "Confirm the new password"
 msgstr "Confirma la nueva contraseña"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"Confirme con la contraseña de su cuenta y un código de su aplicación de "
+"autenticación:"
+
 msgid "Confirm your password"
 msgstr "Confirma tu contraseña"
 
@@ -143,6 +160,9 @@ msgstr "Conectarse"
 
 msgid "Contacts"
 msgstr "Contactos"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Revisión continua de ortografía y gramática."
 
 msgid "Copy"
 msgstr "Copiar"
@@ -471,8 +491,20 @@ msgstr "Exportar lo seleccionado como JATS"
 msgid "Export selected as LaTeX"
 msgstr "Exportar lo seleccionado a LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "Exportar seleccionado como Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Exportar seleccionado como PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Exportación seleccionada como Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Exportar seleccionado como TEI"
+
+msgid "Export selected as Typst"
+msgstr "Exportar seleccionado como Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr ""
@@ -507,6 +539,20 @@ msgstr ""
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr ""
 "Exportar los documentos que han sido seleccionados como archivos LaTeX."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr ""
+"Exporte los documentos que han sido seleccionados como archivos Markdown."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Exporte los documentos que han sido seleccionados como archivos PDF."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Exporte los documentos que han sido seleccionados como archivos TEI."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr ""
+"Exporte los documentos que han sido seleccionados como archivos Typst."
 
 msgid "Exporting..."
 msgstr "Exportador..."
@@ -761,6 +807,9 @@ msgstr ""
 msgid "Please enter a 6-digit code."
 msgstr "Por favor ingrese un código de 6 dígitos."
 
+msgid "Please enter your password."
+msgstr "Por favor ingrese su contraseña."
+
 msgid "Primary address"
 msgstr "Dirección principal"
 
@@ -819,15 +868,6 @@ msgstr "Restablecer la contraseña"
 
 msgid "Respond"
 msgstr "Responder"
-
-msgid "Snapshot deleted"
-msgstr "Instantánea eliminada"
-
-msgid "Snapshot of"
-msgstr "Instantánea de"
-
-msgid "Snapshots"
-msgstr "Instantáneas"
 
 msgid "Save"
 msgstr "Guardar"
@@ -899,6 +939,9 @@ msgstr "Registrarse"
 msgid "Sign Up Closed"
 msgstr "El registro está cerrado"
 
+msgid "Sign up with"
+msgstr "Regístrese con"
+
 msgid "Signup"
 msgstr "Regístrate"
 
@@ -907,6 +950,15 @@ msgstr "Navegación del sitio"
 
 msgid "Skip for Now"
 msgstr "Saltar por ahora"
+
+msgid "Snapshot deleted"
+msgstr "Instantánea eliminada"
+
+msgid "Snapshot of"
+msgstr "Instantánea de"
+
+msgid "Snapshots"
+msgstr "Instantáneas"
 
 msgid "Social Account Provider"
 msgstr "Proveedor de cuenta social"

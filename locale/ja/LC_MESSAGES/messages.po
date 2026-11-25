@@ -52,6 +52,9 @@ msgid ""
 " the security of your account."
 msgstr "二要素認証を無効にしてもよろしいですか?これにより、アカウントのセキュリティが低下します。"
 
+msgid "Authenticator code"
+msgstr "認証コード"
+
 msgid "Bibliography"
 msgstr "参考文献"
 
@@ -72,6 +75,13 @@ msgstr "パスワードを変更"
 
 msgid "Change picture"
 msgstr "画像を変更"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"内蔵の LingoTweaker "
+"チェッカーを使用して、入力中にスペルと文法をチェックします。完全にブラウザ内で実行されます。外部サーバーは必要ありません。"
 
 msgid "Choose document template"
 msgstr "ドキュメントテンプレートを選択してください"
@@ -128,6 +138,10 @@ msgstr "プライマリの設定を確認"
 msgid "Confirm the new password"
 msgstr "新しいパスワードを確認します"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr "アカウントのパスワードと認証アプリのコードを使用して確認します。"
+
 msgid "Confirm your password"
 msgstr "パスワードを確認してください"
 
@@ -139,6 +153,9 @@ msgstr "接続"
 
 msgid "Contacts"
 msgstr "連絡先"
+
+msgid "Continuous spell and grammar checking"
+msgstr "継続的なスペルと文法チェック"
 
 msgid "Copy"
 msgstr "コピー"
@@ -460,8 +477,20 @@ msgstr "JATSとして輸出が選択されました"
 msgid "Export selected as LaTeX"
 msgstr "LaTeX としてエクスポートを選択"
 
+msgid "Export selected as Markdown"
+msgstr "選択したマークダウンとしてエクスポート"
+
+msgid "Export selected as PDF"
+msgstr "選択したものを PDF としてエクスポート"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "スリム FIDUS としてエクスポートが選択されました"
+
+msgid "Export selected as TEI"
+msgstr "TEI としてエクスポートが選択されました"
+
+msgid "Export selected as Typst"
+msgstr "Typst として選択された状態でエクスポート"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "選択したドキュメントを BITS ファイルとしてエクスポートします。"
@@ -487,6 +516,18 @@ msgstr "選択したドキュメントを JATS ファイルとしてエクスポ
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "選択した文書を LaTeX ファイルとしてエクスポートします。"
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "選択したドキュメントを Markdown ファイルとしてエクスポートします。"
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "選択したドキュメントを PDF ファイルとしてエクスポートします。"
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "選択したドキュメントを TEI ファイルとしてエクスポートします。"
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "選択したドキュメントを Typst ファイルとしてエクスポートします。"
 
 msgid "Exporting..."
 msgstr "エクスポート中..."
@@ -727,6 +768,9 @@ msgstr "数分経っても届かない場合はご連絡ください。"
 msgid "Please enter a 6-digit code."
 msgstr "6桁のコードを入力してください。"
 
+msgid "Please enter your password."
+msgstr "パスワードを入力してください。"
+
 msgid "Primary address"
 msgstr "プライマリアドレス"
 
@@ -779,15 +823,6 @@ msgstr "パスワードのリセット"
 
 msgid "Respond"
 msgstr "応答"
-
-msgid "Snapshot deleted"
-msgstr "スナップショットが削除されました"
-
-msgid "Snapshot of"
-msgstr "のスナップショット"
-
-msgid "Snapshots"
-msgstr "スナップショット"
 
 msgid "Save"
 msgstr "保存"
@@ -857,6 +892,9 @@ msgstr "サインアップ"
 msgid "Sign Up Closed"
 msgstr "サインアップは終了しました"
 
+msgid "Sign up with"
+msgstr "でサインアップ"
+
 msgid "Signup"
 msgstr "サインアップ"
 
@@ -865,6 +903,15 @@ msgstr "サイトナビゲーション"
 
 msgid "Skip for Now"
 msgstr "今はスキップしてください"
+
+msgid "Snapshot deleted"
+msgstr "スナップショットが削除されました"
+
+msgid "Snapshot of"
+msgstr "のスナップショット"
+
+msgid "Snapshots"
+msgstr "スナップショット"
 
 msgid "Social Account Provider"
 msgstr "ソーシャルアカウントプロバイダー"

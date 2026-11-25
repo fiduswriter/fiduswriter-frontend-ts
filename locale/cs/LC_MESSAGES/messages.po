@@ -55,6 +55,9 @@ msgstr ""
 "Opravdu chcete zakázat dvoufaktorové ověřování? To sníží zabezpečení vašeho "
 "účtu."
 
+msgid "Authenticator code"
+msgstr "Authenticator kód"
+
 msgid "Bibliography"
 msgstr "Bibliografie"
 
@@ -75,6 +78,14 @@ msgstr "Změnit heslo"
 
 msgid "Change picture"
 msgstr "Změnit obrázek"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Kontrolujte pravopis a gramatiku při psaní pomocí vestavěné kontroly "
+"LingoTweaker. Celý běží ve vašem prohlížeči; není potřeba žádný externí "
+"server."
 
 msgid "Choose document template"
 msgstr "Vyberte šablonu dokumentu"
@@ -131,6 +142,10 @@ msgstr "Potvrďte primární nastavení"
 msgid "Confirm the new password"
 msgstr "Potvrďte nové heslo"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr "Potvrďte pomocí hesla k účtu a kódu z aplikace pro ověřování:"
+
 msgid "Confirm your password"
 msgstr "Potvrďte své heslo"
 
@@ -142,6 +157,9 @@ msgstr "Připojit"
 
 msgid "Contacts"
 msgstr "Kontakty"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Průběžná kontrola pravopisu a gramatiky"
 
 msgid "Copy"
 msgstr "Kopie"
@@ -466,8 +484,20 @@ msgstr "Export vybrán jako JATS"
 msgid "Export selected as LaTeX"
 msgstr "Exportovat vybraný jako LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "Export vybrán jako Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Exportovat vybrané jako PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Export vybrán jako Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Export vybrán jako TEI"
+
+msgid "Export selected as Typst"
+msgstr "Export vybrán jako Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Exportujte dokumenty, které byly vybrány jako soubory BITS."
@@ -497,6 +527,18 @@ msgstr "Exportujte dokumenty, které byly vybrány jako soubory JATS."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Exportujte dokumenty, které byly vybrány jako soubory LaTeX."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Exportujte dokumenty, které byly vybrány jako soubory Markdown."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Exportujte dokumenty, které byly vybrány jako soubory PDF."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Exportujte dokumenty, které byly vybrány jako soubory TEI."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Exportujte dokumenty, které byly vybrány jako soubory Typst."
 
 msgid "Exporting..."
 msgstr "Exportování..."
@@ -748,6 +790,9 @@ msgstr "Pokud jej neobdržíte do několika minut, kontaktujte nás."
 msgid "Please enter a 6-digit code."
 msgstr "Zadejte 6místný kód."
 
+msgid "Please enter your password."
+msgstr "Zadejte prosím své heslo."
+
 msgid "Primary address"
 msgstr "Primární adresa"
 
@@ -803,15 +848,6 @@ msgstr "Obnovit heslo"
 
 msgid "Respond"
 msgstr "Reagovat"
-
-msgid "Snapshot deleted"
-msgstr "Snímek smazán"
-
-msgid "Snapshot of"
-msgstr "Snímek"
-
-msgid "Snapshots"
-msgstr "Snímky"
 
 msgid "Save"
 msgstr "Uložit"
@@ -883,6 +919,9 @@ msgstr "Zaregistrujte se"
 msgid "Sign Up Closed"
 msgstr "Registrace uzavřena"
 
+msgid "Sign up with"
+msgstr "Zaregistrujte se pomocí"
+
 msgid "Signup"
 msgstr "Registrace"
 
@@ -891,6 +930,15 @@ msgstr "Navigace na webu"
 
 msgid "Skip for Now"
 msgstr "Prozatím přeskočit"
+
+msgid "Snapshot deleted"
+msgstr "Snímek smazán"
+
+msgid "Snapshot of"
+msgstr "Snímek"
+
+msgid "Snapshots"
+msgstr "Snímky"
 
 msgid "Social Account Provider"
 msgstr "Poskytovatel sociálního účtu"

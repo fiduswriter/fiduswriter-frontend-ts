@@ -56,6 +56,9 @@ msgstr ""
 "Сигурни ли сте, че искате да деактивирате двуфакторното удостоверяване? Това"
 " ще намали сигурността на вашия акаунт."
 
+msgid "Authenticator code"
+msgstr "Код за удостоверяване"
+
 msgid "Bibliography"
 msgstr "Библиография"
 
@@ -76,6 +79,14 @@ msgstr "Промяна на паролата"
 
 msgid "Change picture"
 msgstr "Смени картинката"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Проверявайте правописа и граматиката, докато пишете с вградената програма за"
+" проверка LingoTweaker. Работи изцяло във вашия браузър; не е необходим "
+"външен сървър."
 
 msgid "Choose document template"
 msgstr "Изберете шаблон за документ"
@@ -132,6 +143,12 @@ msgstr "Потвърди настройването като основен"
 msgid "Confirm the new password"
 msgstr "Потвърди новата парола"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"Потвърдете с паролата за вашия акаунт и код от вашето приложение за "
+"удостоверяване:"
+
 msgid "Confirm your password"
 msgstr "Потвърди паролата"
 
@@ -143,6 +160,9 @@ msgstr "Connect"
 
 msgid "Contacts"
 msgstr "Контакти"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Непрекъсната проверка на правописа и граматиката"
 
 msgid "Copy"
 msgstr "копие"
@@ -470,8 +490,20 @@ msgstr "Износът е избран като JATS"
 msgid "Export selected as LaTeX"
 msgstr "Експортирай избраните като LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "Експортиране избрано като Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Експортирайте избраното като PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Експортирането е избрано като Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Износът е избран като TEI"
+
+msgid "Export selected as Typst"
+msgstr "Експортиране избрано като Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Експортирайте документите, които са избрани като BITS файлове."
@@ -501,6 +533,18 @@ msgstr "Експортирайте документите, които са из�
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Експортирайте документите, които са избрани като LaTeX файлове."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Експортирайте документите, които са избрани като Markdown файлове."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Експортирайте документите, които са избрани като PDF файлове."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Експортирайте документите, които са избрани като TEI файлове."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Експортирайте документите, които са избрани като Typst файлове."
 
 msgid "Exporting..."
 msgstr "Експортиране..."
@@ -753,6 +797,9 @@ msgstr ""
 msgid "Please enter a 6-digit code."
 msgstr "Моля, въведете 6-цифрен код."
 
+msgid "Please enter your password."
+msgstr "Моля, въведете вашата парола."
+
 msgid "Primary address"
 msgstr "Основен адрес"
 
@@ -811,15 +858,6 @@ msgstr "Нулиране на парола"
 
 msgid "Respond"
 msgstr "Отговорете"
-
-msgid "Snapshot deleted"
-msgstr "Снимката е изтрита"
-
-msgid "Snapshot of"
-msgstr "Снимка на"
-
-msgid "Snapshots"
-msgstr "Снимките"
 
 msgid "Save"
 msgstr "Запази"
@@ -891,6 +929,9 @@ msgstr "Създай акаунт"
 msgid "Sign Up Closed"
 msgstr "Създаването на акаунти е изключено"
 
+msgid "Sign up with"
+msgstr "Регистрирайте се с"
+
 msgid "Signup"
 msgstr "Регистрирай се"
 
@@ -899,6 +940,15 @@ msgstr "Навигация на сайта"
 
 msgid "Skip for Now"
 msgstr "Пропуснете за сега"
+
+msgid "Snapshot deleted"
+msgstr "Снимката е изтрита"
+
+msgid "Snapshot of"
+msgstr "Снимка на"
+
+msgid "Snapshots"
+msgstr "Снимките"
 
 msgid "Social Account Provider"
 msgstr "Доставчик на социални акаунти"

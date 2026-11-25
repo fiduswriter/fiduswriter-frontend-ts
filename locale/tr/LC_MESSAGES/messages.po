@@ -42,7 +42,8 @@ msgid "All documents updated!"
 msgstr "Tüm belgeler güncellendi!"
 
 msgid "All documents, document templates and document snapshots updated!"
-msgstr "Tüm belgeler, belge şablonları ve belge anlık görüntüleri güncellendi!"
+msgstr ""
+"Tüm belgeler, belge şablonları ve belge anlık görüntüleri güncellendi!"
 
 msgid "All fields are required!"
 msgstr "Tüm alanlar zorunludur!"
@@ -53,6 +54,9 @@ msgid ""
 msgstr ""
 "İki faktörlü kimlik doğrulamayı devre dışı bırakmak istediğinizden emin "
 "misiniz? Bu hesabınızın güvenliğini azaltacaktır."
+
+msgid "Authenticator code"
+msgstr "Kimlik doğrulayıcı kodu"
 
 msgid "Bibliography"
 msgstr "Kaynakça"
@@ -74,6 +78,13 @@ msgstr "Şifre değiştir"
 
 msgid "Change picture"
 msgstr "Resmi değiştir"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Yerleşik LingoTweaker denetleyicisi ile yazarken yazım ve dilbilgisini "
+"kontrol edin. Tamamen tarayıcınızda çalışır; harici sunucuya gerek yoktur."
 
 msgid "Choose document template"
 msgstr "Belge şablonunu seçin"
@@ -130,6 +141,11 @@ msgstr "Birincil ayarı onaylayın"
 msgid "Confirm the new password"
 msgstr "Yeni şifreyi onaylayın"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"Hesap şifreniz ve kimlik doğrulayıcı uygulamanızdaki bir kodla onaylayın:"
+
 msgid "Confirm your password"
 msgstr "Şifrenizi onaylayın"
 
@@ -141,6 +157,9 @@ msgstr "Bağlamak"
 
 msgid "Contacts"
 msgstr "Kişiler"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Sürekli yazım ve dil bilgisi denetimi"
 
 msgid "Copy"
 msgstr "Kopyala"
@@ -465,8 +484,20 @@ msgstr "JATS olarak seçilen dışa aktarma"
 msgid "Export selected as LaTeX"
 msgstr "Dışa aktarma LaTeX olarak seçildi"
 
+msgid "Export selected as Markdown"
+msgstr "Dışa aktarma Markdown olarak seçildi"
+
+msgid "Export selected as PDF"
+msgstr "Seçileni PDF olarak dışa aktar"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Dışa aktarma İnce FIDUS olarak seçildi"
+
+msgid "Export selected as TEI"
+msgstr "İhracat TEI olarak seçildi"
+
+msgid "Export selected as Typst"
+msgstr "Tyst olarak seçilen dışa aktarma"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Seçilen belgeleri BITS dosyaları olarak dışa aktarın."
@@ -495,6 +526,18 @@ msgstr "Seçilen belgeleri JATS dosyaları olarak dışa aktarın."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Seçilen belgeleri LaTeX dosyaları olarak dışa aktarın."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Seçilen belgeleri Markdown dosyaları olarak dışa aktarın."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Seçilen belgeleri PDF dosyaları olarak dışa aktarın."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Seçilen belgeleri TEI dosyası olarak dışa aktarın."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Seçilen belgeleri Tyst dosyaları olarak dışa aktarın."
 
 msgid "Exporting..."
 msgstr "Dışa aktarılıyor..."
@@ -749,6 +792,9 @@ msgstr ""
 msgid "Please enter a 6-digit code."
 msgstr "Lütfen 6 haneli kodu giriniz."
 
+msgid "Please enter your password."
+msgstr "Lütfen şifrenizi giriniz."
+
 msgid "Primary address"
 msgstr "Birincil adres"
 
@@ -805,15 +851,6 @@ msgstr "Şifreyi Sıfırla"
 
 msgid "Respond"
 msgstr "Yanıtlamak"
-
-msgid "Snapshot deleted"
-msgstr "Anlık görüntü silindi"
-
-msgid "Snapshot of"
-msgstr "Anlık görüntü"
-
-msgid "Snapshots"
-msgstr "Anlık görüntüler"
 
 msgid "Save"
 msgstr "Kaydet"
@@ -885,6 +922,9 @@ msgstr "Üye olmak"
 msgid "Sign Up Closed"
 msgstr "Kayıt Kapatıldı"
 
+msgid "Sign up with"
+msgstr "Şununla kaydol:"
+
 msgid "Signup"
 msgstr "Üye olmak"
 
@@ -893,6 +933,15 @@ msgstr "Sitede gezinme"
 
 msgid "Skip for Now"
 msgstr "Şimdilik Atla"
+
+msgid "Snapshot deleted"
+msgstr "Anlık görüntü silindi"
+
+msgid "Snapshot of"
+msgstr "Anlık görüntü"
+
+msgid "Snapshots"
+msgstr "Anlık görüntüler"
 
 msgid "Social Account Provider"
 msgstr "Sosyal Hesap Sağlayıcı"

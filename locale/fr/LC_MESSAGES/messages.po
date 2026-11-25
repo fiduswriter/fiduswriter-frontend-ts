@@ -56,6 +56,9 @@ msgstr ""
 "Êtes-vous sûr de vouloir désactiver l'authentification à deux facteurs ? "
 "Cela réduira la sécurité de votre compte."
 
+msgid "Authenticator code"
+msgstr "Code d'authentification"
+
 msgid "Bibliography"
 msgstr "Bibliographie"
 
@@ -76,6 +79,14 @@ msgstr "Changer le mot de passe"
 
 msgid "Change picture"
 msgstr "Changer l'image"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Vérifiez l'orthographe et la grammaire lors de la saisie avec le "
+"vérificateur LingoTweaker intégré. Il s'exécute entièrement dans votre "
+"navigateur ; aucun serveur externe n'est nécessaire."
 
 msgid "Choose document template"
 msgstr "Choisissez un modèle de document"
@@ -132,6 +143,12 @@ msgstr "Confirmer le paramétrage principal"
 msgid "Confirm the new password"
 msgstr "Confirmez le nouveau mot de passe"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"Confirmez avec le mot de passe de votre compte et un code de votre "
+"application d'authentification :"
+
 msgid "Confirm your password"
 msgstr "Confirmez votre mot de passe"
 
@@ -143,6 +160,9 @@ msgstr "Relier"
 
 msgid "Contacts"
 msgstr "Contacts"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Vérification continue de l'orthographe et de la grammaire"
 
 msgid "Copy"
 msgstr "Copier"
@@ -473,8 +493,20 @@ msgstr "Exporter sélectionné en tant que JATS"
 msgid "Export selected as LaTeX"
 msgstr "Exporter la sélection en LaTex"
 
+msgid "Export selected as Markdown"
+msgstr "Exporter sélectionné en tant que Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Exporter la sélection au format PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Exporter sélectionné comme Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Exporter sélectionné comme TEI"
+
+msgid "Export selected as Typst"
+msgstr "Exporter la sélection en tant que Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Exportez les documents sélectionnés sous forme de fichiers BITS."
@@ -505,6 +537,18 @@ msgstr "Exportez les documents sélectionnés en tant que fichiers JATS."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Exportez les documents sélectionnés en tant que fichiers LaTeX."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Exportez les documents sélectionnés en tant que fichiers Markdown."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Exportez les documents sélectionnés sous forme de fichiers PDF."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Exportez les documents sélectionnés sous forme de fichiers TEI."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Exportez les documents sélectionnés sous forme de fichiers Typst."
 
 msgid "Exporting..."
 msgstr "Exportation..."
@@ -761,6 +805,9 @@ msgstr ""
 msgid "Please enter a 6-digit code."
 msgstr "Veuillez saisir un code à 6 chiffres."
 
+msgid "Please enter your password."
+msgstr "Veuillez entrer votre mot de passe."
+
 msgid "Primary address"
 msgstr "Adresse Principale"
 
@@ -820,15 +867,6 @@ msgstr "réinitialiser le mot de passe"
 
 msgid "Respond"
 msgstr "Répondre"
-
-msgid "Snapshot deleted"
-msgstr "Instantané supprimé"
-
-msgid "Snapshot of"
-msgstr "Instantané de"
-
-msgid "Snapshots"
-msgstr "Instantanés"
 
 msgid "Save"
 msgstr "Enregistrer"
@@ -900,6 +938,9 @@ msgstr "S'inscrire"
 msgid "Sign Up Closed"
 msgstr "Enregistrement Fermé"
 
+msgid "Sign up with"
+msgstr "Inscrivez-vous avec"
+
 msgid "Signup"
 msgstr "S'inscrire"
 
@@ -908,6 +949,15 @@ msgstr "Navigation sur les sites"
 
 msgid "Skip for Now"
 msgstr "Passer pour l'instant"
+
+msgid "Snapshot deleted"
+msgstr "Instantané supprimé"
+
+msgid "Snapshot of"
+msgstr "Instantané de"
+
+msgid "Snapshots"
+msgstr "Instantanés"
 
 msgid "Social Account Provider"
 msgstr "Fournisseur de compte social"

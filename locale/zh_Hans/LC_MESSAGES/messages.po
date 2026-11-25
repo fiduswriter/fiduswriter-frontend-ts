@@ -52,6 +52,9 @@ msgid ""
 " the security of your account."
 msgstr "您确定要禁用双因素身份验证吗？这会降低您帐户的安全性。"
 
+msgid "Authenticator code"
+msgstr "验证码"
+
 msgid "Bibliography"
 msgstr "参考书目"
 
@@ -72,6 +75,11 @@ msgstr "更改密码"
 
 msgid "Change picture"
 msgstr "更改图片"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr "使用内置的 LingoTweaker 检查器在打字时检查拼写和语法。它完全在您的浏览器中运行；不需要外部服务器。"
 
 msgid "Choose document template"
 msgstr "选择文档模板"
@@ -127,6 +135,10 @@ msgstr "确认设置主要"
 msgid "Confirm the new password"
 msgstr "确认新密码"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr "使用您的帐户密码和身份验证器应用程序中的代码进行确认："
+
 msgid "Confirm your password"
 msgstr "确认您的密码"
 
@@ -138,6 +150,9 @@ msgstr "连接"
 
 msgid "Contacts"
 msgstr "联系人"
+
+msgid "Continuous spell and grammar checking"
+msgstr "持续的拼写和语法检查"
 
 msgid "Copy"
 msgstr "复制"
@@ -459,8 +474,20 @@ msgstr "导出选择为 JATS"
 msgid "Export selected as LaTeX"
 msgstr "将选定的内容导出为 LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "导出选择为 Markdown"
+
+msgid "Export selected as PDF"
+msgstr "将所选内容导出为 PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "导出选择为 Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "导出选择为 TEI"
+
+msgid "Export selected as Typst"
+msgstr "导出选择为 Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "导出已选择为 BITS 文件的文档。"
@@ -486,6 +513,18 @@ msgstr "导出已选择为 JATS 文件的文档。"
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "将已选择的文档导出为 LaTeX 文件。"
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "导出已选择为 Markdown 文件的文档。"
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "将已选择的文档导出为 PDF 文件。"
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "导出已选择为 TEI 文件的文档。"
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "导出已选择为 Typst 文件的文档。"
 
 msgid "Exporting..."
 msgstr "出口..."
@@ -726,6 +765,9 @@ msgstr "如果您在几分钟内没有收到，请联系我们。"
 msgid "Please enter a 6-digit code."
 msgstr "请输入 6 位数代码。"
 
+msgid "Please enter your password."
+msgstr "请输入您的密码。"
+
 msgid "Primary address"
 msgstr "主要地址"
 
@@ -778,15 +820,6 @@ msgstr "重置密码"
 
 msgid "Respond"
 msgstr "回应"
-
-msgid "Snapshot deleted"
-msgstr "快照已删除"
-
-msgid "Snapshot of"
-msgstr "快照"
-
-msgid "Snapshots"
-msgstr "快照"
 
 msgid "Save"
 msgstr "保存"
@@ -856,6 +889,9 @@ msgstr "报名"
 msgid "Sign Up Closed"
 msgstr "注册已关闭"
 
+msgid "Sign up with"
+msgstr "注册为"
+
 msgid "Signup"
 msgstr "报名"
 
@@ -864,6 +900,15 @@ msgstr "站点导航"
 
 msgid "Skip for Now"
 msgstr "暂时跳过"
+
+msgid "Snapshot deleted"
+msgstr "快照已删除"
+
+msgid "Snapshot of"
+msgstr "快照"
+
+msgid "Snapshots"
+msgstr "快照"
 
 msgid "Social Account Provider"
 msgstr "社交账户提供商"

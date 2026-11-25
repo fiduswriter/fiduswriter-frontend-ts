@@ -54,6 +54,9 @@ msgstr ""
 "هل أنت متأكد أنك تريد تعطيل المصادقة الثنائية؟ سيؤدي هذا إلى تقليل أمان "
 "حسابك."
 
+msgid "Authenticator code"
+msgstr "رمز المصادقة"
+
 msgid "Bibliography"
 msgstr "فهرس"
 
@@ -74,6 +77,13 @@ msgstr "تغيير كلمة المرور"
 
 msgid "Change picture"
 msgstr "تغيير الصورة"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"قم بإجراء التدقيق الإملائي والنحوي أثناء الكتابة باستخدام مدقق LingoTweaker "
+"المدمج. يتم تشغيله بالكامل في متصفحك؛ ليست هناك حاجة لخادم خارجي."
 
 msgid "Choose document template"
 msgstr "اختر قالب المستند"
@@ -130,6 +140,11 @@ msgstr "تأكيد التعيين الأساسي"
 msgid "Confirm the new password"
 msgstr "قم بتأكيد كلمة المرور الجديدة"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"قم بالتأكيد باستخدام كلمة مرور حسابك والرمز من تطبيق المصادقة الخاص بك:"
+
 msgid "Confirm your password"
 msgstr "قم بتأكيد كلمة المرور الخاصة بك"
 
@@ -141,6 +156,9 @@ msgstr "يتصل"
 
 msgid "Contacts"
 msgstr "اتصالات"
+
+msgid "Continuous spell and grammar checking"
+msgstr "التدقيق الإملائي والنحوي المستمر"
 
 msgid "Copy"
 msgstr "نسخ"
@@ -465,8 +483,20 @@ msgstr "تم تحديد التصدير كـ JATS"
 msgid "Export selected as LaTeX"
 msgstr "تم تحديد التصدير كـ LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "تم تحديد التصدير كـ Markdown"
+
+msgid "Export selected as PDF"
+msgstr "تصدير المحدد بصيغة PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "تم تحديد التصدير كـ Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "تم تحديد التصدير كـ TEI"
+
+msgid "Export selected as Typst"
+msgstr "تم تحديد التصدير كـ Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "قم بتصدير المستندات التي تم تحديدها كملفات BITS."
@@ -495,6 +525,18 @@ msgstr "قم بتصدير المستندات التي تم تحديدها كمل
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "قم بتصدير المستندات التي تم تحديدها كملفات LaTeX."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "قم بتصدير المستندات التي تم تحديدها كملفات Markdown."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "تصدير المستندات التي تم تحديدها كملفات PDF."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "قم بتصدير المستندات التي تم تحديدها كملفات TEI."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "قم بتصدير المستندات التي تم تحديدها كملفات Typst."
 
 msgid "Exporting..."
 msgstr "جارٍ التصدير..."
@@ -741,6 +783,9 @@ msgstr "يرجى الاتصال بنا إذا لم تستلمها في غضون 
 msgid "Please enter a 6-digit code."
 msgstr "الرجاء إدخال رمز مكون من 6 أرقام."
 
+msgid "Please enter your password."
+msgstr "الرجاء إدخال كلمة المرور الخاصة بك."
+
 msgid "Primary address"
 msgstr "العنوان الأساسي"
 
@@ -795,15 +840,6 @@ msgstr "إعادة تعيين كلمة المرور"
 
 msgid "Respond"
 msgstr "يرد"
-
-msgid "Snapshot deleted"
-msgstr "تم حذف اللقطة"
-
-msgid "Snapshot of"
-msgstr "لقطة"
-
-msgid "Snapshots"
-msgstr "اللقطات"
 
 msgid "Save"
 msgstr "حفظ"
@@ -875,6 +911,9 @@ msgstr "اشتراك"
 msgid "Sign Up Closed"
 msgstr "التسجيل مغلق"
 
+msgid "Sign up with"
+msgstr "قم بالتسجيل مع"
+
 msgid "Signup"
 msgstr "اشتراك"
 
@@ -883,6 +922,15 @@ msgstr "التنقل في الموقع"
 
 msgid "Skip for Now"
 msgstr "تخطي الآن"
+
+msgid "Snapshot deleted"
+msgstr "تم حذف اللقطة"
+
+msgid "Snapshot of"
+msgstr "لقطة"
+
+msgid "Snapshots"
+msgstr "اللقطات"
 
 msgid "Social Account Provider"
 msgstr "مزود الحساب الاجتماعي"

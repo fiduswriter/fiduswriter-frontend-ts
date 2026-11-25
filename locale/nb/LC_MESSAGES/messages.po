@@ -54,6 +54,9 @@ msgstr ""
 "Er du sikker på at du vil deaktivere tofaktorautentisering? Dette vil "
 "redusere sikkerheten til kontoen din."
 
+msgid "Authenticator code"
+msgstr "Autentiseringskode"
+
 msgid "Bibliography"
 msgstr "Bibliografi"
 
@@ -74,6 +77,14 @@ msgstr "Endre passord"
 
 msgid "Change picture"
 msgstr "Bytt bilde"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Sjekk stavemåte og grammatikk mens du skriver med den innebygde "
+"LingoTweaker-kontrollen. Den kjører helt i nettleseren din; ingen ekstern "
+"server er nødvendig."
 
 msgid "Choose document template"
 msgstr "Velg dokumentmal"
@@ -130,6 +141,10 @@ msgstr "Bekreft angitt primær"
 msgid "Confirm the new password"
 msgstr "Bekreft det nye passordet"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr "Bekreft med kontopassordet og en kode fra autentiseringsappen:"
+
 msgid "Confirm your password"
 msgstr "Bekreft passordet ditt"
 
@@ -141,6 +156,9 @@ msgstr "Koble til"
 
 msgid "Contacts"
 msgstr "Kontakter"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Kontinuerlig stave- og grammatikkkontroll"
 
 msgid "Copy"
 msgstr "Kopiere"
@@ -467,8 +485,20 @@ msgstr "Eksporter valgt som JATS"
 msgid "Export selected as LaTeX"
 msgstr "Eksporter valgt som LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "Eksporter valgt som Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Eksporter valgt som PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Eksport valgt som Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Eksport valgt som TEI"
+
+msgid "Export selected as Typst"
+msgstr "Eksporter valgt som Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Eksporter dokumentene som er valgt som BITS-filer."
@@ -495,6 +525,18 @@ msgstr "Eksporter dokumentene som er valgt som JATS-filer."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Eksporter dokumentene som er valgt som LaTeX-filer."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Eksporter dokumentene som er valgt som Markdown-filer."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Eksporter dokumentene som er valgt som PDF-filer."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Eksporter dokumentene som er valgt som TEI-filer."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Eksporter dokumentene som er valgt som Typst-filer."
 
 msgid "Exporting..."
 msgstr "Eksporterer..."
@@ -747,6 +789,9 @@ msgstr "Ta kontakt med oss ​​hvis du ikke mottar den innen få minutter."
 msgid "Please enter a 6-digit code."
 msgstr "Vennligst skriv inn en 6-sifret kode."
 
+msgid "Please enter your password."
+msgstr "Vennligst skriv inn passordet ditt."
+
 msgid "Primary address"
 msgstr "Primær adresse"
 
@@ -802,15 +847,6 @@ msgstr "Tilbakestill passord"
 
 msgid "Respond"
 msgstr "Svare"
-
-msgid "Snapshot deleted"
-msgstr "Øyeblikksbilde slettet"
-
-msgid "Snapshot of"
-msgstr "Øyeblikksbilde av"
-
-msgid "Snapshots"
-msgstr "Øyeblikksbilder"
 
 msgid "Save"
 msgstr "Lagre"
@@ -882,6 +918,9 @@ msgstr "Registrer deg"
 msgid "Sign Up Closed"
 msgstr "Påmelding stengt"
 
+msgid "Sign up with"
+msgstr "Meld deg på med"
+
 msgid "Signup"
 msgstr "Registrer deg"
 
@@ -890,6 +929,15 @@ msgstr "Nettstednavigering"
 
 msgid "Skip for Now"
 msgstr "Hopp over nå"
+
+msgid "Snapshot deleted"
+msgstr "Øyeblikksbilde slettet"
+
+msgid "Snapshot of"
+msgstr "Øyeblikksbilde av"
+
+msgid "Snapshots"
+msgstr "Øyeblikksbilder"
 
 msgid "Social Account Provider"
 msgstr "Leverandør av sosiale kontoer"

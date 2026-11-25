@@ -42,7 +42,8 @@ msgid "All documents updated!"
 msgstr "Alla dokument uppdaterade!"
 
 msgid "All documents, document templates and document snapshots updated!"
-msgstr "Alla dokument, dokumentmallar och dokumentögonblicksbilder uppdaterade!"
+msgstr ""
+"Alla dokument, dokumentmallar och dokumentögonblicksbilder uppdaterade!"
 
 msgid "All fields are required!"
 msgstr "Alla fält är obligatoriska!"
@@ -53,6 +54,9 @@ msgid ""
 msgstr ""
 "Är du säker på att du vill inaktivera tvåfaktorsautentisering? Detta kommer "
 "att minska säkerheten för ditt konto."
+
+msgid "Authenticator code"
+msgstr "Autentiseringskod"
 
 msgid "Bibliography"
 msgstr "Bibliografi"
@@ -74,6 +78,14 @@ msgstr "Ändra lösenord"
 
 msgid "Change picture"
 msgstr "Byt bild"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"Kontrollera stavning och grammatik medan du skriver med den inbyggda "
+"LingoTweaker-kontrollen. Det körs helt i din webbläsare; ingen extern server"
+" behövs."
 
 msgid "Choose document template"
 msgstr "Välj dokumentmall"
@@ -130,6 +142,11 @@ msgstr "Bekräfta inställd primär"
 msgid "Confirm the new password"
 msgstr "Bekräfta det nya lösenordet"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr ""
+"Bekräfta med ditt kontolösenord och en kod från din autentiseringsapp:"
+
 msgid "Confirm your password"
 msgstr "Bekräfta ditt lösenord"
 
@@ -141,6 +158,9 @@ msgstr "Ansluta"
 
 msgid "Contacts"
 msgstr "Kontakter"
+
+msgid "Continuous spell and grammar checking"
+msgstr "Kontinuerlig stavnings- och grammatikkontroll"
 
 msgid "Copy"
 msgstr "Kopiera"
@@ -465,8 +485,20 @@ msgstr "Exportera valt som JATS"
 msgid "Export selected as LaTeX"
 msgstr "Export valt som LaTeX"
 
+msgid "Export selected as Markdown"
+msgstr "Exportera valt som Markdown"
+
+msgid "Export selected as PDF"
+msgstr "Exportera valt som PDF"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Export valt som Slim FIDUS"
+
+msgid "Export selected as TEI"
+msgstr "Export valt som TEI"
+
+msgid "Export selected as Typst"
+msgstr "Exportera valt som Typst"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "Exportera dokumenten som har valts som BITS-filer."
@@ -494,6 +526,18 @@ msgstr "Exportera dokumenten som har valts som JATS-filer."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "Exportera de dokument som har valts som LaTeX-filer."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "Exportera dokumenten som har valts som Markdown-filer."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "Exportera de dokument som har valts som PDF-filer."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "Exportera de dokument som har valts som TEI-filer."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Exportera de dokument som har valts som Typst-filer."
 
 msgid "Exporting..."
 msgstr "Exporterar..."
@@ -747,6 +791,9 @@ msgstr "Kontakta oss om du inte får den inom några minuter."
 msgid "Please enter a 6-digit code."
 msgstr "Ange en 6-siffrig kod."
 
+msgid "Please enter your password."
+msgstr "Vänligen ange ditt lösenord."
+
 msgid "Primary address"
 msgstr "Primär adress"
 
@@ -804,15 +851,6 @@ msgstr "Återställ lösenord"
 
 msgid "Respond"
 msgstr "Svara"
-
-msgid "Snapshot deleted"
-msgstr "Ögonblicksbild raderad"
-
-msgid "Snapshot of"
-msgstr "Ögonblicksbild av"
-
-msgid "Snapshots"
-msgstr "Ögonblicksbilder"
 
 msgid "Save"
 msgstr "Spara"
@@ -884,6 +922,9 @@ msgstr "Anmäl dig"
 msgid "Sign Up Closed"
 msgstr "Anmälan stängd"
 
+msgid "Sign up with"
+msgstr "Anmäl dig med"
+
 msgid "Signup"
 msgstr "Registrera dig"
 
@@ -892,6 +933,15 @@ msgstr "Webbplatsnavigering"
 
 msgid "Skip for Now"
 msgstr "Hoppa över nu"
+
+msgid "Snapshot deleted"
+msgstr "Ögonblicksbild raderad"
+
+msgid "Snapshot of"
+msgstr "Ögonblicksbild av"
+
+msgid "Snapshots"
+msgstr "Ögonblicksbilder"
 
 msgid "Social Account Provider"
 msgstr "Leverantör av sociala konton"

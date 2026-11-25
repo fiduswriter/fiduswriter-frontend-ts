@@ -7,13 +7,25 @@
  * translations from a Django djangojs.po file (including obsolete #~ entries),
  * and writes per-language messages.po into locale/.
  *
+ * Translations already present in the target messages.po files are preserved,
+ * so re-running extraction never loses work done by translate_all.py or by
+ * human translators.  All .po parsing handles msgids and msgstrs wrapped over
+ * multiple lines (polib and msgcat wrap long lines when saving) — a naive
+ * line-based parser silently drops every translation long enough to wrap.
+ *
  * Usage:
  *   node scripts/extract-i18n.js <path-to-django-locale>
  */
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs"
-import { join, dirname } from "node:path"
-import { fileURLToPath } from "node:url"
+import {
+    readFileSync,
+    writeFileSync,
+    mkdirSync,
+    readdirSync,
+    existsSync
+} from "node:fs"
+import {join, dirname} from "node:path"
+import {fileURLToPath} from "node:url"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, "..")
@@ -30,11 +42,20 @@ const msgids = new Set()
 
 function scanDir(dir) {
     if (!existsSync(dir)) return
-    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    for (const entry of readdirSync(dir, {withFileTypes: true})) {
         const full = join(dir, entry.name)
-        if (entry.isDirectory() && entry.name !== "node_modules" && !entry.name.startsWith(".")) {
+        if (
+            entry.isDirectory() &&
+            entry.name !== "node_modules" &&
+            !entry.name.startsWith(".")
+        ) {
             scanDir(full)
-        } else if (entry.isFile() && (entry.name.endsWith(".ts") || entry.name.endsWith(".js") || entry.name.endsWith(".mjs"))) {
+        } else if (
+            entry.isFile() &&
+            (entry.name.endsWith(".ts") ||
+                entry.name.endsWith(".js") ||
+                entry.name.endsWith(".mjs"))
+        ) {
             const content = readFileSync(full, "utf8")
             let match
             while ((match = GETTEXT_RE.exec(content)) !== null) {
@@ -53,12 +74,147 @@ if (msgids.size === 0) {
     process.exit(0)
 }
 
-// Build translation maps from djangojs.po — including obsolete #~ entries
-const languages = readdirSync(djangoLocalePath, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
+/**
+ * Parse the active (non-obsolete) entries of a .po file into a Map of
+ * msgid → {msgstr, comment}.  Handles msgids and msgstrs wrapped over
+ * multiple lines.  Entries with an empty msgstr and plural entries are
+ * skipped.
+ */
+function parsePoEntries(content) {
+    const entries = new Map()
+    let msgid = null
+    let msgstr = ""
+    let comment = ""
+    let pendingComment = ""
+    let mode = null // null | "msgid" | "msgstr"
 
-console.log(`Looking up translations in ${languages.length} languages (including obsolete entries)...`)
+    const flush = () => {
+        if (msgid && msgstr) {
+            entries.set(msgid, {msgstr, comment: comment.trim()})
+        }
+        msgid = null
+        msgstr = ""
+        comment = ""
+        mode = null
+    }
+
+    for (const line of content.split("\n")) {
+        const trimmed = line.trim()
+        if (trimmed === "") {
+            flush()
+            pendingComment = ""
+            continue
+        }
+        if (trimmed.startsWith("#~")) {
+            // Obsolete entries are handled by parseObsoleteEntries().
+            continue
+        }
+        if (trimmed.startsWith("#")) {
+            if (msgid === null) pendingComment += line + "\n"
+            continue
+        }
+        if (trimmed.startsWith("msgid ")) {
+            flush()
+            comment = pendingComment
+            pendingComment = ""
+            mode = "msgid"
+            msgid = unescapePo(stripQuotes(trimmed.slice(6)))
+            continue
+        }
+        if (trimmed.startsWith("msgid_plural") || trimmed.startsWith("msgstr[")) {
+            msgid = null
+            mode = null
+            continue
+        }
+        if (trimmed.startsWith("msgstr ")) {
+            if (msgid === null) continue
+            mode = "msgstr"
+            msgstr = unescapePo(stripQuotes(trimmed.slice(7)))
+            continue
+        }
+        if (trimmed.startsWith('"')) {
+            const fragment = unescapePo(stripQuotes(trimmed))
+            if (mode === "msgid") {
+                msgid += fragment
+            } else if (mode === "msgstr") {
+                msgstr += fragment
+            }
+        }
+    }
+    flush()
+    return entries
+}
+
+/**
+ * Parse the obsolete (#~) entries of a .po file into a Map of
+ * msgid → {msgstr, comment}.  These often still hold the translation of a
+ * string that was reworded slightly, so they seed new msgids as well.
+ */
+function parseObsoleteEntries(content) {
+    const entries = new Map()
+    let state = null // null | "msgid" | "msgstr"
+    let msgid = ""
+    let msgstr = ""
+    let prevMsgid = null
+
+    const flush = () => {
+        if (msgid && msgstr && !entries.has(msgid)) {
+            entries.set(msgid, {msgstr, comment: ""})
+        }
+        if (prevMsgid && msgstr && !entries.has(prevMsgid)) {
+            entries.set(prevMsgid, {msgstr, comment: ""})
+        }
+        state = null
+        msgid = ""
+        msgstr = ""
+        prevMsgid = null
+    }
+
+    for (const line of content.split("\n")) {
+        const trimmed = line.trim()
+        if (trimmed.startsWith('#~ msgid "') || trimmed.startsWith("#~ msgid ")) {
+            flush()
+            state = "msgid"
+            msgid = unescapePo(stripQuotes(trimmed.slice(9)))
+            continue
+        }
+        if (trimmed.startsWith('#~| msgid "') || trimmed.startsWith("#~| msgid ")) {
+            prevMsgid = unescapePo(stripQuotes(trimmed.slice(11)))
+            continue
+        }
+        if (
+            state === "msgid" &&
+            (trimmed.startsWith('#~ msgstr "') || trimmed.startsWith("#~ msgstr "))
+        ) {
+            state = "msgstr"
+            msgstr = unescapePo(stripQuotes(trimmed.slice(11)))
+            continue
+        }
+        if (trimmed.startsWith('#~ "') && state !== null) {
+            const fragment = unescapePo(stripQuotes(trimmed.slice(4)))
+            if (state === "msgid") {
+                msgid += fragment
+            } else {
+                msgstr += fragment
+            }
+            continue
+        }
+        if (state === "msgstr" && !trimmed.startsWith("#~")) {
+            flush()
+        }
+    }
+    flush()
+    return entries
+}
+
+// Build translation maps from djangojs.po — including obsolete #~ entries
+const languages = readdirSync(djangoLocalePath, {withFileTypes: true})
+    .filter(e => e.isDirectory())
+    .map(e => e.name)
+
+console.log(
+    `Looking up translations in ${languages.length} languages (including obsolete entries)...`
+)
 
 let totalTranslated = 0
 
@@ -67,169 +223,36 @@ for (const lang of languages) {
     if (!existsSync(poFile)) continue
 
     const poContent = readFileSync(poFile, "utf8")
-    const translationMap = new Map()
-
-    // Parse active entries
-    let currentMsgid = null
-    let currentComment = ""
-    for (const line of poContent.split("\n")) {
-        const trimmed = line.trim()
-        // Skip obsolete lines for active parsing
-        if (trimmed.startsWith("#~")) continue
-
-        if (trimmed.startsWith("#:")) {
-            if (currentMsgid === null) currentComment += line + "\n"
-            continue
-        }
-        if (trimmed.startsWith("#,") || trimmed.startsWith("#.") || trimmed.startsWith("#|")) {
-            if (currentMsgid === null) currentComment += line + "\n"
-            continue
-        }
-        if (trimmed.startsWith("#") && !trimmed.startsWith("#:")) continue
-        if (trimmed.startsWith('msgid "')) {
-            currentMsgid = unescapePo(trimmed.slice(7, -1))
-            continue
-        }
-        if (trimmed.startsWith("msgid ")) {
-            currentMsgid = unescapePo(trimmed.slice(6))
-            continue
-        }
-        if (trimmed.startsWith('msgstr "') && currentMsgid !== null) {
-            const msgstr = unescapePo(trimmed.slice(8, -1))
-            if (msgstr) translationMap.set(currentMsgid, { msgstr, comment: currentComment.trim() })
-            currentMsgid = null
-            currentComment = ""
-            continue
-        }
-        if (trimmed.startsWith("msgstr ") && currentMsgid !== null) {
-            const msgstr = unescapePo(trimmed.slice(7))
-            if (msgstr) translationMap.set(currentMsgid, { msgstr, comment: currentComment.trim() })
-            currentMsgid = null
-            currentComment = ""
-            continue
-        }
-        if (trimmed.startsWith("msgid_plural") || trimmed.startsWith("msgstr[")) {
-            currentMsgid = null
-            currentComment = ""
-            continue
-        }
-        if (trimmed.startsWith('"') && currentMsgid !== null) {
-            currentMsgid += unescapePo(trimmed.slice(1, -1))
-        }
+    const translationMap = parsePoEntries(poContent)
+    for (const [key, value] of parseObsoleteEntries(poContent)) {
+        if (!translationMap.has(key)) translationMap.set(key, value)
     }
 
-    // Also parse obsolete entries (#~ msgid ... #~ msgstr ...)
-    // State machine: null = awaiting entry, "msgid" = building msgid, "msgstr" = building msgstr
-    let obsState = null    // null | "msgid" | "msgstr"
-    let obsMsgid = ""       // accumulating msgid (may span multiple #~ "..." lines)
-    let obsMsgstr = ""      // accumulating msgstr
-    let obsPrevMsgid = null
-
-    function saveObsolete() {
-        if (obsMsgid && obsMsgstr && !translationMap.has(obsMsgid)) {
-            translationMap.set(obsMsgid, { msgstr: obsMsgstr, comment: "" })
-        }
-        if (obsPrevMsgid && obsMsgstr && !translationMap.has(obsPrevMsgid)) {
-            translationMap.set(obsPrevMsgid, { msgstr: obsMsgstr, comment: "" })
-        }
-    }
-
-    for (const line of poContent.split("\n")) {
-        const trimmed = line.trim()
-
-        // ----------- start of obsolete msgid -----------
-        if (trimmed.startsWith('#~ msgid "')) {
-            saveObsolete()  // save any previous entry
-            obsState = "msgid"
-            obsMsgid = unescapePo(trimmed.slice(10, -1))
-            obsMsgstr = ""
-            obsPrevMsgid = null
-            continue
-        }
-        // Also handle msgid without quotes (rare)
-        if (trimmed.startsWith("#~ msgid ") && !trimmed.startsWith('#~ msgid "')) {
-            saveObsolete()
-            obsState = "msgid"
-            obsMsgid = unescapePo(trimmed.slice(9))
-            obsMsgstr = ""
-            obsPrevMsgid = null
-            continue
-        }
-        // ----------- previous msgid marker -----------
-        if (trimmed.startsWith('#~| msgid "')) {
-            obsPrevMsgid = unescapePo(trimmed.slice(12, -1))
-            continue
-        }
-        // ----------- start of obsolete msgstr -----------
-        if (trimmed.startsWith('#~ msgstr "') && obsState === "msgid") {
-            obsState = "msgstr"
-            obsMsgstr = unescapePo(trimmed.slice(11, -1))
-            // If the msgid is non-empty and this is a single-line msgstr, save immediately
-            continue
-        }
-        if (trimmed.startsWith("#~ msgstr ") && obsState === "msgid" && !trimmed.startsWith('#~ msgstr "')) {
-            obsState = "msgstr"
-            obsMsgstr = unescapePo(trimmed.slice(10))
-            continue
-        }
-        // ----------- multi-line continuation -----------
-        if (trimmed.startsWith('#~ "') && obsState !== null) {
-            const fragment = unescapePo(trimmed.slice(4, -1))
-            if (obsState === "msgid") {
-                obsMsgid += fragment
-            } else if (obsState === "msgstr") {
-                obsMsgstr += fragment
-            }
-            continue
-        }
-        // ----------- end of entry (next #~ msgid or non-obsolete line) -----------
-        if (obsState === "msgstr" && (trimmed.startsWith('#~ msgid') || !trimmed.startsWith("#~"))) {
-            saveObsolete()
-            obsState = null
-            obsMsgid = ""
-            obsMsgstr = ""
-        }
-    }
-    // Save any trailing entry
-    if (obsState === "msgstr") {
-        saveObsolete()
-    }
-
-    // Build entries — merge existing translations from the target .po file
-    // if it already exists, so translations added by translate_all.py or
-    // manual editing are preserved across re-extractions.
+    // Merge existing translations from the target .po file so translations
+    // added by translate_all.py or manual editing are preserved across
+    // re-extractions.
     const existingPo = join(root, "locale", lang, "LC_MESSAGES", "messages.po")
     const existingTranslations = new Map()
     if (existsSync(existingPo)) {
-        const existingContent = readFileSync(existingPo, "utf8")
-        let curMsgid = null
-        for (const line of existingContent.split("\n")) {
-            const trimmed = line.trim()
-            if (trimmed.startsWith('msgid "')) {
-                curMsgid = unescapePo(trimmed.slice(7, -1))
-                continue
-            }
-            if (trimmed.startsWith('msgstr "') && curMsgid !== null) {
-                const ms = unescapePo(trimmed.slice(8, -1))
-                if (ms) existingTranslations.set(curMsgid, ms)
-                curMsgid = null
-                continue
-            }
-            if (trimmed.startsWith('"') && curMsgid !== null) {
-                curMsgid += unescapePo(trimmed.slice(1, -1))
-            }
+        for (const [key, value] of parsePoEntries(
+            readFileSync(existingPo, "utf8")
+        )) {
+            existingTranslations.set(key, value.msgstr)
         }
     }
 
+    // Build entries
     const entries = []
     for (const msgid of msgids) {
         // Prefer existing translation over djangojs.po lookup (no synthetic comment)
         const existing = existingTranslations.get(msgid)
-        const t = existing ? { msgstr: existing, comment: "" } : translationMap.get(msgid)
+        const t = existing
+            ? {msgstr: existing, comment: ""}
+            : translationMap.get(msgid)
         entries.push({
             msgid,
             msgstr: t ? t.msgstr : "",
-            comment: t ? t.comment : "",
+            comment: t ? t.comment : ""
         })
         if (t?.msgstr) totalTranslated++
     }
@@ -245,11 +268,11 @@ for (const lang of languages) {
         '"Content-Type: text/plain; charset=UTF-8\\n"',
         `"Language: ${lang}\\n"`,
         '"Plural-Forms: nplurals=2; plural=(n != 1);\\n"',
-        "",
+        ""
     ].join("\n")
 
     const body = entries
-        .map((e) => {
+        .map(e => {
             let lines = ""
             if (e.comment && !e.comment.startsWith("# obsolete")) {
                 lines += e.comment + "\n"
@@ -261,18 +284,38 @@ for (const lang of languages) {
         .join("")
 
     const langDir = join(root, "locale", lang, "LC_MESSAGES")
-    mkdirSync(langDir, { recursive: true })
+    mkdirSync(langDir, {recursive: true})
     writeFileSync(join(langDir, "messages.po"), header + body, "utf8")
 
-    const translated = entries.filter((e) => e.msgstr).length
-    console.log(`  ${lang}: ${entries.length} entries, ${translated} translated`)
+    const translated = entries.filter(e => e.msgstr).length
+    console.log(
+        `  ${lang}: ${entries.length} entries, ${translated} translated`
+    )
 }
 
 console.log(`\nTotal translated strings: ${totalTranslated}`)
 
 function escapePo(s) {
-    return s.replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t")
+    return s
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\n/g, "\\n")
+        .replace(/\r/g, "\\r")
+        .replace(/\t/g, "\\t")
 }
+
 function unescapePo(s) {
-    return s.replace(/\\"/g, '"').replace(/\\n/g, "\n").replace(/\\r/g, "\r").replace(/\t/g, "\t").replace(/\\\\/g, "\\")
+    return s
+        .replace(/\\"/g, '"')
+        .replace(/\\n/g, "\n")
+        .replace(/\\r/g, "\r")
+        .replace(/\t/g, "\t")
+        .replace(/\\\\/g, "\\")
+}
+
+function stripQuotes(s) {
+    if (s.startsWith('"') && s.endsWith('"') && s.length >= 2) {
+        return s.slice(1, -1)
+    }
+    return s
 }

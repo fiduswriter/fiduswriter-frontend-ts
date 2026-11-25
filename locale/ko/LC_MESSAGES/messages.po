@@ -52,6 +52,9 @@ msgid ""
 " the security of your account."
 msgstr "이중 인증을 비활성화하시겠습니까? 이렇게 하면 계정의 보안이 약화됩니다."
 
+msgid "Authenticator code"
+msgstr "인증기 코드"
+
 msgid "Bibliography"
 msgstr "참고문헌"
 
@@ -72,6 +75,13 @@ msgstr "비밀번호 변경"
 
 msgid "Change picture"
 msgstr "사진 변경"
+
+msgid ""
+"Check spelling and grammar while typing with the built-in LingoTweaker "
+"checker. It runs entirely in your browser; no external server is needed."
+msgstr ""
+"내장된 LingoTweaker 검사기로 입력하는 동안 철자와 문법을 검사하세요. 이는 전적으로 귀하의 브라우저에서 실행됩니다. 외부 "
+"서버가 필요하지 않습니다."
 
 msgid "Choose document template"
 msgstr "문서 템플릿 선택"
@@ -128,6 +138,10 @@ msgstr "기본 설정 확인"
 msgid "Confirm the new password"
 msgstr "새 비밀번호를 확인하세요"
 
+msgid ""
+"Confirm with your account password and a code from your authenticator app:"
+msgstr "계정 비밀번호와 인증 앱의 코드를 확인하세요."
+
 msgid "Confirm your password"
 msgstr "비밀번호를 확인하세요"
 
@@ -139,6 +153,9 @@ msgstr "연결"
 
 msgid "Contacts"
 msgstr "연락처"
+
+msgid "Continuous spell and grammar checking"
+msgstr "지속적인 맞춤법 및 문법 검사"
 
 msgid "Copy"
 msgstr "복사"
@@ -460,8 +477,20 @@ msgstr "JATS로 내보내기 선택"
 msgid "Export selected as LaTeX"
 msgstr "LaTeX로 내보내기가 선택되었습니다."
 
+msgid "Export selected as Markdown"
+msgstr "Markdown으로 내보내기가 선택됨"
+
+msgid "Export selected as PDF"
+msgstr "PDF로 선택 내보내기"
+
 msgid "Export selected as Slim FIDUS"
 msgstr "Slim FIDUS로 내보내기 선택"
+
+msgid "Export selected as TEI"
+msgstr "TEI로 내보내기 선택"
+
+msgid "Export selected as Typst"
+msgstr "Typst로 내보내기가 선택됨"
 
 msgid "Export the documents that have been selected as BITS files."
 msgstr "선택한 문서를 BITS 파일로 내보내세요."
@@ -487,6 +516,18 @@ msgstr "선택한 문서를 JATS 파일로 내보내세요."
 
 msgid "Export the documents that have been selected as LaTeX files."
 msgstr "선택한 문서를 LaTeX 파일로 내보내세요."
+
+msgid "Export the documents that have been selected as Markdown files."
+msgstr "선택한 문서를 Markdown 파일로 내보냅니다."
+
+msgid "Export the documents that have been selected as PDF files."
+msgstr "선택한 문서를 PDF 파일로 내보냅니다."
+
+msgid "Export the documents that have been selected as TEI files."
+msgstr "TEI 파일로 선택된 문서를 내보냅니다."
+
+msgid "Export the documents that have been selected as Typst files."
+msgstr "Typst 파일로 선택된 문서를 내보냅니다."
 
 msgid "Exporting..."
 msgstr "내보내는 중..."
@@ -727,6 +768,9 @@ msgstr "몇 분 내에 받지 못하시면 연락주시기 바랍니다."
 msgid "Please enter a 6-digit code."
 msgstr "6자리 코드를 입력해주세요."
 
+msgid "Please enter your password."
+msgstr "비밀번호를 입력해주세요."
+
 msgid "Primary address"
 msgstr "기본 주소"
 
@@ -779,15 +823,6 @@ msgstr "비밀번호 재설정"
 
 msgid "Respond"
 msgstr "응답"
-
-msgid "Snapshot deleted"
-msgstr "스냅샷이 삭제되었습니다."
-
-msgid "Snapshot of"
-msgstr "스냅샷"
-
-msgid "Snapshots"
-msgstr "스냅샷"
 
 msgid "Save"
 msgstr "저장"
@@ -857,6 +892,9 @@ msgstr "가입"
 msgid "Sign Up Closed"
 msgstr "회원가입이 마감되었습니다"
 
+msgid "Sign up with"
+msgstr "다음으로 가입하세요"
+
 msgid "Signup"
 msgstr "가입"
 
@@ -865,6 +903,15 @@ msgstr "사이트 탐색"
 
 msgid "Skip for Now"
 msgstr "지금은 건너뛰기"
+
+msgid "Snapshot deleted"
+msgstr "스냅샷이 삭제되었습니다."
+
+msgid "Snapshot of"
+msgstr "스냅샷"
+
+msgid "Snapshots"
+msgstr "스냅샷"
 
 msgid "Social Account Provider"
 msgstr "소셜 계정 제공자"
