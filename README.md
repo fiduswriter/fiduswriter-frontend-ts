@@ -268,3 +268,10 @@ npm test             # Run Jest test suite
 ## License
 
 AGPL-3.0 — see [LICENSE](LICENSE) for details.
+
+## Trademark
+
+"Fidus Writer" is a registered EU trademark of Lund Info AB. This
+repository's license covers the code, not the name and logo — see
+[TRADEMARK.md](TRADEMARK.md) and the
+[Fidus Writer trademark policy](https://www.fiduswriter.org/trademark/).
